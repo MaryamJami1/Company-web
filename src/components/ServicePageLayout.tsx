@@ -82,10 +82,7 @@ export default function ServicePageLayout({
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: [0.17, 0.55, 0.55, 1] as const }}
           >
-            <h1
-              className="font-[var(--font-orbitron)] text-4xl md:text-6xl lg:text-8xl font-black mb-4 uppercase glitch tracking-tighter"
-              data-text={heroTitle.toUpperCase()}
-            >
+            <h1 className="font-[var(--font-orbitron)] text-4xl md:text-6xl lg:text-8xl font-black mb-4 uppercase tracking-tighter">
               {heroTitle}
             </h1>
             <p className="font-[var(--font-montserrat)] text-lg md:text-xl text-gray-300 max-w-xl mx-auto mb-8 uppercase tracking-widest">
@@ -246,8 +243,36 @@ export default function ServicePageLayout({
         </section>
       </PerspectiveSection>
 
+      {/* Related Services (Internal Linking) */}
+      <section className="py-20 relative z-10 bg-gray-50 border-y border-gray-100">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+            <h2 className="font-[var(--font-orbitron)] text-2xl font-bold uppercase tracking-wider text-black text-center md:text-left">
+              Explore Other <span className="text-[var(--color-arc-blue)]">Services</span>
+            </h2>
+            <div className="flex flex-wrap justify-center gap-4">
+              {[
+                { name: "Logo Design", href: "/logo-design" },
+                { name: "Web Design", href: "/website-design" },
+                { name: "Animation", href: "/animation" },
+                { name: "Brand Identity", href: "/brand" },
+                { name: "Amazon", href: "/amazon-private-label" },
+              ].filter(s => s.name !== heroTitle).map((service, i) => (
+                <Link 
+                  key={i} 
+                  href={service.href}
+                  className="font-[var(--font-orbitron)] text-[10px] font-bold uppercase tracking-widest text-gray-500 hover:text-[var(--color-arc-blue)] border-b border-transparent hover:border-[var(--color-arc-blue)] transition-all"
+                >
+                  {service.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="py-24 relative z-10 bg-white border-t border-gray-100">
+      <section className="py-24 relative z-10 bg-white">
         <div className="container mx-auto px-6 text-center">
           <motion.div
             initial="hidden"

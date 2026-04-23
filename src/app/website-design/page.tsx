@@ -1,8 +1,8 @@
 import ServicePageLayout from "@/components/ServicePageLayout";
 
 export const metadata = {
-  title: "Website Design | Ideas Assemble",
-  description: "High-performance, responsive website design and development. E-commerce solutions, landing pages, and custom web applications that convert.",
+  title: "Premium Website Design & Development | Ideas Assemble",
+  description: "Get a high-performance, custom-designed website with Ideas Assemble. We specialize in conversion-optimized, responsive web design and advanced UI/UX to elevate your digital presence.",
   keywords: ["Website Design", "Web Development", "E-commerce Website", "Responsive Design", "Next.js Development", "Landing Page Design", "UI/UX Design", "Business Website"],
 };
 

@@ -1,8 +1,8 @@
 import ServicePageLayout from "@/components/ServicePageLayout";
 
 export const metadata = {
-  title: "Amazon Wholesale Solutions | Ideas Assemble",
-  description: "Expert Amazon Wholesale services. Product sourcing, brand approval, and logistics management for a profitable wholesale empire.",
+  title: "Amazon Wholesale Solutions & Sourcing | Ideas Assemble",
+  description: "Build a profitable Amazon FBA wholesale business with Ideas Assemble. We provide expert product sourcing, brand approval, and streamlined logistics management to scale your wholesale empire.",
   keywords: ["Amazon Wholesale", "Product Sourcing", "Brand Approval", "Logistics Management", "Wholesale FBA", "Amazon Inventory", "Supply Chain", "Amazon Growth"],
 };
 

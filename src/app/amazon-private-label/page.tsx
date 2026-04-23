@@ -1,8 +1,8 @@
 import ServicePageLayout from "@/components/ServicePageLayout";
 
 export const metadata = {
-  title: "Amazon Private Label Marketing | Ideas Assemble",
-  description: "Scale your Amazon FBA business with expert Private Label services. Listing optimization, PPC management, and A+ content design.",
+  title: "Amazon Private Label FBA Services | Ideas Assemble",
+  description: "Launch and scale your Amazon Private Label brand with Ideas Assemble. High-converting A+ content, data-driven PPC management, and expert listing optimization to dominate the FBA marketplace.",
   keywords: ["Amazon Private Label", "Amazon FBA", "Listing Optimization", "Amazon PPC", "A+ Content", "EBC Design", "Amazon SEO", "Amazon Seller Support"],
 };
 

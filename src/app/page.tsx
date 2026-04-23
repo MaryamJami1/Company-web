@@ -196,7 +196,10 @@ export default function Home() {
             transition={{ duration: 1, ease: [0.17, 0.55, 0.55, 1] as const }}
             style={{ y: yHeading, opacity: opacityHero }}
           >
-            <h1 className="font-[var(--font-orbitron)] text-4xl md:text-6xl lg:text-8xl font-black mb-6 uppercase tracking-tighter flex justify-center gap-x-[0.2em] relative">
+            <h1 
+              className="font-[var(--font-orbitron)] text-4xl md:text-6xl lg:text-8xl font-black mb-6 uppercase tracking-tighter glitch"
+              data-text="IDEAS ASSEMBLE"
+            >
               IDEAS <span className="text-[var(--color-arc-blue)]">ASSEMBLE</span>
             </h1>
             <motion.p 
