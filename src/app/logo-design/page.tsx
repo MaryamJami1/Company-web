@@ -1,9 +1,9 @@
 import ServicePageLayout from "@/components/ServicePageLayout";
 
 export const metadata = {
-  title: "Logo Design | Ideas Assemble",
-  description: "Premium logo design services with 100% Money-Back Guarantee. We build brands, not just logos. Professional, unique, and timeless visual identities.",
-  keywords: ["Logo Design", "Custom Logo", "Brand Identity", "Vector Logo", "Business Branding", "Professional Logo Designer", "Corporate Identity", "Minimalist Logo"],
+  title: "Professional Logo Design Services | Custom Brand Identity Design",
+  description: "Best professional logo design services with a 100% Money-Back Guarantee. Get a unique, custom, and timeless minimalist logo for your business. Unlimited revisions and fast turnaround.",
+  keywords: ["Best Logo Design", "Professional Logo Designer", "Custom Logo Design Services", "Minimalist Logo Design", "Premium Brand Identity", "Business Branding Solutions", "Corporate Logo Design", "Vector Logo Design"],
 };
 
 export default function LogoDesignPage() {

@@ -502,7 +502,7 @@ export default function Home() {
                 >
                   <img 
                     src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=2071&auto=format&fit=crop" 
-                    alt="Premium Logo Mockup" 
+                    alt="Professional Logo Design Mockup - Premium Brand Identity by Ideas Assemble" 
                     className="w-full h-auto"
                   />
                 </motion.div>

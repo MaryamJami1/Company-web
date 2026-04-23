@@ -115,6 +115,30 @@ const faqJsonLd = {
   ]
 };
 
+const logoServiceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Logo Design & Brand Identity",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Ideas Assemble",
+    "image": "https://www.ideasassemble.com/og-image.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Ideas Assemble HQ",
+      "addressLocality": "Digital",
+      "addressRegion": "Global"
+    }
+  },
+  "description": "Premium minimalist logo design and cinematic brand identity services. We create timeless visual identities that help brands dominate their industries.",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "199.00",
+    "availability": "https://schema.org/InStock"
+  }
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -130,6 +154,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(logoServiceJsonLd) }}
         />
       </head>
       <body
