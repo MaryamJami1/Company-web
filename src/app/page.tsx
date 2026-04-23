@@ -181,7 +181,6 @@ export default function Home() {
 
       {/* ═══════════ HERO ═══════════ */}
       <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
-        <ThreeDScene />
         <motion.div style={{ y, opacity: opacityHero }} className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/70 z-10" />
           <img

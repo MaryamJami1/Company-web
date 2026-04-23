@@ -66,13 +66,13 @@ const jsonLd = {
   "@type": "Organization",
   "name": "Ideas Assemble",
   "url": "https://www.ideasassemble.com",
-  "logo": "https://www.ideasassemble.com/logo.png",
+  // "logo": "https://www.ideasassemble.com/logo.png",
   "description": "Ideas Assemble is a premium digital design agency specializing in cinematic branding, high-performance website design, 3D animation, and Amazon marketplace growth.",
-  "sameAs": [
-    "https://facebook.com/ideasassemble",
-    "https://instagram.com/ideasassemble",
-    "https://linkedin.com/company/ideasassemble"
-  ],
+  // "sameAs": [
+  //   "https://facebook.com/ideasassemble",
+  //   "https://instagram.com/ideasassemble",
+  //   "https://linkedin.com/company/ideasassemble"
+  // ],
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "+1-682-437-5323",
