@@ -61,6 +61,25 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Ideas Assemble",
+  "url": "https://www.ideasassemble.com",
+  "logo": "https://www.ideasassemble.com/logo.png",
+  "description": "Ideas Assemble is a premium digital design agency specializing in cinematic branding, high-performance website design, 3D animation, and Amazon marketplace growth.",
+  "sameAs": [
+    "https://facebook.com/ideasassemble",
+    "https://instagram.com/ideasassemble",
+    "https://linkedin.com/company/ideasassemble"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-682-437-5323",
+    "contactType": "customer service"
+  }
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -68,6 +87,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={`${orbitron.variable} ${montserrat.variable} antialiased`}
       >
