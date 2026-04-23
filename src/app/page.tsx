@@ -457,13 +457,13 @@ export default function Home() {
                 <motion.div variants={fadeInUp}>
                   <div className="font-[var(--font-orbitron)] text-xs font-bold uppercase text-[var(--color-arc-blue)] tracking-[0.3em] mb-4">Core Excellence</div>
                   <h2 className="font-[var(--font-orbitron)] text-4xl md:text-6xl font-black uppercase tracking-tighter mb-8 text-black">
-                    THE ART OF THE <span className="text-[var(--color-hot-red)]">MARK</span>
+                    PREMIUM LOGO <span className="text-[var(--color-hot-red)]">DESIGN</span>
                   </h2>
                   <div className="w-24 h-1 bg-black mb-8" />
                 </motion.div>
                 
                 <motion.p variants={fadeInUp} className="font-[var(--font-montserrat)] text-gray-700 text-lg leading-relaxed mb-8 max-w-xl">
-                  A logo is not just a graphic; it's the heartbeat of your brand. We specialize in creating minimalist, high-impact visual identities that distill your entire business philosophy into a single, unforgettable mark.
+                  We are a specialized **Logo Design Agency** creating high-impact visual identities. Our minimalist approach distills your entire business philosophy into a single, professional mark that ranks your brand as an industry leader.
                 </motion.p>
 
                 <motion.div variants={fadeInUp} className="space-y-6 mb-10">
@@ -487,7 +487,7 @@ export default function Home() {
                     href="/logo-design"
                     className="bg-black hover:bg-[var(--color-arc-blue)] text-white px-10 py-4 rounded-full font-[var(--font-orbitron)] font-bold uppercase tracking-wider text-xs transition-all flex items-center gap-3 w-fit"
                   >
-                    Explore Identity Design <ChevronRight className="w-4 h-4" />
+                    Get Best Logo Design Services <ChevronRight className="w-4 h-4" />
                   </MagneticButton>
                 </motion.div>
               </motion.div>
