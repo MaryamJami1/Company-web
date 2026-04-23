@@ -263,7 +263,7 @@ export default function Home() {
               style={{ y: yText }}
               className="font-[var(--font-montserrat)] text-base md:text-xl text-gray-300 max-w-2xl mx-auto mb-10"
             >
-              Forging high-performance digital identities.
+              Premium Logo Design & Cinematic Digital Brand Identity Forging.
             </motion.p>
             <MagneticButton 
               href="/build"
@@ -444,7 +444,90 @@ export default function Home() {
         </section>
       </PerspectiveSection>
 
-      {/* ═══════════ TESTIMONIALS ═══════════ */}
+      {/* ═══════════ SIGNATURE MARKS (LOGO FOCUS) ═══════════ */}
+      <PerspectiveSection>
+        <section className="py-24 relative z-10 overflow-hidden">
+          <div className="container mx-auto px-6">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={staggerContainer}
+              >
+                <motion.div variants={fadeInUp}>
+                  <div className="font-[var(--font-orbitron)] text-xs font-bold uppercase text-[var(--color-arc-blue)] tracking-[0.3em] mb-4">Core Excellence</div>
+                  <h2 className="font-[var(--font-orbitron)] text-4xl md:text-6xl font-black uppercase tracking-tighter mb-8 text-black">
+                    THE ART OF THE <span className="text-[var(--color-hot-red)]">MARK</span>
+                  </h2>
+                  <div className="w-24 h-1 bg-black mb-8" />
+                </motion.div>
+                
+                <motion.p variants={fadeInUp} className="font-[var(--font-montserrat)] text-gray-700 text-lg leading-relaxed mb-8 max-w-xl">
+                  A logo is not just a graphic; it's the heartbeat of your brand. We specialize in creating minimalist, high-impact visual identities that distill your entire business philosophy into a single, unforgettable mark.
+                </motion.p>
+
+                <motion.div variants={fadeInUp} className="space-y-6 mb-10">
+                  {[
+                    "Architectural Precision & Grid Systems",
+                    "Psychological Color Strategy",
+                    "Timeless Minimalism",
+                    "Complete Vector Scalability"
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center gap-4">
+                      <div className="w-6 h-6 rounded-full bg-[var(--color-arc-blue)]/10 flex items-center justify-center text-[var(--color-arc-blue)]">
+                        <CheckCircle2 className="w-4 h-4" />
+                      </div>
+                      <span className="font-[var(--font-orbitron)] text-xs font-bold uppercase tracking-wider text-black">{item}</span>
+                    </div>
+                  ))}
+                </motion.div>
+
+                <motion.div variants={fadeInUp}>
+                  <MagneticButton 
+                    href="/logo-design"
+                    className="bg-black hover:bg-[var(--color-arc-blue)] text-white px-10 py-4 rounded-full font-[var(--font-orbitron)] font-bold uppercase tracking-wider text-xs transition-all flex items-center gap-3 w-fit"
+                  >
+                    Explore Identity Design <ChevronRight className="w-4 h-4" />
+                  </MagneticButton>
+                </motion.div>
+              </motion.div>
+
+              <div className="relative">
+                <motion.div
+                  initial={{ opacity: 0, x: 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, ease: "easeOut" }}
+                  className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-2xl border border-gray-100 bg-black"
+                >
+                  <img 
+                    src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=2071&auto=format&fit=crop" 
+                    alt="Premium Logo Mockup" 
+                    className="w-full h-auto"
+                  />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.3 }}
+                  className="absolute -bottom-10 -left-10 z-20 w-1/2 rounded-3xl overflow-hidden shadow-2xl border-4 border-white"
+                >
+                  <img 
+                    src="https://images.unsplash.com/photo-1572044162444-ad60f128bde2?q=80&w=2070&auto=format&fit=crop" 
+                    alt="Logo Sketches" 
+                    className="w-full h-auto"
+                  />
+                </motion.div>
+                {/* Decorative Elements */}
+                <div className="absolute -top-10 -right-10 w-40 h-40 bg-[var(--color-arc-blue)]/5 blur-3xl rounded-full" />
+                <div className="absolute -bottom-10 -left-10 w-60 h-60 bg-[var(--color-hot-red)]/5 blur-3xl rounded-full" />
+              </div>
+            </div>
+          </div>
+        </section>
+      </PerspectiveSection>
       <PerspectiveSection>
         <section id="testimonials" className="py-24 relative z-10">
           <div className="container mx-auto px-6">
