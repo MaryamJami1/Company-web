@@ -24,19 +24,16 @@ export const metadata: Metadata = {
   authors: [{ name: "Ideas Assemble" }],
   creator: "Ideas Assemble",
   metadataBase: new URL("https://www.ideasassemble.com"),
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://www.ideasassemble.com",
     title: "Ideas Assemble | Premium Digital Design & Branding Agency",
-    description: "Forging high-performance digital identities. Premium branding, web design, and animation solutions.",
+    description: "Ideas Assemble is a premier digital design agency specializing in cinematic branding, custom web development, and Amazon marketplace growth strategies.",
     siteName: "Ideas Assemble",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=1200&auto=format&fit=crop",
         width: 1200,
         height: 630,
         alt: "Ideas Assemble - Digital Innovation Hub",
@@ -46,8 +43,11 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Ideas Assemble | Premium Digital Design & Branding Agency",
-    description: "Forging high-performance digital identities. Premium branding, web design, and animation solutions.",
-    images: ["/og-image.png"],
+    description: "Ideas Assemble is a premier digital design agency specializing in cinematic branding, custom web development, and Amazon marketplace growth strategies.",
+    images: ["https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=1200&auto=format&fit=crop"],
+  },
+  alternates: {
+    canonical: "https://www.ideasassemble.com",
   },
   robots: {
     index: true,
