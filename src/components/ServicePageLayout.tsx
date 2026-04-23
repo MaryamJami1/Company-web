@@ -82,8 +82,11 @@ export default function ServicePageLayout({
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: [0.17, 0.55, 0.55, 1] as const }}
           >
-            <h1 className="font-[var(--font-orbitron)] text-4xl md:text-6xl lg:text-8xl font-black mb-4 uppercase tracking-tighter">
-              {heroTitle}
+            <h1 
+              className="font-[var(--font-orbitron)] text-4xl md:text-6xl lg:text-8xl font-black mb-4 uppercase tracking-tighter glitch"
+              data-text={heroTitle.toUpperCase()}
+            >
+              {heroTitle.split(' ').slice(0, -1).join(' ')} <span className="text-[var(--color-arc-blue)]">{heroTitle.split(' ').slice(-1)}</span>
             </h1>
             <p className="font-[var(--font-montserrat)] text-lg md:text-xl text-gray-300 max-w-xl mx-auto mb-8 uppercase tracking-widest">
               {heroSubtitle}
