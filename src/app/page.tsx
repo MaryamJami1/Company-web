@@ -507,19 +507,6 @@ export default function Home() {
                     className="w-full h-auto"
                   />
                 </motion.div>
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1, delay: 0.3 }}
-                  className="absolute -bottom-10 -left-10 z-20 w-1/2 rounded-3xl overflow-hidden shadow-2xl border-4 border-white"
-                >
-                  <img 
-                    src="https://images.unsplash.com/photo-1572044162444-ad60f128bde2?q=80&w=2070&auto=format&fit=crop" 
-                    alt="Logo Sketches" 
-                    className="w-full h-auto"
-                  />
-                </motion.div>
                 {/* Decorative Elements */}
                 <div className="absolute -top-10 -right-10 w-40 h-40 bg-[var(--color-arc-blue)]/5 blur-3xl rounded-full" />
                 <div className="absolute -bottom-10 -left-10 w-60 h-60 bg-[var(--color-hot-red)]/5 blur-3xl rounded-full" />
