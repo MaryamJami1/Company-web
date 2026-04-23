@@ -90,7 +90,7 @@ export default function AboutPage() {
               className="font-[var(--font-orbitron)] text-4xl md:text-6xl lg:text-8xl font-black mb-4 uppercase glitch tracking-tighter"
               data-text="ABOUT US"
             >
-              ABOUT US
+              ABOUT <span className="text-[var(--color-arc-blue)]">US</span>
             </h1>
             <p className="font-[var(--font-montserrat)] text-lg md:text-xl text-gray-300 max-w-xl mx-auto uppercase tracking-widest">
               The story behind the innovation.
