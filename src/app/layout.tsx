@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Orbitron, Montserrat } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react"
 import "./globals.css";
 import SmoothScrollProvider from "@/components/SmoothScrollProvider";
 
@@ -138,6 +139,7 @@ export default function RootLayout({
         <SmoothScrollProvider>
           {children}
         </SmoothScrollProvider>
+        <Analytics />
       </body>
     </html>
   );
