@@ -197,59 +197,9 @@ export default function Home() {
             transition={{ duration: 1, ease: [0.17, 0.55, 0.55, 1] as const }}
             style={{ y: yHeading, opacity: opacityHero }}
           >
-            <h1 className="font-[var(--font-orbitron)] text-4xl md:text-6xl lg:text-8xl font-black mb-6 uppercase tracking-tighter flex flex-wrap justify-center gap-x-[0.2em] relative" style={{ perspective: "1000px" }}>
-              <span className="flex">
-                {"IDEAS".split("").map((char, i) => (
-                  <motion.span
-                    key={i}
-                    initial={{ 
-                      opacity: 0, 
-                      x: Math.random() * 400 - 200, 
-                      y: Math.random() * 400 - 200, 
-                      z: Math.random() * 500 - 250,
-                      rotateX: Math.random() * 360,
-                      rotateY: Math.random() * 360,
-                      rotateZ: Math.random() * 360
-                    }}
-                    animate={{ opacity: 1, x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }}
-                    transition={{ 
-                      duration: 2, 
-                      delay: i * 0.05, 
-                      ease: [0.23, 1, 0.32, 1] 
-                    }}
-                    className="inline-block glitch"
-                    data-text={char}
-                  >
-                    {char}
-                  </motion.span>
-                ))}
-              </span>
-              <span className="flex">
-                {"ASSEMBLE".split("").map((char, i) => (
-                  <motion.span
-                    key={i}
-                    initial={{ 
-                      opacity: 0, 
-                      x: Math.random() * 400 - 200, 
-                      y: Math.random() * 400 - 200, 
-                      z: Math.random() * 500 - 250,
-                      rotateX: Math.random() * 360,
-                      rotateY: Math.random() * 360,
-                      rotateZ: Math.random() * 360
-                    }}
-                    animate={{ opacity: 1, x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }}
-                    transition={{ 
-                      duration: 2, 
-                      delay: (5 + i) * 0.05, 
-                      ease: [0.23, 1, 0.32, 1] 
-                    }}
-                    className="inline-block glitch text-[var(--color-arc-blue)]"
-                    data-text={char}
-                  >
-                    {char}
-                  </motion.span>
-                ))}
-              </span>
+            <h1 className="font-[var(--font-orbitron)] text-4xl md:text-6xl lg:text-8xl font-black mb-6 uppercase tracking-tighter flex flex-wrap justify-center gap-x-[0.2em] relative">
+              <span className="glitch" data-text="IDEAS">IDEAS</span>
+              <span className="glitch text-[var(--color-arc-blue)]" data-text="ASSEMBLE">ASSEMBLE</span>
             </h1>
             <motion.p 
               style={{ y: yText }}
