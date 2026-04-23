@@ -83,6 +83,37 @@ const jsonLd = {
   }
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What digital services does Ideas Assemble provide?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We offer a comprehensive range of premium services including Logo Design, Website Design & Development, 3D Animation, Brand Identity creation, and specialized Amazon Marketplace growth strategies."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a typical web design project take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Project timelines vary depending on complexity. A standard business website usually takes 2-4 weeks, while complex E-commerce platforms can take 6-10 weeks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you help scale my existing Amazon business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! Our Amazon experts specialize in scaling both Private Label and Wholesale businesses with optimization, PPC management, and logistics support."
+      }
+    }
+  ]
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -94,6 +125,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
       </head>
       <body

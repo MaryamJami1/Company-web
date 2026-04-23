@@ -135,6 +135,61 @@ const videoTestimonials = [
   },
 ];
 
+const faqs = [
+  {
+    question: "What digital services does Ideas Assemble provide?",
+    answer: "We offer a comprehensive range of premium services including Logo Design, Website Design & Development, 3D Animation, Brand Identity creation, and specialized Amazon Marketplace growth strategies (Private Label & Wholesale)."
+  },
+  {
+    question: "How long does a typical web design project take?",
+    answer: "Project timelines vary depending on complexity. A standard business website usually takes 2-4 weeks, while complex E-commerce platforms can take 6-10 weeks. We prioritize quality and precision in every build."
+  },
+  {
+    question: "Can you help scale my existing Amazon business?",
+    answer: "Yes! Our Amazon experts specialize in scaling both Private Label and Wholesale businesses. We handle everything from listing optimization and PPC management to A+ content and logistics."
+  },
+  {
+    question: "Do you offer custom design revisions?",
+    answer: "Absolutely. We strive for 100% client satisfaction. We provide multiple initial concepts and work closely with you through revisions to ensure the final result perfectly matches your vision."
+  },
+  {
+    question: "How do I get started with a project?",
+    answer: "You can start by clicking 'Initialize Connection' or 'Book Free Consultation' on our site. Once you fill out the form, our team will reach out within 24 hours to discuss your project requirements."
+  }
+];
+
+function AccordionItem({ question, answer, isOpen, onClick }: { question: string, answer: string, isOpen: boolean, onClick: () => void }) {
+  return (
+    <div className="border-b border-gray-100 last:border-0 overflow-hidden">
+      <button
+        onClick={onClick}
+        className="w-full py-6 flex items-center justify-between text-left group transition-all"
+      >
+        <span className={`font-[var(--font-orbitron)] text-sm md:text-base font-bold uppercase tracking-wider transition-colors ${isOpen ? 'text-[var(--color-arc-blue)]' : 'text-black group-hover:text-[var(--color-arc-blue)]'}`}>
+          {question}
+        </span>
+        <div className={`w-8 h-8 rounded-full border flex items-center justify-center transition-all duration-300 ${isOpen ? 'bg-[var(--color-arc-blue)] border-[var(--color-arc-blue)] rotate-180' : 'border-gray-200 rotate-0'}`}>
+          <ChevronRight className={`w-4 h-4 transition-colors ${isOpen ? 'text-white' : 'text-gray-400'}`} />
+        </div>
+      </button>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+          >
+            <div className="pb-6 font-[var(--font-montserrat)] text-gray-600 text-sm md:text-base leading-relaxed max-w-3xl">
+              {answer}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
+
 export default function Home() {
   const [mounted, setMounted] = useState(false);
   const { scrollYProgress } = useScroll();
@@ -145,6 +200,7 @@ export default function Home() {
 
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -493,6 +549,58 @@ export default function Home() {
               >
                 See More Success Stories <ChevronRight className="w-4 h-4" />
               </MagneticButton>
+            </motion.div>
+          </div>
+        </section>
+      </PerspectiveSection>
+
+      {/* ═══════════ FAQ SECTION ═══════════ */}
+      <PerspectiveSection>
+        <section id="faq" className="py-24 relative z-10 bg-gray-50 border-y border-gray-100">
+          <div className="container mx-auto px-6">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={fadeInUp}
+              className="grid lg:grid-cols-12 gap-16"
+            >
+              <div className="lg:col-span-5">
+                <h2 className="font-[var(--font-orbitron)] text-3xl md:text-5xl font-bold uppercase tracking-wide mb-6 text-black">
+                  Frequently Asked <span className="text-[var(--color-arc-blue)]">Questions</span>
+                </h2>
+                <div className="w-24 h-1 bg-[var(--color-arc-blue)] mb-8" />
+                <p className="font-[var(--font-montserrat)] text-gray-600 leading-relaxed mb-8">
+                  Get answers to common queries about our process, services, and how we help brands scale in the digital landscape.
+                </p>
+                <div className="p-8 rounded-2xl bg-white border border-gray-100 shadow-xl">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 rounded-xl bg-[var(--color-arc-blue)]/10 flex items-center justify-center text-[var(--color-arc-blue)]">
+                      <MessageSquare className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <div className="font-[var(--font-orbitron)] text-xs font-bold uppercase text-gray-400">Direct Support</div>
+                      <div className="font-[var(--font-montserrat)] font-bold text-black">+1 (682) 437-5323</div>
+                    </div>
+                  </div>
+                  <p className="text-xs text-gray-500 font-[var(--font-montserrat)] mb-6">Can't find what you're looking for? Initialize a connection below.</p>
+                  <MagneticButton href="#contact" className="w-full py-3 bg-gray-100 hover:bg-black hover:text-white transition-all text-black font-[var(--font-orbitron)] text-[10px] font-bold uppercase tracking-widest rounded-xl flex items-center justify-center gap-2">
+                    Ask a Question <ChevronRight className="w-3 h-3" />
+                  </MagneticButton>
+                </div>
+              </div>
+
+              <div className="lg:col-span-7 bg-white p-8 md:p-12 rounded-[2.5rem] border border-gray-100 shadow-2xl">
+                {faqs.map((faq, i) => (
+                  <AccordionItem
+                    key={i}
+                    question={faq.question}
+                    answer={faq.answer}
+                    isOpen={openFaqIndex === i}
+                    onClick={() => setOpenFaqIndex(openFaqIndex === i ? null : i)}
+                  />
+                ))}
+              </div>
             </motion.div>
           </div>
         </section>
