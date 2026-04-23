@@ -12,6 +12,7 @@ const services = [
   { label: "Brand", href: "/brand" },
   { label: "Amazon Private Label", href: "/amazon-private-label" },
   { label: "Amazon Wholesale", href: "/amazon-wholesale" },
+  { label: "Chatbot Development", href: "/chatbot-development" },
 ];
 
 export default function Navbar() {

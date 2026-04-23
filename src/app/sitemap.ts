@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/portfolio',
     '/privacy-policy',
     '/terms-of-service',
+    '/chatbot-development',
   ]
  
   return routes.map((route) => ({

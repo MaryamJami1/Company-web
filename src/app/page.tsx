@@ -94,6 +94,7 @@ const services = [
   { icon: <Palette className="w-7 h-7" />, title: "Brand Identity", desc: "Cohesive brand identities that build trust, loyalty, and recognition.", href: "/brand" },
   { icon: <ShoppingCart className="w-7 h-7" />, title: "Amazon Private Label", desc: "Data-driven strategies to dominate the world's largest marketplace.", href: "/amazon-private-label" },
   { icon: <Package className="w-7 h-7" />, title: "Amazon Wholesale", desc: "High-volume distribution with product sourcing and logistics management.", href: "/amazon-wholesale" },
+  { icon: <Zap className="w-7 h-7" />, title: "Chatbot Development", desc: "Automate your customer engagement with AI-powered conversation agents.", href: "/chatbot-development" },
 ];
 
 const whyUsCards = [
