@@ -1,7 +1,7 @@
 import ServicePageLayout from "@/components/ServicePageLayout";
 
 export const metadata = {
-  title: "Amazon Private Label FBA Services | Ideas Assemble",
+  title: "E-commerce Solutions | Ideas Assemble",
   description: "Launch and scale your Amazon Private Label brand with Ideas Assemble. High-converting A+ content, data-driven PPC management, and expert listing optimization to dominate the FBA marketplace.",
   keywords: ["Amazon Private Label", "Amazon FBA", "Listing Optimization", "Amazon PPC", "A+ Content", "EBC Design", "Amazon SEO", "Amazon Seller Support"],
 };
@@ -9,12 +9,12 @@ export const metadata = {
 export default function AmazonPrivateLabelPage() {
   return (
     <ServicePageLayout
-      heroTitle="Amazon Private Label"
-      heroSubtitle="Build your brand on the world's largest marketplace."
+      heroTitle="E-commerce Solutions"
+      heroSubtitle="Build your premium online brand across global platforms."
       ctaLabel="Launch Now"
       heroImage="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2070&auto=format&fit=crop"
-      description="Dominate the world's largest marketplace. Stand out in the crowded Amazon marketplace with our data-driven marketing strategies. We help you increase visibility, click-through rates, and sales."
-      description2="From SEO optimization and PPC campaigns to A+ content creation, we provide a holistic approach to Amazon marketing that maximizes your ROI."
+      description="We provide end-to-end e-commerce solutions that transform your products into household names. From market research to logistics, we handle the complexity so you can focus on growth."
+      description2="Our data-driven approach ensures your store outranks competitors and converts visitors into loyal customers across all major online sales channels."
       highlights={[
         "Listing Optimization (SEO)",
         "PPC Ad Management",

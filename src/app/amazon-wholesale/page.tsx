@@ -1,20 +1,20 @@
 import ServicePageLayout from "@/components/ServicePageLayout";
 
 export const metadata = {
-  title: "Amazon Wholesale Solutions & Sourcing | Ideas Assemble",
-  description: "Build a profitable Amazon FBA wholesale business with Ideas Assemble. We provide expert product sourcing, brand approval, and streamlined logistics management to scale your wholesale empire.",
+  title: "Marketplace Scaling & Distribution | Ideas Assemble",
+  description: "Scale your distribution and marketplace presence with our professional wholesale growth strategies. High-volume solutions for modern brands.",
   keywords: ["Amazon Wholesale", "Product Sourcing", "Brand Approval", "Logistics Management", "Wholesale FBA", "Amazon Inventory", "Supply Chain", "Amazon Growth"],
 };
 
-export default function AmazonWholesalePage() {
+export default function MarketplaceScalingPage() {
   return (
     <ServicePageLayout
-      heroTitle="Amazon Wholesale"
-      heroSubtitle="Scale your business with high-volume distribution."
-      ctaLabel="Start Wholesale"
+      heroTitle="Marketplace Scaling"
+      heroSubtitle="Maximize your distribution and reach global audiences."
+      ctaLabel="Start Scaling"
       heroImage="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop"
-      description="Build a profitable wholesale empire. We simplify the complex process of product sourcing, brand approval, and logistics management."
-      description2="Our team connects you with top-tier suppliers and handles the operational heavy lifting, allowing you to focus on growth and ROI."
+      description="We bridge the gap between manufacturers and global marketplaces. Our scaling strategies focus on high-volume distribution, logistics efficiency, and inventory management."
+      description2="By leveraging advanced data analytics and industry connections, we help you scale your existing product lines into massive revenue streams."
       highlights={[
         "Brand Approvals",
         "Product Sourcing",

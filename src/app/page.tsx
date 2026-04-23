@@ -92,8 +92,7 @@ const services = [
   { icon: <Globe className="w-7 h-7" />, title: "Website Design", desc: "Responsive, high-performance websites that convert visitors into customers.", href: "/website-design" },
   { icon: <Film className="w-7 h-7" />, title: "Animation", desc: "Engaging 2D/3D explainer videos and motion graphics that captivate audiences.", href: "/animation" },
   { icon: <Palette className="w-7 h-7" />, title: "Brand Identity", desc: "Cohesive brand identities that build trust, loyalty, and recognition.", href: "/brand" },
-  { icon: <ShoppingCart className="w-7 h-7" />, title: "Amazon Private Label", desc: "Data-driven strategies to dominate the world's largest marketplace.", href: "/amazon-private-label" },
-  { icon: <Package className="w-7 h-7" />, title: "Amazon Wholesale", desc: "High-volume distribution with product sourcing and logistics management.", href: "/amazon-wholesale" },
+  { icon: <ShoppingCart className="w-7 h-7" />, title: "E-commerce Solutions", desc: "End-to-end marketplace management and scaling strategies for global online brands.", href: "/ecommerce" },
   { icon: <Zap className="w-7 h-7" />, title: "Chatbot Development", desc: "Automate your customer engagement with AI-powered conversation agents.", href: "/chatbot-development" },
 ];
 
@@ -139,15 +138,15 @@ const videoTestimonials = [
 const faqs = [
   {
     question: "What digital services does Ideas Assemble provide?",
-    answer: "We offer a comprehensive range of premium services including Logo Design, Website Design & Development, 3D Animation, Brand Identity creation, and specialized Amazon Marketplace growth strategies (Private Label & Wholesale)."
+    answer: "We offer a comprehensive range of premium services including Logo Design, Website Design & Development, 3D Animation, Brand Identity creation, and specialized E-commerce growth strategies."
   },
   {
     question: "How long does a typical web design project take?",
     answer: "Project timelines vary depending on complexity. A standard business website usually takes 2-4 weeks, while complex E-commerce platforms can take 6-10 weeks. We prioritize quality and precision in every build."
   },
   {
-    question: "Can you help scale my existing Amazon business?",
-    answer: "Yes! Our Amazon experts specialize in scaling both Private Label and Wholesale businesses. We handle everything from listing optimization and PPC management to A+ content and logistics."
+    question: "Can you help scale my existing online business?",
+    answer: "Yes! Our E-commerce experts specialize in scaling digital brands through multi-platform expansion, PPC management, supply chain optimization, and professional store design."
   },
   {
     question: "Do you offer custom design revisions?",

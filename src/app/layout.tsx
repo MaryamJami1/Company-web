@@ -19,8 +19,8 @@ export const metadata: Metadata = {
     default: "Ideas Assemble | Premium Digital Design & Branding Agency",
     template: "%s | Ideas Assemble"
   },
-  description: "Ideas Assemble is a premier digital design agency specializing in cinematic branding, custom web development, and Amazon marketplace growth strategies.",
-  keywords: ["Digital Design", "Branding Agency", "Website Design", "3D Animation", "Amazon Private Label", "Amazon Wholesale", "Ideas Assemble", "Logo Design", "Digital Identity"],
+  description: "Ideas Assemble is a premier digital design agency specializing in cinematic branding, custom web development, and e-commerce marketplace growth strategies.",
+  keywords: ["Digital Design", "Branding Agency", "Website Design", "3D Animation", "E-commerce Solutions", "Marketplace Scaling", "Ideas Assemble", "Logo Design", "Digital Identity", "Online Business Growth", "E-commerce Marketing"],
   authors: [{ name: "Ideas Assemble" }],
   creator: "Ideas Assemble",
   metadataBase: new URL("https://www.ideasassemble.com"),
@@ -93,7 +93,7 @@ const faqJsonLd = {
       "name": "What digital services does Ideas Assemble provide?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We offer a comprehensive range of premium services including Logo Design, Website Design & Development, 3D Animation, Brand Identity creation, and specialized Amazon Marketplace growth strategies."
+        "text": "We offer a comprehensive range of premium services including Logo Design, Website Design & Development, 3D Animation, Brand Identity creation, and specialized E-commerce growth strategies."
       }
     },
     {
@@ -106,10 +106,10 @@ const faqJsonLd = {
     },
     {
       "@type": "Question",
-      "name": "Can you help scale my existing Amazon business?",
+      "name": "Can you help scale my existing online business?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes! Our Amazon experts specialize in scaling both Private Label and Wholesale businesses with optimization, PPC management, and logistics support."
+        "text": "Yes! Our E-commerce experts specialize in scaling digital brands through multi-platform expansion, PPC management, and supply chain optimization."
       }
     }
   ]

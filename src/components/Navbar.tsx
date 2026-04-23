@@ -10,8 +10,7 @@ const services = [
   { label: "Website Design", href: "/website-design" },
   { label: "Animation", href: "/animation" },
   { label: "Brand", href: "/brand" },
-  { label: "Amazon Private Label", href: "/amazon-private-label" },
-  { label: "Amazon Wholesale", href: "/amazon-wholesale" },
+  { label: "E-commerce", href: "/ecommerce" },
   { label: "Chatbot Development", href: "/chatbot-development" },
 ];
 
