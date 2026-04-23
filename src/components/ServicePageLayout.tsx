@@ -67,7 +67,6 @@ export default function ServicePageLayout({
 
       {/* Hero */}
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-28 pb-20">
-        <ThreeDScene />
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/80 z-10" />
           <img
