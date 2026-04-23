@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     default: "Ideas Assemble | Premium Digital Design & Branding Agency",
     template: "%s | Ideas Assemble"
   },
-  description: "Ideas Assemble is a premium digital design agency specializing in cinematic branding, high-performance website design, 3D animation, and Amazon marketplace growth. Forging high-performance digital identities with precision.",
+  description: "Ideas Assemble is a premier digital design agency specializing in cinematic branding, custom web development, and Amazon marketplace growth strategies.",
   keywords: ["Digital Design", "Branding Agency", "Website Design", "3D Animation", "Amazon Private Label", "Amazon Wholesale", "Ideas Assemble", "Logo Design", "Digital Identity"],
   authors: [{ name: "Ideas Assemble" }],
   creator: "Ideas Assemble",
