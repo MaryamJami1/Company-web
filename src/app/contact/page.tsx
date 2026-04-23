@@ -174,8 +174,7 @@ export default function ContactPage() {
                             <option value="website">Website Design</option>
                             <option value="animation">Animation</option>
                             <option value="brand">Brand Identity</option>
-                            <option value="amazon-pl">Amazon Private Label</option>
-                            <option value="amazon-ws">Amazon Wholesale</option>
+                            <option value="ecommerce">E-commerce Solutions</option>
                           </select>
                         </div>
                       </div>

@@ -71,7 +71,7 @@ const jsonLd = {
   "name": "Ideas Assemble",
   "url": "https://www.ideasassemble.com",
   // "logo": "https://www.ideasassemble.com/logo.png",
-  "description": "Ideas Assemble is a premium digital design agency specializing in cinematic branding, high-performance website design, 3D animation, and Amazon marketplace growth.",
+  "description": "Ideas Assemble is a premium digital design agency specializing in cinematic branding, high-performance website design, 3D animation, and e-commerce marketplace growth.",
   // "sameAs": [
   //   "https://facebook.com/ideasassemble",
   //   "https://instagram.com/ideasassemble",

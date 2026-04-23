@@ -50,7 +50,7 @@ const whyUsCards = [
 const timeline = [
   { year: "2008", title: "Foundation", desc: "Ideas Assemble was founded with a vision to transform the digital design landscape and empower brands worldwide." },
   { year: "2012", title: "Global Expansion", desc: "Expanded our services internationally, partnering with multinational ventures across North America and Europe." },
-  { year: "2016", title: "Amazon Services Launch", desc: "Introduced our Amazon Private Label and Wholesale services, helping e-commerce brands dominate the marketplace." },
+  { year: "2016", title: "E-commerce Scaling Launch", desc: "Introduced our dedicated e-commerce scaling services, helping global brands dominate multi-platform marketplaces." },
   { year: "2020", title: "500+ Projects Milestone", desc: "Crossed the 500+ project milestone, serving startups to Fortune 500 companies with our in-house creative team." },
   { year: "2024", title: "Innovation Hub", desc: "Launched our Innovation Hub, combining AI-powered design tools with creative expertise for next-gen brand solutions." },
 ];

@@ -261,7 +261,7 @@ export default function BuildTodayPage() {
                             <div className="space-y-1">
                               <label className="text-[9px] font-bold uppercase tracking-widest text-gray-400 ml-2">Project Type</label>
                               <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
-                                {["Logo", "Web", "Animation", "Branding", "Amazon", "Other"].map((type) => (
+                                {["Logo", "Web", "Animation", "Branding", "E-commerce", "Other"].map((type) => (
                                   <label key={type} className="relative cursor-pointer">
                                     <input type="radio" name="project_type" value={type} className="peer sr-only" />
                                     <div className="p-2 text-center border border-gray-100 rounded-lg text-[9px] font-bold uppercase tracking-wider text-gray-500 peer-checked:bg-[var(--color-arc-blue)] peer-checked:text-white peer-checked:border-[var(--color-arc-blue)] transition-all">
