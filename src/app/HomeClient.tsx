@@ -203,6 +203,32 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
   const [chatbotOpen, setChatbotOpen] = useState(false);
+  const [chatbotDimensions, setChatbotDimensions] = useState({ width: 400, height: 600 });
+
+  useEffect(() => {
+    setMounted(true);
+    
+    const updateChatbotDimensions = () => {
+      const width = window.innerWidth;
+      if (width < 640) {
+        // Mobile: nearly full screen with some padding
+        setChatbotDimensions({ 
+          width: Math.min(width - 32, 360), 
+          height: Math.min(window.innerHeight - 120, 500) 
+        });
+      } else if (width < 1024) {
+        // Tablet: medium size
+        setChatbotDimensions({ width: 380, height: 550 });
+      } else {
+        // Desktop: full size
+        setChatbotDimensions({ width: 400, height: 600 });
+      }
+    };
+
+    updateChatbotDimensions();
+    window.addEventListener('resize', updateChatbotDimensions);
+    return () => window.removeEventListener('resize', updateChatbotDimensions);
+  }, []);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -791,7 +817,7 @@ export default function Home() {
       </section>
 
       {/* ═══════════ CHATBOT WIDGET ═══════════ */}
-      <div className="fixed bottom-6 right-6 z-50">
+      <div className="fixed bottom-6 right-6 z-50 sm:bottom-6 sm:right-6 md:bottom-8 md:right-8">
         <AnimatePresence>
           {chatbotOpen && (
             <motion.div
@@ -799,15 +825,17 @@ export default function Home() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.8, y: 20 }}
               transition={{ duration: 0.3 }}
-              className="mb-4 rounded-2xl overflow-hidden shadow-2xl bg-white border border-gray-100"
+              className="mb-4 rounded-2xl overflow-hidden shadow-2xl bg-white border border-gray-100 max-h-[90vh]"
             >
-              <iframe 
-                src='https://interfaces.zapier.com/embed/chatbot/cmoddu3qv00bzic0ouejq8n5l' 
-                height='600px' 
-                width='400px' 
-                allow='clipboard-write *' 
-                style={{ border: 'none' }}
-              />
+              {mounted && (
+                <iframe 
+                  src='https://interfaces.zapier.com/embed/chatbot/cmoddu3qv00bzic0ouejq8n5l' 
+                  height={`${chatbotDimensions.height}px`}
+                  width={`${chatbotDimensions.width}px`}
+                  allow='clipboard-write *' 
+                  style={{ border: 'none' }}
+                />
+              )}
             </motion.div>
           )}
         </AnimatePresence>
@@ -816,9 +844,9 @@ export default function Home() {
           onClick={() => setChatbotOpen(!chatbotOpen)}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className="w-16 h-16 rounded-full bg-[var(--color-arc-blue)] text-white shadow-lg hover:shadow-xl transition-shadow flex items-center justify-center"
+          className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[var(--color-arc-blue)] text-white shadow-lg hover:shadow-xl transition-shadow flex items-center justify-center flex-shrink-0"
         >
-          <MessageSquare className="w-6 h-6" />
+          <MessageSquare className="w-5 h-5 sm:w-6 sm:h-6" />
         </motion.button>
       </div>
 
