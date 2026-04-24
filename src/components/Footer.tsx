@@ -46,7 +46,7 @@ export default function Footer() {
                 { label: "Home", href: "/" },
                 { label: "About Us", href: "/about" },
                 { label: "Build Today", href: "/build" },
-                { label: "Portfolio", href: "/portfolio" },
+                { label: "Portfolio", href: "/#testimonials" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-xs text-gray-500 hover:text-[var(--color-arc-blue)] transition-colors uppercase tracking-widest font-bold">

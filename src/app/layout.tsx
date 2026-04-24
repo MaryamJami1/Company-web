@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.ideasassemble.com",
     title: "Ideas Assemble | Premium Digital Design & Branding Agency",
-    description: "Ideas Assemble is a premier digital design agency specializing in cinematic branding, custom web development, and Amazon marketplace growth strategies.",
+    description: "Ideas Assemble is a premier digital design agency specializing in cinematic branding, custom web development, and e-commerce marketplace growth strategies.",
     siteName: "Ideas Assemble",
     images: [
       {
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Ideas Assemble | Premium Digital Design & Branding Agency",
-    description: "Ideas Assemble is a premier digital design agency specializing in cinematic branding, custom web development, and Amazon marketplace growth strategies.",
+    description: "Ideas Assemble is a premier digital design agency specializing in cinematic branding, custom web development, and e-commerce marketplace growth strategies.",
     images: ["https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=1200&auto=format&fit=crop"],
   },
   alternates: {
@@ -139,6 +139,40 @@ const logoServiceJsonLd = {
   }
 };
 
+const webServiceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Website Design & Development",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Ideas Assemble"
+  },
+  "description": "High-performance, responsive website design and custom web development services. We build digital storefronts and corporate websites that convert.",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "499.00",
+    "availability": "https://schema.org/InStock"
+  }
+};
+
+const ecommerceServiceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "E-commerce Solutions",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Ideas Assemble"
+  },
+  "description": "Professional e-commerce marketplace management and scaling. From product launch to logistics optimization, we grow your online sales.",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "999.00",
+    "availability": "https://schema.org/InStock"
+  }
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -158,6 +192,14 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(logoServiceJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webServiceJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(ecommerceServiceJsonLd) }}
         />
       </head>
       <body

@@ -96,7 +96,7 @@ export default function Navbar() {
               </Link>
 
               <Link
-                href="/portfolio"
+                href="/#testimonials"
                 className="bg-white/10 hover:bg-white/20 text-white px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-colors border border-white/10"
               >
                 Portfolio
@@ -149,7 +149,7 @@ export default function Navbar() {
               <Link href="/about" onClick={() => setMobileOpen(false)} className="text-lg text-white hover:text-[var(--color-arc-blue)] uppercase tracking-wider py-3 border-b border-white/10">About</Link>
               <Link href="/contact" onClick={() => setMobileOpen(false)} className="text-lg text-white hover:text-[var(--color-arc-blue)] uppercase tracking-wider py-3 border-b border-white/10">Contact</Link>
 
-              <Link href="/portfolio" onClick={() => setMobileOpen(false)} className="mt-6 bg-white/10 text-white text-center px-6 py-4 rounded-full text-sm font-bold uppercase tracking-wider border border-white/10">
+              <Link href="/#testimonials" onClick={() => setMobileOpen(false)} className="mt-6 bg-white/10 text-white text-center px-6 py-4 rounded-full text-sm font-bold uppercase tracking-wider border border-white/10">
                 Portfolio
               </Link>
               

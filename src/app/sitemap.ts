@@ -13,7 +13,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/animation',
     '/brand',
     '/ecommerce',
-    '/portfolio',
     '/privacy-policy',
     '/terms-of-service',
     '/chatbot-development',
