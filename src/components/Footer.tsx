@@ -26,10 +26,10 @@ export default function Footer() {
               Forging high-performance digital identities with advanced brand design solutions. We transform complex visions into powerful, cinematic digital realities.
             </p>
             <div className="flex items-center gap-4">
-              <a href="https://wa.me/15125430367" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-green-500 hover:border-green-500/50 transition-all">
+              <a href="https://wa.me/15125430367" aria-label="Contact us on WhatsApp" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-green-500 hover:border-green-500/50 transition-all">
                 <MessageCircle className="w-5 h-5" />
               </a>
-              <a href="mailto:ideasassemble1@gmail.com" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-[var(--color-arc-blue)] hover:border-[var(--color-arc-blue)]/50 transition-all">
+              <a href="mailto:ideasassemble1@gmail.com" aria-label="Send us an Email" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-[var(--color-arc-blue)] hover:border-[var(--color-arc-blue)]/50 transition-all">
                 <Mail className="w-5 h-5" />
               </a>
             </div>
@@ -37,10 +37,10 @@ export default function Footer() {
 
           {/* Links Column */}
           <div className="md:col-span-3">
-            <h4 className="font-[var(--font-orbitron)] text-xs font-bold uppercase tracking-widest text-white mb-8 relative inline-block">
+            <h3 className="font-[var(--font-orbitron)] text-xs font-bold uppercase tracking-widest text-white mb-8 relative inline-block">
               Navigation
               <div className="absolute -bottom-2 left-0 w-8 h-0.5 bg-[var(--color-arc-blue)]" />
-            </h4>
+            </h3>
             <ul className="grid grid-cols-1 gap-4">
               {[
                 { label: "Home", href: "/" },
@@ -59,10 +59,10 @@ export default function Footer() {
 
           {/* Contact Column */}
           <div className="md:col-span-4">
-            <h4 className="font-[var(--font-orbitron)] text-xs font-bold uppercase tracking-widest text-white mb-8 relative inline-block">
+            <h3 className="font-[var(--font-orbitron)] text-xs font-bold uppercase tracking-widest text-white mb-8 relative inline-block">
               Connect
               <div className="absolute -bottom-2 left-0 w-8 h-0.5 bg-[var(--color-hot-red)]" />
-            </h4>
+            </h3>
             <ul className="space-y-4">
               <li className="flex items-center gap-4 group">
                 <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-[var(--color-arc-blue)]">

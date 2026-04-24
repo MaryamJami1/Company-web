@@ -590,9 +590,9 @@ export default function Home() {
 
                       {/* Client Info */}
                       <div className="p-8">
-                        <h4 className="font-[var(--font-orbitron)] text-sm font-bold uppercase tracking-wider text-[var(--color-arc-blue)] mb-2">
+                        <h3 className="font-[var(--font-orbitron)] text-sm font-bold uppercase tracking-wider text-[var(--color-arc-blue)] mb-2">
                           {v.title}
-                        </h4>
+                        </h3>
                         <div className="font-[var(--font-orbitron)] text-lg font-black text-black uppercase tracking-tight mb-1">
                           {v.client}
                         </div>
