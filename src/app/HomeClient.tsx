@@ -851,7 +851,7 @@ export default function Home() {
                 {/* Header */}
                 <div className="bg-[#111111] px-6 py-4 flex items-center justify-between flex-shrink-0 border-b border-white/5">
                   <div>
-                    <div className="font-[var(--font-orbitron)] text-base font-bold text-[var(--color-arc-blue)]">Chat with us</div>
+                    <div className="font-[var(--font-orbitron)] text-base font-bold text-[var(--color-hot-red)]">Chat with us</div>
                   </div>
                   <div className="flex items-center gap-2">
                     <button 
@@ -875,7 +875,7 @@ export default function Home() {
                 <div className="px-6 py-4 bg-[#0c0c0c] border-b border-white/5 flex-shrink-0">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0">
-                      <MessageSquare className="w-5 h-5 text-[var(--color-arc-blue)]" />
+                      <MessageSquare className="w-5 h-5 text-[var(--color-hot-red)]" />
                     </div>
                     <div>
                       <div className="font-[var(--font-orbitron)] text-sm font-bold text-white uppercase tracking-tighter">Live Chat Support</div>
@@ -891,7 +891,7 @@ export default function Home() {
                       <iframe 
                         src='https://interfaces.zapier.com/embed/chatbot/cmoddu3qv00bzic0ouejq8n5l' 
                         allow='clipboard-write *' 
-                        className="w-full h-full border-none invert brightness-110"
+                        className="w-full h-full border-none invert brightness-110 hue-rotate-[180deg]"
                       />
                     </div>
                   )}
@@ -906,7 +906,7 @@ export default function Home() {
           onClick={() => setChatbotOpen(!chatbotOpen)}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className="fixed bottom-6 right-6 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[var(--color-arc-blue)] text-black shadow-[0_0_20px_rgba(0,210,255,0.3)] hover:shadow-[0_0_30px_rgba(0,210,255,0.6)] transition-all flex items-center justify-center flex-shrink-0 font-bold"
+          className="fixed bottom-6 right-6 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[var(--color-hot-red)] text-white shadow-[0_0_20px_rgba(139,0,0,0.3)] hover:shadow-[0_0_30px_rgba(139,0,0,0.6)] transition-all flex items-center justify-center flex-shrink-0 font-bold"
         >
           <MessageSquare className="w-5 h-5 sm:w-6 sm:h-6" />
         </motion.button>
