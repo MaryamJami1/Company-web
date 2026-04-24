@@ -215,10 +215,10 @@ export default function Home() {
       const height = window.innerHeight;
       
       if (width < 640) {
-        // Mobile: full screen
+        // Mobile: compact floating window
         setChatbotDimensions({ 
-          width: '100%', 
-          height: '100%' 
+          width: 'calc(100vw - 32px)', 
+          height: 'min(600px, 80vh)' 
         });
       } else if (width < 1024) {
         // Tablet: medium size
@@ -846,52 +846,52 @@ export default function Home() {
                   maxWidth: '100vw',
                   maxHeight: '100vh'
                 }}
-                className="fixed inset-0 sm:inset-auto sm:bottom-6 sm:right-6 md:bottom-8 md:right-8 sm:rounded-2xl overflow-hidden shadow-2xl bg-white border-0 sm:border sm:border-gray-100 flex flex-col"
+                className="fixed bottom-24 right-4 sm:bottom-6 sm:right-6 md:bottom-8 md:right-8 rounded-2xl overflow-hidden shadow-2xl bg-[#0c0c0c] border border-white/10 flex flex-col"
               >
                 {/* Header */}
-                <div className="bg-amber-400 px-6 py-4 flex items-center justify-between flex-shrink-0">
+                <div className="bg-[#111111] px-6 py-4 flex items-center justify-between flex-shrink-0 border-b border-white/5">
                   <div>
-                    <div className="font-[var(--font-orbitron)] text-base font-bold text-black">Chat with us</div>
+                    <div className="font-[var(--font-orbitron)] text-base font-bold text-[var(--color-arc-blue)]">Chat with us</div>
                   </div>
                   <div className="flex items-center gap-2">
                     <button 
                       onClick={() => {/* minimize */}}
-                      className="p-1.5 hover:bg-amber-500 rounded transition-colors hidden sm:block"
+                      className="p-1.5 hover:bg-white/5 rounded transition-colors hidden sm:block text-gray-400"
                       title="Pop out"
                     >
-                      <ExternalLink className="w-4 h-4 text-black" />
+                      <ExternalLink className="w-4 h-4" />
                     </button>
                     <button 
                       onClick={() => setChatbotOpen(false)}
-                      className="p-1.5 hover:bg-amber-500 rounded transition-colors"
+                      className="p-1.5 hover:bg-white/5 rounded transition-colors text-gray-400"
                       title="Close"
                     >
-                      <Minus className="w-4 h-4 text-black" />
+                      <Minus className="w-4 h-4" />
                     </button>
                   </div>
                 </div>
 
                 {/* Subheader */}
-                <div className="px-6 py-4 bg-gray-50 border-b border-gray-200 flex-shrink-0">
+                <div className="px-6 py-4 bg-[#0c0c0c] border-b border-white/5 flex-shrink-0">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center flex-shrink-0">
-                      <MessageSquare className="w-5 h-5 text-gray-600" />
+                    <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0">
+                      <MessageSquare className="w-5 h-5 text-[var(--color-arc-blue)]" />
                     </div>
                     <div>
-                      <div className="font-[var(--font-orbitron)] text-sm font-bold text-black">Live Chat Support</div>
-                      <div className="font-[var(--font-montserrat)] text-xs text-gray-600">Ask us anything :)</div>
+                      <div className="font-[var(--font-orbitron)] text-sm font-bold text-white uppercase tracking-tighter">Live Chat Support</div>
+                      <div className="font-[var(--font-montserrat)] text-xs text-gray-400">Ask us anything :)</div>
                     </div>
                   </div>
                 </div>
 
                 {/* Chat Content - Flexible */}
-                <div className="flex-1 overflow-auto">
+                <div className="flex-1 overflow-auto bg-[#0c0c0c]">
                   {mounted && (
                     <div className="w-full h-full">
                       <iframe 
                         src='https://interfaces.zapier.com/embed/chatbot/cmoddu3qv00bzic0ouejq8n5l' 
                         allow='clipboard-write *' 
-                        className="w-full h-full border-none"
+                        className="w-full h-full border-none invert brightness-110"
                       />
                     </div>
                   )}
@@ -906,7 +906,7 @@ export default function Home() {
           onClick={() => setChatbotOpen(!chatbotOpen)}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className="fixed bottom-6 right-6 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-amber-400 text-black shadow-lg hover:shadow-xl transition-shadow flex items-center justify-center flex-shrink-0 font-bold hover:bg-amber-500"
+          className="fixed bottom-6 right-6 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[var(--color-arc-blue)] text-black shadow-[0_0_20px_rgba(0,210,255,0.3)] hover:shadow-[0_0_30px_rgba(0,210,255,0.6)] transition-all flex items-center justify-center flex-shrink-0 font-bold"
         >
           <MessageSquare className="w-5 h-5 sm:w-6 sm:h-6" />
         </motion.button>
