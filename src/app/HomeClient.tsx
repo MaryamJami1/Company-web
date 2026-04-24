@@ -211,10 +211,10 @@ export default function Home() {
     const updateChatbotDimensions = () => {
       const width = window.innerWidth;
       if (width < 640) {
-        // Mobile: nearly full screen with some padding
+        // Mobile: full width with padding
         setChatbotDimensions({ 
-          width: Math.min(width - 32, 360), 
-          height: Math.min(window.innerHeight - 120, 500) 
+          width: width - 16, 
+          height: window.innerHeight - 100
         });
       } else if (width < 1024) {
         // Tablet: medium size
@@ -817,34 +817,55 @@ export default function Home() {
       </section>
 
       {/* ═══════════ CHATBOT WIDGET ═══════════ */}
-      <div className="fixed bottom-6 right-6 z-50 sm:bottom-6 sm:right-6 md:bottom-8 md:right-8">
+      <div className="fixed z-50">
         <AnimatePresence>
           {chatbotOpen && (
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.8, y: 20 }}
-              transition={{ duration: 0.3 }}
-              className="mb-4 rounded-2xl overflow-hidden shadow-2xl bg-white border border-gray-100 max-h-[90vh]"
-            >
-              {mounted && (
-                <iframe 
-                  src='https://interfaces.zapier.com/embed/chatbot/cmoddu3qv00bzic0ouejq8n5l' 
-                  height={`${chatbotDimensions.height}px`}
-                  width={`${chatbotDimensions.width}px`}
-                  allow='clipboard-write *' 
-                  style={{ border: 'none' }}
-                />
-              )}
-            </motion.div>
+            <>
+              {/* Mobile Backdrop */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                onClick={() => setChatbotOpen(false)}
+                className="fixed inset-0 bg-black/40 sm:hidden"
+              />
+              
+              {/* Chatbot Container */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.8, y: 20 }}
+                transition={{ duration: 0.3 }}
+                className="fixed sm:bottom-6 sm:right-6 md:bottom-8 md:right-8 sm:rounded-2xl overflow-hidden shadow-2xl bg-white border border-gray-100 w-screen sm:w-auto h-screen sm:h-auto bottom-0 right-0 left-0 sm:left-auto"
+              >
+                {/* Close Button for Mobile */}
+                <button 
+                  onClick={() => setChatbotOpen(false)}
+                  className="absolute top-4 right-4 z-10 sm:hidden w-8 h-8 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center transition-colors"
+                >
+                  <span className="text-lg font-bold">×</span>
+                </button>
+
+                {mounted && (
+                  <iframe 
+                    src='https://interfaces.zapier.com/embed/chatbot/cmoddu3qv00bzic0ouejq8n5l' 
+                    height={`${chatbotDimensions.height}px`}
+                    width={`${chatbotDimensions.width}px`}
+                    allow='clipboard-write *' 
+                    style={{ border: 'none', display: 'block' }}
+                  />
+                )}
+              </motion.div>
+            </>
           )}
         </AnimatePresence>
         
+        {/* Chat Button */}
         <motion.button
           onClick={() => setChatbotOpen(!chatbotOpen)}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[var(--color-arc-blue)] text-white shadow-lg hover:shadow-xl transition-shadow flex items-center justify-center flex-shrink-0"
+          className="fixed bottom-6 right-6 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[var(--color-arc-blue)] text-white shadow-lg hover:shadow-xl transition-shadow flex items-center justify-center flex-shrink-0"
         >
           <MessageSquare className="w-5 h-5 sm:w-6 sm:h-6" />
         </motion.button>
