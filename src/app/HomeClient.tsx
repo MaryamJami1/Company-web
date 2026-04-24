@@ -205,7 +205,7 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
   const [chatbotOpen, setChatbotOpen] = useState(false);
-  const [chatbotDimensions, setChatbotDimensions] = useState({ width: 400, height: 600 });
+  const [chatbotDimensions, setChatbotDimensions] = useState<{ width: string | number, height: string | number }>({ width: 400, height: 600 });
 
   useEffect(() => {
     setMounted(true);
@@ -215,17 +215,17 @@ export default function Home() {
       const height = window.innerHeight;
       
       if (width < 640) {
-        // Mobile: full screen minus small padding
+        // Mobile: full screen
         setChatbotDimensions({ 
-          width: width, 
-          height: height
+          width: '100%', 
+          height: '100%' 
         });
       } else if (width < 1024) {
         // Tablet: medium size
         setChatbotDimensions({ width: 380, height: 550 });
       } else {
         // Desktop: full size
-        setChatbotDimensions({ width: 400, height: 600 });
+        setChatbotDimensions({ width: 400, height: 650 });
       }
     };
 
@@ -840,6 +840,12 @@ export default function Home() {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.8, y: 20 }}
                 transition={{ duration: 0.3 }}
+                style={{ 
+                  width: chatbotDimensions.width, 
+                  height: chatbotDimensions.height,
+                  maxWidth: '100vw',
+                  maxHeight: '100vh'
+                }}
                 className="fixed inset-0 sm:inset-auto sm:bottom-6 sm:right-6 md:bottom-8 md:right-8 sm:rounded-2xl overflow-hidden shadow-2xl bg-white border-0 sm:border sm:border-gray-100 flex flex-col"
               >
                 {/* Header */}
