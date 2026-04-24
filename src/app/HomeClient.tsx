@@ -202,6 +202,7 @@ export default function Home() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
+  const [chatbotOpen, setChatbotOpen] = useState(false);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -788,6 +789,38 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
+      {/* ═══════════ CHATBOT WIDGET ═══════════ */}
+      <div className="fixed bottom-6 right-6 z-50">
+        <AnimatePresence>
+          {chatbotOpen && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.8, y: 20 }}
+              transition={{ duration: 0.3 }}
+              className="mb-4 rounded-2xl overflow-hidden shadow-2xl bg-white border border-gray-100"
+            >
+              <iframe 
+                src='https://interfaces.zapier.com/embed/chatbot/cmoddu3qv00bzic0ouejq8n5l' 
+                height='600px' 
+                width='400px' 
+                allow='clipboard-write *' 
+                style={{ border: 'none' }}
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
+        
+        <motion.button
+          onClick={() => setChatbotOpen(!chatbotOpen)}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="w-16 h-16 rounded-full bg-[var(--color-arc-blue)] text-white shadow-lg hover:shadow-xl transition-shadow flex items-center justify-center"
+        >
+          <MessageSquare className="w-6 h-6" />
+        </motion.button>
+      </div>
 
       <Footer />
     </main>
