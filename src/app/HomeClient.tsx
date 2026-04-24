@@ -225,11 +225,7 @@ export default function Home() {
       );
   };
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
-  if (!mounted) return null;
 
   return (
     <main className="min-h-screen relative selection:bg-[var(--color-arc-blue)] selection:text-black">
