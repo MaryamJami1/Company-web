@@ -212,11 +212,13 @@ export default function Home() {
     
     const updateChatbotDimensions = () => {
       const width = window.innerWidth;
+      const height = window.innerHeight;
+      
       if (width < 640) {
-        // Mobile: full width with padding
+        // Mobile: full screen minus small padding
         setChatbotDimensions({ 
-          width: width - 16, 
-          height: window.innerHeight - 100
+          width: width, 
+          height: height
         });
       } else if (width < 1024) {
         // Tablet: medium size
@@ -838,24 +840,24 @@ export default function Home() {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.8, y: 20 }}
                 transition={{ duration: 0.3 }}
-                className="fixed sm:bottom-6 sm:right-6 md:bottom-8 md:right-8 overflow-hidden shadow-2xl bg-white border border-gray-100 w-screen sm:w-auto h-screen sm:h-auto bottom-0 right-0 left-0 sm:left-auto sm:rounded-2xl flex flex-col"
+                className="fixed inset-0 sm:inset-auto sm:bottom-6 sm:right-6 md:bottom-8 md:right-8 sm:rounded-2xl overflow-hidden shadow-2xl bg-white border-0 sm:border sm:border-gray-100 flex flex-col"
               >
                 {/* Header */}
-                <div className="bg-amber-400 px-6 py-5 flex items-center justify-between flex-shrink-0">
+                <div className="bg-amber-400 px-6 py-4 flex items-center justify-between flex-shrink-0">
                   <div>
                     <div className="font-[var(--font-orbitron)] text-base font-bold text-black">Chat with us</div>
                   </div>
                   <div className="flex items-center gap-2">
                     <button 
-                      onClick={() => setChatbotOpen(false)}
-                      className="p-1.5 hover:bg-amber-500 rounded transition-colors"
-                      title="Minimize"
+                      onClick={() => {/* minimize */}}
+                      className="p-1.5 hover:bg-amber-500 rounded transition-colors hidden sm:block"
+                      title="Pop out"
                     >
                       <ExternalLink className="w-4 h-4 text-black" />
                     </button>
                     <button 
                       onClick={() => setChatbotOpen(false)}
-                      className="p-1.5 hover:bg-amber-500 rounded transition-colors sm:hidden"
+                      className="p-1.5 hover:bg-amber-500 rounded transition-colors"
                       title="Close"
                     >
                       <Minus className="w-4 h-4 text-black" />
@@ -865,8 +867,8 @@ export default function Home() {
 
                 {/* Subheader */}
                 <div className="px-6 py-4 bg-gray-50 border-b border-gray-200 flex-shrink-0">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center flex-shrink-0">
                       <MessageSquare className="w-5 h-5 text-gray-600" />
                     </div>
                     <div>
@@ -877,15 +879,15 @@ export default function Home() {
                 </div>
 
                 {/* Chat Content - Flexible */}
-                <div className="flex-1 overflow-hidden">
+                <div className="flex-1 overflow-auto">
                   {mounted && (
-                    <iframe 
-                      src='https://interfaces.zapier.com/embed/chatbot/cmoddu3qv00bzic0ouejq8n5l' 
-                      height={`${chatbotDimensions.height - 140}px`}
-                      width={`${chatbotDimensions.width}px`}
-                      allow='clipboard-write *' 
-                      style={{ border: 'none', display: 'block', width: '100%', height: '100%' }}
-                    />
+                    <div className="w-full h-full">
+                      <iframe 
+                        src='https://interfaces.zapier.com/embed/chatbot/cmoddu3qv00bzic0ouejq8n5l' 
+                        allow='clipboard-write *' 
+                        className="w-full h-full border-none"
+                      />
+                    </div>
                   )}
                 </div>
               </motion.div>
@@ -898,7 +900,7 @@ export default function Home() {
           onClick={() => setChatbotOpen(!chatbotOpen)}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className="fixed bottom-6 right-6 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-amber-400 text-black shadow-lg hover:shadow-xl transition-shadow flex items-center justify-center flex-shrink-0 font-bold"
+          className="fixed bottom-6 right-6 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-amber-400 text-black shadow-lg hover:shadow-xl transition-shadow flex items-center justify-center flex-shrink-0 font-bold hover:bg-amber-500"
         >
           <MessageSquare className="w-5 h-5 sm:w-6 sm:h-6" />
         </motion.button>
