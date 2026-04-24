@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -69,10 +70,12 @@ export default function ServicePageLayout({
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-28 pb-20">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/80 z-10" />
-          <img
+          <Image
             src={heroImage}
             alt={heroTitle}
-            className="w-full h-full object-cover object-center opacity-40 mix-blend-luminosity"
+            fill
+            priority
+            className="object-cover object-center opacity-40 mix-blend-luminosity"
           />
         </div>
         <div className="relative z-10 container mx-auto px-6 text-center">

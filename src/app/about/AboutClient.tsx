@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MagneticButton from "@/components/MagneticButton";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Fingerprint,
   Clock,
@@ -73,10 +74,12 @@ export default function AboutPage() {
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-28 pb-16">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/80 z-10" />
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
             alt="About Us"
-            className="w-full h-full object-cover object-center opacity-40 mix-blend-luminosity"
+            fill
+            priority
+            className="object-cover object-center opacity-40 mix-blend-luminosity"
           />
         </div>
         <div className="relative z-10 container mx-auto px-6 text-center">

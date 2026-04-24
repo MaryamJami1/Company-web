@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MagneticButton from "@/components/MagneticButton";
 import emailjs from "@emailjs/browser";
+import Image from "next/image";
 import {
   Send,
   User,
@@ -78,10 +79,12 @@ export default function ContactPage() {
       <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden pt-28 pb-16">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/85 z-10" />
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?q=80&w=2074&auto=format&fit=crop"
             alt="Contact Us"
-            className="w-full h-full object-cover object-center opacity-30 mix-blend-luminosity"
+            fill
+            priority
+            className="object-cover object-center opacity-30 mix-blend-luminosity"
           />
         </div>
         <div className="relative z-10 container mx-auto px-6 text-center">

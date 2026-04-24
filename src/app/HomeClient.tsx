@@ -4,6 +4,7 @@ import { useEffect, useState, useRef, FormEvent } from "react";
 import { motion, useScroll, useTransform, animate, AnimatePresence } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import Link from "next/link";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MagneticButton from "@/components/MagneticButton";
@@ -235,10 +236,12 @@ export default function Home() {
       <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
         <motion.div style={{ y, opacity: opacityHero }} className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/70 z-10" />
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2000&auto=format&fit=crop"
             alt="Digital Branding"
-            className="w-full h-full object-cover object-center opacity-40"
+            fill
+            priority
+            className="object-cover object-center opacity-40"
           />
         </motion.div>
         <div className="relative z-10 container mx-auto px-6 flex flex-col items-center text-center mt-20">
@@ -297,10 +300,11 @@ export default function Home() {
                 <ThreeDCard>
                   <div className="neon-border rounded-2xl overflow-hidden aspect-video">
                     <div className="neon-content w-full h-full">
-                      <img
+                      <Image
                         src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
                         alt="Our Team"
-                        className="w-full h-full object-cover opacity-70"
+                        fill
+                        className="object-cover opacity-70"
                       />
                     </div>
                   </div>
@@ -496,9 +500,11 @@ export default function Home() {
                   transition={{ duration: 1, ease: "easeOut" }}
                   className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-2xl border border-gray-100 bg-black"
                 >
-                  <img 
+                  <Image 
                     src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=2071&auto=format&fit=crop" 
                     alt="Professional Logo Design Mockup - Premium Brand Identity by Ideas Assemble" 
+                    width={2071}
+                    height={1381}
                     className="w-full h-auto"
                   />
                 </motion.div>

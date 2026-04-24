@@ -8,6 +8,7 @@ import MagneticButton from "@/components/MagneticButton";
 import ThreeDScene from "@/components/ThreeDScene";
 import PerspectiveSection from "@/components/PerspectiveSection";
 import emailjs from "@emailjs/browser";
+import Image from "next/image";
 import {
   Send,
   User,
@@ -106,10 +107,12 @@ export default function BuildTodayPage() {
         <ThreeDScene />
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-black/95 via-black/80 to-white z-10" />
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop"
             alt="Build Together"
-            className="w-full h-full object-cover opacity-30 mix-blend-luminosity"
+            fill
+            priority
+            className="object-cover opacity-30 mix-blend-luminosity"
           />
         </div>
         <div className="relative z-10 container mx-auto px-6 text-center">
