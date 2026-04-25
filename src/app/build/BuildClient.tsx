@@ -150,10 +150,10 @@ export default function BuildTodayPage() {
       {/* Main Content Section */}
       <section className="relative z-20 -mt-10 md:-mt-20 pb-16 md:pb-24">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid lg:grid-cols-12 gap-8 md:gap-12 items-start">
+          <div className="flex flex-col lg:grid lg:grid-cols-12 gap-8 md:gap-12 items-center lg:items-start justify-center">
 
             {/* Left Column: Direct Contact & Benefits */}
-            <div className="lg:col-span-5 space-y-6 md:space-y-8 max-w-lg mx-auto lg:max-w-none w-full">
+            <div className="lg:col-span-5 space-y-6 md:space-y-8 max-w-md w-full mx-auto lg:max-w-none">
               <PerspectiveSection>
                 <div className="glass-pill p-6 md:p-10 rounded-[1.5rem] md:rounded-[2.5rem] border border-gray-100 shadow-xl space-y-8 md:space-y-10 bg-white">
                   <div className="text-center lg:text-left">
@@ -221,7 +221,7 @@ export default function BuildTodayPage() {
             </div>
 
             {/* Right Column: Dynamic Form */}
-            <div className="lg:col-span-7 max-w-lg mx-auto lg:max-w-none w-full">
+            <div className="lg:col-span-7 max-w-md w-full mx-auto lg:max-w-none">
               <PerspectiveSection>
                 <div className="neon-border rounded-[1.5rem] md:rounded-[2.5rem] shadow-xl overflow-hidden">
                   <div className="neon-content p-6 md:p-10 bg-white">
@@ -245,7 +245,7 @@ export default function BuildTodayPage() {
                           <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6 text-left">
                             <div className="grid md:grid-cols-2 gap-4 md:gap-6">
                               <div className="space-y-1">
-                                <label className="text-[9px] font-bold uppercase tracking-widest text-gray-400 ml-2">Your Name</label>
+                                <label className="text-[9px] font-bold uppercase tracking-widest text-gray-400 block ml-1">Your Name</label>
                                 <div className="relative">
                                   <User className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-300" />
                                   <input
@@ -253,12 +253,12 @@ export default function BuildTodayPage() {
                                     name="from_name"
                                     required
                                     placeholder="Enter your name"
-                                    className="w-full bg-gray-50 border border-gray-100 rounded-xl px-12 py-3 text-sm focus:outline-none focus:border-[var(--color-arc-blue)] transition-all"
+                                    className="w-full bg-gray-50 border border-gray-100 rounded-xl px-12 py-3.5 md:py-3 text-sm focus:outline-none focus:border-[var(--color-arc-blue)] transition-all"
                                   />
                                 </div>
                               </div>
                               <div className="space-y-1">
-                                <label className="text-[9px] font-bold uppercase tracking-widest text-gray-400 ml-2">Email Address</label>
+                                <label className="text-[9px] font-bold uppercase tracking-widest text-gray-400 block ml-1">Email Address</label>
                                 <div className="relative">
                                   <MailIcon className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-300" />
                                   <input
@@ -266,14 +266,14 @@ export default function BuildTodayPage() {
                                     name="reply_to"
                                     required
                                     placeholder="Enter your email"
-                                    className="w-full bg-gray-50 border border-gray-100 rounded-xl px-12 py-3 text-sm focus:outline-none focus:border-[var(--color-arc-blue)] transition-all"
+                                    className="w-full bg-gray-50 border border-gray-100 rounded-xl px-12 py-3.5 md:py-3 text-sm focus:outline-none focus:border-[var(--color-arc-blue)] transition-all"
                                   />
                                 </div>
                               </div>
                             </div>
 
                             <div className="space-y-1">
-                              <label className="text-[9px] font-bold uppercase tracking-widest text-gray-400 ml-2">Phone Number</label>
+                              <label className="text-[9px] font-bold uppercase tracking-widest text-gray-400 block ml-1">Phone Number</label>
                               <div className="phone-light">
                                 <PhoneInput
                                   international
@@ -288,7 +288,7 @@ export default function BuildTodayPage() {
                             <input type="hidden" name="phone_number" value={phone} />
 
                             <div className="space-y-1">
-                              <label className="text-[9px] font-bold uppercase tracking-widest text-gray-400 ml-2">Project Type</label>
+                              <label className="text-[9px] font-bold uppercase tracking-widest text-gray-400 block ml-1">Project Type</label>
                               <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
                                 {["Logo", "Web", "Animation", "Branding", "E-commerce", "Other"].map((type) => (
                                   <label key={type} className="relative cursor-pointer">
@@ -302,7 +302,7 @@ export default function BuildTodayPage() {
                             </div>
 
                             <div className="space-y-1">
-                              <label className="text-[9px] font-bold uppercase tracking-widest text-gray-400 ml-2">Description</label>
+                              <label className="text-[9px] font-bold uppercase tracking-widest text-gray-400 block ml-1">Description</label>
                               <div className="relative">
                                 <MessageSquare className="absolute left-4 top-4 w-4 h-4 text-gray-300" />
                                 <textarea
