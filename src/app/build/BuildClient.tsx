@@ -9,6 +9,8 @@ import ThreeDScene from "@/components/ThreeDScene";
 import PerspectiveSection from "@/components/PerspectiveSection";
 import emailjs from "@emailjs/browser";
 import Image from "next/image";
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
 import {
   Send,
   User,
@@ -46,6 +48,7 @@ const staggerContainer = {
 export default function BuildTodayPage() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [phone, setPhone] = useState("");
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -56,8 +59,14 @@ export default function BuildTodayPage() {
     const TEMPLATE_ID = "template_0jn4ccf";
     const PUBLIC_KEY = "X_E0vJghlawo1saFC";
 
+    const form = e.currentTarget;
+    const hiddenPhone = form.elements.namedItem("phone_number") as HTMLInputElement;
+    if (hiddenPhone) {
+      hiddenPhone.value = phone;
+    }
+
     emailjs
-      .sendForm(SERVICE_ID, TEMPLATE_ID, e.currentTarget, PUBLIC_KEY)
+      .sendForm(SERVICE_ID, TEMPLATE_ID, form, PUBLIC_KEY)
       .then(
         () => {
           setSubmitted(true);
@@ -260,6 +269,21 @@ export default function BuildTodayPage() {
                                 </div>
                               </div>
                             </div>
+
+                            <div className="space-y-1">
+                              <label className="text-[9px] font-bold uppercase tracking-widest text-gray-400 ml-2">Phone Number</label>
+                              <div className="phone-light">
+                                <PhoneInput
+                                  international
+                                  defaultCountry="US"
+                                  placeholder="Enter your phone number"
+                                  value={phone}
+                                  onChange={(value) => setPhone(value || "")}
+                                  className="w-full font-[var(--font-montserrat)]"
+                                />
+                              </div>
+                            </div>
+                            <input type="hidden" name="phone_number" value={phone} />
 
                             <div className="space-y-1">
                               <label className="text-[9px] font-bold uppercase tracking-widest text-gray-400 ml-2">Project Type</label>

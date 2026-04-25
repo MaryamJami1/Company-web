@@ -37,6 +37,7 @@ import {
 import ThreeDScene from "@/components/ThreeDScene";
 import ThreeDCard from "@/components/ThreeDCard";
 import PerspectiveSection from "@/components/PerspectiveSection";
+import QuickLogoForm from "@/components/QuickLogoForm";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -280,16 +281,16 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: [0.17, 0.55, 0.55, 1] as const }}
-            style={{ y: yHeading, opacity: opacityHero }}
+            className="w-full flex flex-col items-center"
           >
+            <QuickLogoForm />
             <h1 
-              className="font-[var(--font-orbitron)] text-4xl md:text-6xl lg:text-8xl font-black mb-6 uppercase tracking-tighter glitch"
+              className="font-[var(--font-orbitron)] text-4xl md:text-6xl lg:text-8xl font-black mb-6 uppercase tracking-tighter glitch mt-8"
               data-text="IDEAS ASSEMBLE"
             >
               IDEAS <span className="text-[var(--color-arc-blue)]">ASSEMBLE</span>
             </h1>
             <motion.p 
-              style={{ y: yText }}
               className="font-[var(--font-montserrat)] text-base md:text-xl text-gray-300 max-w-2xl mx-auto mb-10"
             >
               Premium Logo Design & Cinematic Digital Brand Identity Forging.
