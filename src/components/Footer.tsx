@@ -23,7 +23,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="font-[var(--font-montserrat)] text-sm text-gray-400 leading-relaxed max-w-sm">
-              Forging high-performance digital identities with advanced brand design solutions. We transform complex visions into powerful, cinematic digital realities.
+              Forging high performance digital identities with advanced brand design solutions. We transform complex visions into powerful, cinematic digital realities.
             </p>
             <div className="flex items-center gap-4">
               <a href="https://wa.me/15125430367" aria-label="Contact us on WhatsApp" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-green-500 hover:border-green-500/50 transition-all">

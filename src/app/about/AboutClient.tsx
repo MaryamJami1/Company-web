@@ -53,7 +53,7 @@ const timeline = [
   { year: "2012", title: "Global Expansion", desc: "Expanded our services internationally, partnering with multinational ventures across North America and Europe." },
   { year: "2016", title: "E-commerce Scaling Launch", desc: "Introduced our dedicated e-commerce scaling services, helping global brands dominate multi-platform marketplaces." },
   { year: "2020", title: "500+ Projects Milestone", desc: "Crossed the 500+ project milestone, serving startups to Fortune 500 companies with our in-house creative team." },
-  { year: "2024", title: "Innovation Hub", desc: "Launched our Innovation Hub, combining AI-powered design tools with creative expertise for next-gen brand solutions." },
+  { year: "2024", title: "Innovation Hub", desc: "Launched our Innovation Hub, combining AI-powered design tools with creative expertise for next gen brand solutions." },
 ];
 
 // const team = [
@@ -123,7 +123,7 @@ export default function AboutPage() {
                 <p className="font-[var(--font-montserrat)] text-gray-600 leading-relaxed mb-8">
                   Tell us your need and book a free design consultation now to get personalized services for your logo in real time.
                 </p>
-                <MagneticButton 
+                <MagneticButton
                   href="/build"
                   className="bg-[var(--color-hot-red)] hover:bg-red-900 text-white px-6 py-3 rounded-full font-bold uppercase tracking-wider text-xs flex items-center gap-2"
                 >
@@ -294,7 +294,7 @@ export default function AboutPage() {
             <p className="font-[var(--font-montserrat)] text-gray-600 mb-8 max-w-lg mx-auto">
               Book a free consultation and let our expert team craft the perfect digital solution for your brand.
             </p>
-            <MagneticButton 
+            <MagneticButton
               href="/build"
               className="bg-[var(--color-hot-red)] hover:bg-red-900 text-white px-10 py-4 rounded-full font-[var(--font-orbitron)] font-bold uppercase tracking-wider text-sm"
             >
