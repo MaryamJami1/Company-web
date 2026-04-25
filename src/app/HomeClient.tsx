@@ -265,7 +265,7 @@ export default function Home() {
       <Navbar />
 
       {/* ═══════════ HERO ═══════════ */}
-      <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section id="home" className="relative min-h-screen md:h-screen flex items-center justify-center overflow-hidden pt-32 pb-16 md:pt-0 md:pb-0">
         <motion.div style={{ y, opacity: opacityHero }} className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/70 z-10" />
           <Image
@@ -276,7 +276,7 @@ export default function Home() {
             className="object-cover object-center opacity-40"
           />
         </motion.div>
-        <div className="relative z-10 container mx-auto px-6 flex flex-col items-center text-center mt-20">
+        <div className="relative z-10 container mx-auto px-4 md:px-6 flex flex-col items-center text-center mt-4 md:mt-20">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}

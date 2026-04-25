@@ -153,10 +153,10 @@ export default function BuildTodayPage() {
           <div className="grid lg:grid-cols-12 gap-8 md:gap-12 items-start">
 
             {/* Left Column: Direct Contact & Benefits */}
-            <div className="lg:col-span-5 space-y-6 md:space-y-8">
+            <div className="lg:col-span-5 space-y-6 md:space-y-8 max-w-lg mx-auto lg:max-w-none w-full">
               <PerspectiveSection>
                 <div className="glass-pill p-6 md:p-10 rounded-[1.5rem] md:rounded-[2.5rem] border border-gray-100 shadow-xl space-y-8 md:space-y-10 bg-white">
-                  <div>
+                  <div className="text-center lg:text-left">
                     <h2 className="font-[var(--font-orbitron)] text-2xl md:text-3xl font-bold uppercase tracking-wide text-black mb-3 md:mb-4">
                       Direct <span className="text-[var(--color-arc-blue)]">Connect</span>
                     </h2>
@@ -221,7 +221,7 @@ export default function BuildTodayPage() {
             </div>
 
             {/* Right Column: Dynamic Form */}
-            <div className="lg:col-span-7">
+            <div className="lg:col-span-7 max-w-lg mx-auto lg:max-w-none w-full">
               <PerspectiveSection>
                 <div className="neon-border rounded-[1.5rem] md:rounded-[2.5rem] shadow-xl overflow-hidden">
                   <div className="neon-content p-6 md:p-10 bg-white">
@@ -233,14 +233,16 @@ export default function BuildTodayPage() {
                           animate={{ opacity: 1, x: 0 }}
                           exit={{ opacity: 0, x: -20 }}
                         >
-                          <h2 className="font-[var(--font-orbitron)] text-2xl md:text-3xl font-bold uppercase tracking-wide text-black mb-2">
-                            Project <span className="text-[var(--color-hot-red)]">Brief</span>
-                          </h2>
-                          <p className="font-[var(--font-montserrat)] text-[10px] md:text-sm text-gray-600 mb-8 md:mb-10 uppercase tracking-widest">
-                            Initialize your vision into reality.
-                          </p>
+                          <div className="text-center lg:text-left">
+                            <h2 className="font-[var(--font-orbitron)] text-2xl md:text-3xl font-bold uppercase tracking-wide text-black mb-2">
+                              Project <span className="text-[var(--color-hot-red)]">Brief</span>
+                            </h2>
+                            <p className="font-[var(--font-montserrat)] text-[10px] md:text-sm text-gray-600 mb-8 md:mb-10 uppercase tracking-widest">
+                              Initialize your vision into reality.
+                            </p>
+                          </div>
 
-                          <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
+                          <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6 text-left">
                             <div className="grid md:grid-cols-2 gap-4 md:gap-6">
                               <div className="space-y-1">
                                 <label className="text-[9px] font-bold uppercase tracking-widest text-gray-400 ml-2">Your Name</label>
