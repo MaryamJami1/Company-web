@@ -1,9 +1,15 @@
 import ServicePageLayout from "@/components/ServicePageLayout";
 
 export const metadata = {
-  title: "Professional Logo Design Services | Custom Brand Identity Design",
-  description: "Best professional logo design services with a 100% Money-Back Guarantee. Get a unique, custom, and timeless minimalist logo for your business. Unlimited revisions and fast turnaround.",
-  keywords: ["Best Logo Design", "Professional Logo Designer", "Custom Logo Design Services", "Minimalist Logo Design", "Premium Brand Identity", "Business Branding Solutions", "Corporate Logo Design", "Vector Logo Design"],
+  title: "Best Logo Designer in USA | Professional Custom Logo Design Services",
+  description: "Looking for the best logo designer in USA? Ideas Assemble offers professional custom logo design with 100% Money-Back Guarantee, unlimited revisions, and fast delivery. Trusted by 500+ American brands.",
+  keywords: ["Logo Designer in USA", "Best Logo Designer USA", "Professional Logo Designer USA", "Custom Logo Design USA", "Logo Design Company America", "Affordable Logo Designer USA", "Top Logo Designer in United States", "Business Logo Design USA", "Minimalist Logo Designer USA", "Corporate Logo Design USA", "Brand Identity Designer USA"],
+  openGraph: {
+    title: "Best Logo Designer in USA | Ideas Assemble",
+    description: "Professional custom logo design services in USA. 100% Money-Back Guarantee, unlimited revisions, and fast turnaround. Trusted by 500+ brands across America.",
+    type: "website",
+    url: "https://www.ideasassemble.com/logo-design",
+  },
 };
 
 export default function LogoDesignPage() {

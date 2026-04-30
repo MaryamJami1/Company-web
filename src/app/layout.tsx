@@ -16,11 +16,11 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: {
-    default: "Ideas Assemble | Premium Digital Design & Branding Agency",
+    default: "Ideas Assemble | #1 Logo Designer in USA | Premium Design & Branding Agency",
     template: "%s | Ideas Assemble"
   },
-  description: "Ideas Assemble is a premier digital design agency specializing in cinematic branding, custom web development, and e-commerce marketplace growth strategies.",
-  keywords: ["Digital Design", "Branding Agency", "Website Design", "3D Animation", "E-commerce Solutions", "Marketplace Scaling", "Ideas Assemble", "Logo Design", "Digital Identity", "Online Business Growth", "E-commerce Marketing"],
+  description: "Ideas Assemble is the leading logo designer in USA, specializing in professional custom logo design, cinematic branding, web development, and e-commerce growth. Trusted by 500+ brands across America.",
+  keywords: ["Logo Designer in USA", "Best Logo Designer USA", "Professional Logo Designer", "Logo Design Company USA", "Custom Logo Design USA", "American Logo Designer", "Digital Design", "Branding Agency", "Website Design", "3D Animation", "E-commerce Solutions", "Ideas Assemble", "Logo Design", "Brand Identity USA"],
   authors: [{ name: "Ideas Assemble" }],
   creator: "Ideas Assemble",
   metadataBase: new URL("https://www.ideasassemble.com"),
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://www.ideasassemble.com",
-    title: "Ideas Assemble | Premium Digital Design & Branding Agency",
-    description: "Ideas Assemble is a premier digital design agency specializing in cinematic branding, custom web development, and e-commerce marketplace growth strategies.",
+    title: "Ideas Assemble | #1 Logo Designer in USA | Premium Design & Branding Agency",
+    description: "Ideas Assemble is the leading logo designer in USA, specializing in professional custom logo design, cinematic branding, web development, and e-commerce growth. Trusted by 500+ brands across America.",
     siteName: "Ideas Assemble",
     images: [
       {
@@ -42,8 +42,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ideas Assemble | Premium Digital Design & Branding Agency",
-    description: "Ideas Assemble is a premier digital design agency specializing in cinematic branding, custom web development, and e-commerce marketplace growth strategies.",
+    title: "Ideas Assemble | #1 Logo Designer in USA | Premium Design & Branding Agency",
+    description: "Ideas Assemble is the leading logo designer in USA. Professional custom logo design, cinematic branding, web development, and e-commerce growth strategies.",
     images: ["https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=1200&auto=format&fit=crop"],
   },
   alternates: {
@@ -71,7 +71,7 @@ const jsonLd = {
   "name": "Ideas Assemble",
   "url": "https://www.ideasassemble.com",
   // "logo": "https://www.ideasassemble.com/logo.png",
-  "description": "Ideas Assemble is a premium digital design agency specializing in cinematic branding, high-performance website design, 3D animation, and e-commerce marketplace growth.",
+  "description": "Ideas Assemble is the #1 logo designer in USA, offering premium digital design, cinematic branding, high-performance website design, 3D animation, and e-commerce marketplace growth.",
   // "sameAs": [
   //   "https://facebook.com/ideasassemble",
   //   "https://instagram.com/ideasassemble",
@@ -80,7 +80,9 @@ const jsonLd = {
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "+1-682-437-5323",
-    "contactType": "customer service"
+    "contactType": "customer service",
+    "areaServed": "US",
+    "availableLanguage": "English"
   }
 };
 
@@ -118,7 +120,7 @@ const faqJsonLd = {
 const logoServiceJsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "serviceType": "Logo Design & Brand Identity",
+  "serviceType": "Logo Designer in USA - Custom Logo Design & Brand Identity",
   "provider": {
     "@type": "LocalBusiness",
     "name": "Ideas Assemble",
@@ -126,11 +128,16 @@ const logoServiceJsonLd = {
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Ideas Assemble HQ",
-      "addressLocality": "Digital",
-      "addressRegion": "Global"
+      "addressLocality": "Dallas",
+      "addressRegion": "TX",
+      "addressCountry": "US"
     }
   },
-  "description": "Premium minimalist logo design and cinematic brand identity services. We create timeless visual identities that help brands dominate their industries.",
+  "areaServed": {
+    "@type": "Country",
+    "name": "United States"
+  },
+  "description": "Top-rated professional logo designer in USA. Custom logo design, minimalist branding, and complete brand identity services. Trusted by 500+ American businesses with 100% money-back guarantee.",
   "offers": {
     "@type": "Offer",
     "priceCurrency": "USD",
