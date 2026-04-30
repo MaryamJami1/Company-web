@@ -116,21 +116,21 @@ const whyUsCards = [
  * 3. Any resolution/size will be automatically cropped to fit the cinematic 16:9 frame.
  */
 const videoTestimonials = [
-  { 
+  {
     id: 1,
     videoPath: "/testimonials/test1.mp4",
     title: "Project Transformation",
     client: "Sarah Johnson",
     role: "CEO, TechStart Inc."
   },
-  { 
+  {
     id: 2,
     videoPath: "/testimonials/test2.mp4",
     title: "Brand Identity Success",
     client: "Michael Chen",
     role: "Founder, DesignHub"
   },
-  { 
+  {
     id: 3,
     videoPath: "/testimonials/test3.mp4",
     title: "Digital Scaling",
@@ -210,16 +210,16 @@ export default function Home() {
 
   useEffect(() => {
     setMounted(true);
-    
+
     const updateChatbotDimensions = () => {
       const width = window.innerWidth;
       const height = window.innerHeight;
-      
+
       if (width < 640) {
         // Mobile: compact floating window
-        setChatbotDimensions({ 
-          width: 'calc(100vw - 32px)', 
-          height: 'min(600px, 80vh)' 
+        setChatbotDimensions({
+          width: 'calc(100vw - 32px)',
+          height: 'min(600px, 80vh)'
         });
       } else if (width < 1024) {
         // Tablet: medium size
@@ -284,18 +284,18 @@ export default function Home() {
             className="w-full flex flex-col items-center"
           >
             <QuickLogoForm />
-            <h1 
+            <h1
               className="font-[var(--font-orbitron)] text-4xl md:text-6xl lg:text-8xl font-black mb-6 uppercase tracking-tighter glitch mt-8"
               data-text="IDEAS ASSEMBLE"
             >
               IDEAS <span className="text-[var(--color-arc-blue)]">ASSEMBLE</span>
             </h1>
-            <motion.p 
+            <motion.p
               className="font-[var(--font-montserrat)] text-base md:text-xl text-gray-300 max-w-2xl mx-auto mb-10"
             >
               Premium Logo Design & Cinematic Digital Brand Identity Forging.
             </motion.p>
-            <MagneticButton 
+            <MagneticButton
               href="/build"
               className="bg-[var(--color-hot-red)] hover:bg-red-900 text-white px-8 py-4 rounded-full font-[var(--font-orbitron)] font-bold uppercase tracking-wider text-sm flex items-center gap-3"
             >
@@ -493,7 +493,7 @@ export default function Home() {
                   </h2>
                   <div className="w-24 h-1 bg-black mb-8" />
                 </motion.div>
-                
+
                 <motion.p variants={fadeInUp} className="font-[var(--font-montserrat)] text-gray-700 text-lg leading-relaxed mb-8 max-w-xl">
                   We are a specialized **Logo Design Agency** creating high-impact visual identities. Our minimalist approach distills your entire business philosophy into a single, professional mark that ranks your brand as an industry leader.
                 </motion.p>
@@ -515,7 +515,7 @@ export default function Home() {
                 </motion.div>
 
                 <motion.div variants={fadeInUp}>
-                  <MagneticButton 
+                  <MagneticButton
                     href="/logo-design"
                     className="bg-black hover:bg-[var(--color-arc-blue)] text-white px-10 py-4 rounded-full font-[var(--font-orbitron)] font-bold uppercase tracking-wider text-xs transition-all flex items-center gap-3 w-fit"
                   >
@@ -532,9 +532,9 @@ export default function Home() {
                   transition={{ duration: 1, ease: "easeOut" }}
                   className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-2xl border border-gray-100 bg-black"
                 >
-                  <Image 
-                    src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=2071&auto=format&fit=crop" 
-                    alt="Professional Logo Design Mockup - Premium Brand Identity by Ideas Assemble" 
+                  <Image
+                    src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=2071&auto=format&fit=crop"
+                    alt="Professional Logo Design Mockup - Premium Brand Identity by Ideas Assemble"
                     width={2071}
                     height={1381}
                     className="w-full h-auto"
@@ -641,13 +641,13 @@ export default function Home() {
             </motion.div>
 
             {/* See More Button */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="mt-16 text-center"
             >
-              <MagneticButton 
+              <MagneticButton
                 href="/portfolio"
                 className="bg-white border-2 border-gray-100 hover:border-[var(--color-arc-blue)] text-black px-10 py-4 rounded-full font-[var(--font-orbitron)] font-bold uppercase tracking-wider text-xs flex items-center gap-3 mx-auto transition-all"
               >
@@ -785,8 +785,8 @@ export default function Home() {
                     />
                   </div>
                   <div className="text-center">
-                    <MagneticButton 
-                      type="submit" 
+                    <MagneticButton
+                      type="submit"
                       disabled={loading}
                       className={`bg-[var(--color-hot-red)] hover:bg-red-900 text-white px-10 py-4 rounded-full font-[var(--font-orbitron)] font-bold uppercase tracking-wider text-sm flex items-center gap-3 transition-all ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
                     >
@@ -808,7 +808,7 @@ export default function Home() {
                   <p className="font-[var(--font-montserrat)] text-gray-600 max-w-sm mx-auto mb-6">
                     Your connection has been initialized. We will get back to you shortly.
                   </p>
-                  <button 
+                  <button
                     onClick={() => setSubmitted(false)}
                     className="text-[10px] font-bold uppercase tracking-widest text-gray-400 hover:text-black transition-colors"
                   >
@@ -834,15 +834,15 @@ export default function Home() {
                 onClick={() => setChatbotOpen(false)}
                 className="fixed inset-0 bg-black/40 sm:hidden"
               />
-              
+
               {/* Chatbot Container */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.8, y: 20 }}
                 transition={{ duration: 0.3 }}
-                style={{ 
-                  width: chatbotDimensions.width, 
+                style={{
+                  width: chatbotDimensions.width,
                   height: chatbotDimensions.height,
                   maxWidth: '100vw',
                   maxHeight: '100vh'
@@ -855,14 +855,14 @@ export default function Home() {
                     <div className="font-[var(--font-orbitron)] text-base font-bold text-[var(--color-hot-red)]">Chat with us</div>
                   </div>
                   <div className="flex items-center gap-2">
-                    <button 
-                      onClick={() => {/* minimize */}}
+                    <button
+                      onClick={() => {/* minimize */ }}
                       className="p-1.5 hover:bg-white/5 rounded transition-colors hidden sm:block text-gray-400"
                       title="Pop out"
                     >
                       <ExternalLink className="w-4 h-4" />
                     </button>
-                    <button 
+                    <button
                       onClick={() => setChatbotOpen(false)}
                       className="p-1.5 hover:bg-white/5 rounded transition-colors text-gray-400"
                       title="Close"
@@ -889,9 +889,9 @@ export default function Home() {
                 <div className="flex-1 overflow-auto bg-[#0c0c0c]">
                   {mounted && (
                     <div className="w-full h-full">
-                      <iframe 
-                        src='https://interfaces.zapier.com/embed/chatbot/cmoddu3qv00bzic0ouejq8n5l' 
-                        allow='clipboard-write *' 
+                      <iframe
+                        src='https://interfaces.zapier.com/embed/chatbot/cmoddu3qv00bzic0ouejq8n5l'
+                        allow='clipboard-write *'
                         className="w-full h-full border-none invert brightness-110 hue-rotate-[180deg]"
                       />
                     </div>
@@ -901,7 +901,7 @@ export default function Home() {
             </>
           )}
         </AnimatePresence>
-        
+
         {/* Chat Button */}
         <motion.button
           onClick={() => setChatbotOpen(!chatbotOpen)}
