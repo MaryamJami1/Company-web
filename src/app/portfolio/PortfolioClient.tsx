@@ -9,11 +9,23 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 const portfolioItems = [
   // LOGOS
-  { category: "Logo", image: "/assets/logo/logo1.png" },
-  { category: "Logo", image: "/assets/logo/logo2.png" },
-  { category: "Logo", image: "/assets/logo/logo3.png" },
-  { category: "Logo", image: "/assets/logo/logo4.png" },
-  { category: "Logo", image: "/assets/logo/logo5.png" },
+  { category: "Logo", image: "/assets/logo/AKNIFY Logo.png" },
+  { category: "Logo", image: "/assets/logo/ASPIRE-ICON-HHS-PNG.png" },
+  { category: "Logo", image: "/assets/logo/CMI-CollegePrep-Color-BG-JPG.jpg" },
+  { category: "Logo", image: "/assets/logo/Ecorap Logo 1.jpg" },
+  { category: "Logo", image: "/assets/logo/Ecorap Logo 2.png" },
+  { category: "Logo", image: "/assets/logo/Logo.png" },
+  { category: "Logo", image: "/assets/logo/London Global Preschool Logo.jpg" },
+  { category: "Logo", image: "/assets/logo/New Modern Decorators Logo.png" },
+  { category: "Logo", image: "/assets/logo/PMS-PAW-ONE-COLORLARGE-PNG.png" },
+  { category: "Logo", image: "/assets/logo/PUHSD-BizSrv-Color-Large-PNG.png" },
+  { category: "Logo", image: "/assets/logo/PUHSD-EmblemLogo-Color-jpg.jpg" },
+  { category: "Logo", image: "/assets/logo/PUHSD-FACE-ICON-COLOR-PNG.png" },
+  { category: "Logo", image: "/assets/logo/PVHS-30th-2-PNG.png" },
+  { category: "Logo", image: "/assets/logo/Pathways-Square-Icon-Rainbow-600px-PNG.png" },
+  { category: "Logo", image: "/assets/logo/THE PROSPECT Logo.png" },
+  { category: "Logo", image: "/assets/logo/TRANQUIL CARE LTD LOGO.jpg" },
+  { category: "Logo", image: "/assets/logo/TerraBitesCafe-Icon-Color-600px-PNG.png" },
   // WEBSITES
   { category: "Website", image: "/assets/website/website1.png" },
   { category: "Website", image: "/assets/website/website2.png" },
@@ -40,7 +52,7 @@ const categoryDescriptions: Record<string, string> = {
 };
 
 export default function PortfolioClient() {
-  const [filter, setFilter] = useState("Website");
+  const [filter, setFilter] = useState("Logo");
   const [mounted, setMounted] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
