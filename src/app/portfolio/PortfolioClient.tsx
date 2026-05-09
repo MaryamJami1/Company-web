@@ -13,11 +13,16 @@ const portfolioItems = [
   { category: "Logo", image: "/assets/logo/logo2.png" },
   { category: "Logo", image: "/assets/logo/logo3.png" },
   { category: "Logo", image: "/assets/logo/logo4.png" },
+  { category: "Logo", image: "/assets/logo/logo5.png" },
   // WEBSITES
-  { category: "Website", image: "/assets/website/website01.jpg" },
-  { category: "Website", image: "/assets/website/website02.jpg" },
-  { category: "Website", image: "/assets/website/website03.jpg" },
-  { category: "Website", image: "/assets/website/website04.jpg" },
+  { category: "Website", image: "/assets/website/website1.png" },
+  { category: "Website", image: "/assets/website/website2.png" },
+  { category: "Website", image: "/assets/website/website3.png" },
+  { category: "Website", image: "/assets/website/website4.png" },
+  { category: "Website", image: "/assets/website/website5.png" },
+  { category: "Website", image: "/assets/website/website6.png" },
+  { category: "Website", image: "/assets/website/website7.png" },
+  { category: "Website", image: "/assets/website/website8.png" },
   // BRANDING
   { category: "Branding", image: "/assets/branding/branding1.jpg" },
   { category: "Branding", image: "/assets/branding/branding2.jpg" },
@@ -35,7 +40,7 @@ const categoryDescriptions: Record<string, string> = {
 };
 
 export default function PortfolioClient() {
-  const [filter, setFilter] = useState("Logo");
+  const [filter, setFilter] = useState("Website");
   const [mounted, setMounted] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
@@ -135,9 +140,9 @@ export default function PortfolioClient() {
             transition={{ duration: 1, ease: [0.17, 0.55, 0.55, 1] }}
             className="text-center"
           >
-            <div className="font-[var(--font-orbitron)] text-[8px] md:text-[10px] text-[var(--color-hot-red)] uppercase tracking-[0.3em] md:tracking-[0.4em] mb-4 md:mb-8">
+            {/* <div className="font-[var(--font-orbitron)] text-[8px] md:text-[10px] text-[var(--color-hot-red)] uppercase tracking-[0.3em] md:tracking-[0.4em] mb-4 md:mb-8">
               Our Creative Work
-            </div>
+            </div> */}
             <h1
               className="font-[var(--font-orbitron)] text-4xl md:text-7xl lg:text-9xl font-black uppercase tracking-tighter mb-4 md:mb-8 glitch text-white"
               data-text="PORTFOLIO"
@@ -185,9 +190,8 @@ export default function PortfolioClient() {
                     />
                   )}
                   <span
-                    className={`relative z-10 ${
-                      filter === cat ? "text-white" : "text-gray-500 hover:text-white"
-                    }`}
+                    className={`relative z-10 ${filter === cat ? "text-white" : "text-gray-500 hover:text-white"
+                      }`}
                   >
                     {cat}
                   </span>
@@ -239,11 +243,10 @@ export default function PortfolioClient() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: i * 0.08 }}
                   onClick={() => openLightbox(i)}
-                  className={`group relative overflow-hidden rounded-xl md:rounded-2xl cursor-pointer transition-all duration-500 hover:-translate-y-2 ${
-                    item.category === "Logo"
+                  className={`group relative overflow-hidden rounded-xl md:rounded-2xl cursor-pointer transition-all duration-500 hover:-translate-y-2 ${item.category === "Logo"
                       ? "aspect-square bg-white p-8 md:p-12"
                       : "aspect-[4/3] bg-[#141414]"
-                  }`}
+                    }`}
                   style={{
                     boxShadow: "0 0 0 1px rgba(255,255,255,0.05)",
                   }}
@@ -254,11 +257,10 @@ export default function PortfolioClient() {
                       alt="Portfolio Project"
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      className={`transition-transform duration-700 group-hover:scale-110 ${
-                        item.category === "Logo"
+                      className={`transition-transform duration-700 group-hover:scale-110 ${item.category === "Logo"
                           ? "object-contain"
                           : "object-cover"
-                      }`}
+                        }`}
                     />
                   </div>
 
@@ -336,11 +338,10 @@ export default function PortfolioClient() {
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.3 }}
               onClick={(e) => e.stopPropagation()}
-              className={`relative max-w-5xl w-[92vw] md:w-[90vw] ${
-                filteredItems[lightboxIndex]?.category === "Logo"
+              className={`relative max-w-5xl w-[92vw] md:w-[90vw] ${filteredItems[lightboxIndex]?.category === "Logo"
                   ? "max-h-[60vh] md:max-h-[70vh] aspect-square bg-white rounded-2xl md:rounded-3xl p-8 md:p-16"
                   : "max-h-[60vh] md:max-h-[80vh] aspect-[16/10] rounded-2xl md:rounded-3xl overflow-hidden"
-              }`}
+                }`}
             >
               <Image
                 src={filteredItems[lightboxIndex]?.image || ""}
