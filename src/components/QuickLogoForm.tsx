@@ -155,15 +155,18 @@ export default function LogoEngineWizard() {
             <div className="fixed -top-40 -right-40 w-96 h-96 bg-[var(--color-arc-blue)]/20 blur-[100px] rounded-full pointer-events-none" />
             <div className="fixed -bottom-40 -left-40 w-96 h-96 bg-[var(--color-hot-red)]/20 blur-[100px] rounded-full pointer-events-none" />
 
-            {/* ── Top bar (desktop only) ── */}
-            <div className="hidden md:flex flex-none items-center justify-between px-10 py-5 z-50 bg-black">
+            {/* ── Top bar (All devices) ── */}
+            <div 
+              className="flex-none flex items-center justify-between px-5 md:px-10 py-4 md:py-5 z-50 bg-black border-b border-white/5"
+              style={{ paddingTop: 'max(env(safe-area-inset-top), 16px)' }}
+            >
               {step < 6
-                ? <div className="text-[var(--color-arc-blue)] font-[var(--font-orbitron)] text-2xl font-bold tracking-widest flex items-center gap-2">
-                    <Clock className="w-6 h-6" />{formatTime(timeLeft)}
+                ? <div className="text-[var(--color-arc-blue)] font-[var(--font-orbitron)] text-base md:text-2xl font-bold tracking-widest flex items-center gap-2">
+                    <Clock className="w-4 h-4 md:w-6 h-6" />{formatTime(timeLeft)}
                   </div>
                 : <div />}
               <button onClick={() => setIsOpen(false)} className="text-white hover:text-[var(--color-hot-red)] transition-colors p-2">
-                <X className="w-8 h-8" />
+                <X className="w-6 h-6 md:w-8 md:h-8" />
               </button>
             </div>
 
@@ -173,7 +176,7 @@ export default function LogoEngineWizard() {
               style={{ overflowY: "auto", overscrollBehavior: "contain", WebkitOverflowScrolling: "touch" } as React.CSSProperties}
             >
               {/* inner centering wrapper */}
-              <div className="flex flex-col items-center justify-center text-center min-h-full py-4 pt-16 md:pt-4 pb-24 md:pb-4">
+              <div className="flex flex-col items-center justify-center text-center min-h-full py-4 pb-12">
 
                 {/* ── STEP 1 ── */}
                 {step === 1 && (
@@ -364,23 +367,6 @@ export default function LogoEngineWizard() {
               </div>
             </div>
 
-            {/* ── Mobile Bottom Bar (timer + close) ── */}
-            <div 
-              className="md:hidden flex-none flex items-center justify-between px-6 py-4 bg-black border-t border-white/10 z-50"
-              style={{ paddingBottom: 'max(env(safe-area-inset-bottom), 16px)' }}
-            >
-              {step < 6
-                ? <div className="text-[var(--color-arc-blue)] font-[var(--font-orbitron)] text-base font-bold tracking-widest flex items-center gap-2">
-                    <Clock className="w-4 h-4" />{formatTime(timeLeft)}
-                  </div>
-                : <div />}
-              <button 
-                onClick={() => setIsOpen(false)} 
-                className="flex items-center gap-2 text-white bg-white/10 hover:bg-[var(--color-hot-red)] transition-colors px-4 py-2 rounded-full text-xs font-[var(--font-orbitron)] uppercase tracking-widest"
-              >
-                <X className="w-4 h-4" /> Close
-              </button>
-            </div>
 
           </motion.div>
         )}
