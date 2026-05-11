@@ -26,7 +26,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl flex items-center gap-4">
+      <div id="main-navbar" className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl flex items-center gap-4 transition-opacity duration-300">
         <motion.nav
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
