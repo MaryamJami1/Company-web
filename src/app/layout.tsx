@@ -14,6 +14,15 @@ const montserrat = Montserrat({
   subsets: ["latin"],
 });
 
+// Viewport config — prevents iOS zoom on input focus, enables safe-area for notch
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  viewportFit: "cover",
+};
+
 export const metadata: Metadata = {
   title: {
     default: "Ideas Assemble | #1 Logo Designer in USA | Premium Design & Branding Agency",

@@ -116,11 +116,12 @@ export default function LogoEngineWizard() {
         <form onSubmit={handleStart} className="flex flex-col md:flex-row gap-3 md:gap-4 max-w-2xl mx-auto">
           <input
             type="text"
-            placeholder="Enter Your Business Name"
+                placeholder="Enter Your Business Name"
             value={formData.businessName}
             onChange={(e) => setFormData({ ...formData, businessName: e.target.value })}
             required
-            className="flex-grow bg-white text-black px-5 py-3.5 md:px-6 md:py-4 rounded-xl font-[var(--font-montserrat)] text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-[var(--color-arc-blue)]"
+            style={{ fontSize: '16px' }}
+            className="flex-grow bg-white text-black px-5 py-3.5 md:px-6 md:py-4 rounded-xl font-[var(--font-montserrat)] focus:outline-none focus:ring-2 focus:ring-[var(--color-arc-blue)]"
           />
           <button type="submit" className="bg-[var(--color-arc-blue)] hover:bg-[#00b8e6] text-black font-[var(--font-orbitron)] font-bold uppercase tracking-wider px-8 py-3.5 rounded-xl transition-colors text-sm md:text-base w-full md:w-auto">
             Design
@@ -184,6 +185,7 @@ export default function LogoEngineWizard() {
                       placeholder="e.g. Technology, Real Estate, Fashion..."
                       value={formData.industry}
                       onChange={(e) => setFormData({ ...formData, industry: e.target.value })}
+                      style={{ fontSize: '16px' }}
                       className={inputBase}
                     />
                     <div className={navRow}>
@@ -237,6 +239,7 @@ export default function LogoEngineWizard() {
                       placeholder="e.g. Blue and Gold, Dark Theme, Vibrant..."
                       value={formData.colors}
                       onChange={(e) => setFormData({ ...formData, colors: e.target.value })}
+                      style={{ fontSize: '16px' }}
                       className={inputBase}
                     />
                     <div className={navRow}>
@@ -261,6 +264,7 @@ export default function LogoEngineWizard() {
                       rows={3}
                       value={formData.additionalInfo}
                       onChange={(e) => setFormData({ ...formData, additionalInfo: e.target.value })}
+                      style={{ fontSize: '16px' }}
                       className="w-full bg-white/5 border border-white/10 rounded-xl text-white px-4 py-3 text-sm focus:outline-none focus:border-[var(--color-arc-blue)] transition-colors placeholder:text-gray-600 resize-none font-[var(--font-montserrat)]"
                     />
                     <div className={navRow}>
@@ -282,12 +286,14 @@ export default function LogoEngineWizard() {
                         type="text" placeholder="Your Full Name" required
                         value={formData.fullName}
                         onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                        style={{ fontSize: '16px' }}
                         className="w-full bg-white/5 border border-white/10 text-white px-4 py-3 rounded-xl font-[var(--font-montserrat)] text-sm focus:outline-none focus:border-[var(--color-arc-blue)] transition-colors placeholder:text-gray-500"
                       />
                       <input
                         type="email" placeholder="Email Address" required
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        style={{ fontSize: '16px' }}
                         className="w-full bg-white/5 border border-white/10 text-white px-4 py-3 rounded-xl font-[var(--font-montserrat)] text-sm focus:outline-none focus:border-[var(--color-arc-blue)] transition-colors placeholder:text-gray-500"
                       />
                       <div className="phone-dark text-sm">
