@@ -155,17 +155,16 @@ export default function LogoEngineWizard() {
             <div className="fixed -top-40 -right-40 w-96 h-96 bg-[var(--color-arc-blue)]/20 blur-[100px] rounded-full pointer-events-none" />
             <div className="fixed -bottom-40 -left-40 w-96 h-96 bg-[var(--color-hot-red)]/20 blur-[100px] rounded-full pointer-events-none" />
 
-            {/* ── Top bar (All devices) ── */}
+            {/* ── Top bar (Absolute overlay) ── */}
             <div 
-              className="flex-none flex items-center justify-between px-5 md:px-10 py-4 md:py-5 z-50 bg-black border-b border-white/5"
-              style={{ paddingTop: 'max(env(safe-area-inset-top), 16px)' }}
+              className="absolute top-[85px] md:top-8 left-0 w-full px-5 md:px-10 flex items-center justify-between z-50"
             >
               {step < 6
                 ? <div className="text-[var(--color-arc-blue)] font-[var(--font-orbitron)] text-base md:text-2xl font-bold tracking-widest flex items-center gap-2">
-                    <Clock className="w-4 h-4 md:w-6 h-6" />{formatTime(timeLeft)}
+                    <Clock className="w-5 h-5 md:w-6 h-6" />{formatTime(timeLeft)}
                   </div>
                 : <div />}
-              <button onClick={() => setIsOpen(false)} className="text-white hover:text-[var(--color-hot-red)] transition-colors p-2">
+              <button onClick={() => setIsOpen(false)} className="text-white hover:text-[var(--color-hot-red)] transition-colors p-2 bg-black/50 rounded-full md:bg-transparent backdrop-blur-sm md:backdrop-blur-none">
                 <X className="w-6 h-6 md:w-8 md:h-8" />
               </button>
             </div>
@@ -176,7 +175,7 @@ export default function LogoEngineWizard() {
               style={{ overflowY: "auto", overscrollBehavior: "contain", WebkitOverflowScrolling: "touch" } as React.CSSProperties}
             >
               {/* inner centering wrapper */}
-              <div className="flex flex-col items-center justify-center text-center min-h-full py-4 pb-12">
+              <div className="flex flex-col items-center justify-center text-center min-h-full py-4 pt-32 pb-12">
 
                 {/* ── STEP 1 ── */}
                 {step === 1 && (
