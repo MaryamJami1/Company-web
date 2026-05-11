@@ -41,7 +41,7 @@ export default function LogoDesignPage() {
         },
         {
           name: "Gold",
-          price: "$349",
+          price: "$149",
           features: [
             "6 Custom Logo Concepts",
             "3 Dedicated Designers",
@@ -54,7 +54,7 @@ export default function LogoDesignPage() {
         },
         {
           name: "Platinum",
-          price: "$599",
+          price: "$399",
           features: [
             "Unlimited Logo Concepts",
             "4 Dedicated Designers",
