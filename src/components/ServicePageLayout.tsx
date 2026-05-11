@@ -136,7 +136,7 @@ export default function ServicePageLayout({
       </PerspectiveSection>
 
       {/* Pricing Section */}
-      <section className="py-24 relative z-10 bg-gray-50 border-y border-gray-100">
+      <section id="pricing" className="py-24 relative z-10 bg-gray-50 border-y border-gray-100">
         <div className="container mx-auto px-6">
           <motion.div
             initial="hidden"
