@@ -18,6 +18,9 @@ export default function SmoothScrollProvider({
       wheelMultiplier: 1,
       touchMultiplier: 2,
     });
+    
+    // Make lenis globally available to start/stop scrolling in modals
+    (window as any).lenis = lenis;
 
     function raf(time: number) {
       lenis.raf(time);

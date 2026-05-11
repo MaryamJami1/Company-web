@@ -38,6 +38,30 @@ export default function LogoEngineWizard() {
     return () => clearInterval(timer);
   }, [isOpen, step, timeLeft]);
 
+  // Prevent scrolling on body when modal is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
+      if ((window as any).lenis) {
+        (window as any).lenis.stop();
+      }
+    } else {
+      document.body.style.overflow = "unset";
+      document.documentElement.style.overflow = "unset";
+      if ((window as any).lenis) {
+        (window as any).lenis.start();
+      }
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+      document.documentElement.style.overflow = "unset";
+      if ((window as any).lenis) {
+        (window as any).lenis.start();
+      }
+    };
+  }, [isOpen]);
+
   const formatTime = (seconds: number) => {
     const m = Math.floor(seconds / 60);
     const s = seconds % 60;
@@ -137,7 +161,7 @@ Additional Info: ${formData.additionalInfo}
             <div className="fixed -top-40 -right-40 w-96 h-96 bg-[var(--color-arc-blue)]/20 blur-[100px] rounded-full pointer-events-none" />
             <div className="fixed -bottom-40 -left-40 w-96 h-96 bg-[var(--color-hot-red)]/20 blur-[100px] rounded-full pointer-events-none" />
 
-            <div className="absolute top-6 md:top-8 left-0 w-full px-6 md:px-10 flex items-center justify-between z-50">
+            <div className="absolute top-20 md:top-8 left-0 w-full px-6 md:px-10 flex items-center justify-between z-50">
               {step < 6 ? (
                 <div className="text-[var(--color-arc-blue)] font-[var(--font-orbitron)] text-lg md:text-2xl font-bold tracking-widest flex items-center gap-2">
                   <Clock className="w-5 h-5 md:w-6 md:h-6" /> {formatTime(timeLeft)}
@@ -152,7 +176,7 @@ Additional Info: ${formData.additionalInfo}
               </button>
             </div>
 
-            <div className="w-full max-w-3xl px-4 md:px-6 py-16 md:py-8 text-center relative z-10 flex flex-col items-center justify-center min-h-full">
+            <div className="w-full max-w-3xl px-4 md:px-6 pt-32 pb-16 md:py-8 text-center relative z-10 flex flex-col items-center justify-center min-h-full">
               {step === 1 && (
                 <motion.div
                   initial={{ x: 50, opacity: 0 }}
