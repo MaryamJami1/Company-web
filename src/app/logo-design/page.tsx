@@ -29,7 +29,7 @@ export default function LogoDesignPage() {
       pricing={[
         {
           name: "Silver",
-          price: "$149",
+          price: "$49",
           features: [
             "3 Custom Logo Concepts",
             "2 Dedicated Designers",
