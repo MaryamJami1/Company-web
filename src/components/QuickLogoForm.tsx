@@ -45,6 +45,7 @@ export default function LogoEngineWizard() {
       document.body.style.top = `-${y}px`;
       document.body.style.width = "100%";
       document.body.style.overflow = "hidden";
+      document.documentElement.style.background = "#000"; // prevent white flash
       if ((window as any).lenis) (window as any).lenis.stop();
     } else {
       const y = parseInt(document.body.dataset.scrollY || "0");
@@ -53,6 +54,7 @@ export default function LogoEngineWizard() {
       document.body.style.width = "";
       document.body.style.overflow = "";
       window.scrollTo(0, y);
+      document.documentElement.style.background = ""; // restore
       if ((window as any).lenis) (window as any).lenis.start();
     }
     return () => {
@@ -61,6 +63,7 @@ export default function LogoEngineWizard() {
       document.body.style.top = "";
       document.body.style.width = "";
       document.body.style.overflow = "";
+      document.documentElement.style.background = ""; // restore
       if (y) window.scrollTo(0, y);
       if ((window as any).lenis) (window as any).lenis.start();
     };
@@ -153,7 +156,14 @@ export default function LogoEngineWizard() {
             <div className="fixed -bottom-40 -left-40 w-96 h-96 bg-[var(--color-hot-red)]/20 blur-[100px] rounded-full pointer-events-none" />
 
             {/* ── Top bar ── */}
-            <div className="flex-none flex items-center justify-between px-5 md:px-10 pt-3 pb-2 z-50">
+            <div 
+              className="flex-none flex items-center justify-between px-5 md:px-10 z-50"
+              style={{ 
+                backgroundColor: '#000',
+                paddingTop: 'max(env(safe-area-inset-top), 16px)',
+                paddingBottom: '12px',
+              }}
+            >
               {step < 6
                 ? <div className="text-[var(--color-arc-blue)] font-[var(--font-orbitron)] text-sm md:text-2xl font-bold tracking-widest flex items-center gap-2">
                     <Clock className="w-4 h-4 md:w-6 md:h-6" />{formatTime(timeLeft)}
