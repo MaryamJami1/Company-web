@@ -38,24 +38,36 @@ export default function LogoEngineWizard() {
     return () => clearInterval(timer);
   }, [isOpen, step, timeLeft]);
 
-  // Prevent scrolling on body when modal is open
+  // Prevent scrolling — iOS Safari compatible fix
   useEffect(() => {
+    let scrollY = 0;
     if (isOpen) {
+      scrollY = window.scrollY;
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = "100%";
       document.body.style.overflow = "hidden";
-      document.documentElement.style.overflow = "hidden";
       if ((window as any).lenis) {
         (window as any).lenis.stop();
       }
     } else {
-      document.body.style.overflow = "unset";
-      document.documentElement.style.overflow = "unset";
+      const savedScrollY = parseInt(document.body.style.top || "0") * -1;
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+      document.body.style.overflow = "";
+      window.scrollTo(0, savedScrollY);
       if ((window as any).lenis) {
         (window as any).lenis.start();
       }
     }
     return () => {
-      document.body.style.overflow = "unset";
-      document.documentElement.style.overflow = "unset";
+      const savedScrollY = parseInt(document.body.style.top || "0") * -1;
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+      document.body.style.overflow = "";
+      if (savedScrollY) window.scrollTo(0, savedScrollY);
       if ((window as any).lenis) {
         (window as any).lenis.start();
       }
@@ -156,7 +168,14 @@ Additional Info: ${formData.additionalInfo}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-[9999] bg-black flex flex-col"
-            style={{ height: "100dvh" }}
+            style={{ 
+              height: "100vh",
+              maxHeight: "-webkit-fill-available",
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+            }}
           >
             {/* Cinematic Background Glows */}
             <div className="fixed -top-40 -right-40 w-96 h-96 bg-[var(--color-arc-blue)]/20 blur-[100px] rounded-full pointer-events-none" />
@@ -179,7 +198,10 @@ Additional Info: ${formData.additionalInfo}
             </div>
 
             {/* Scrollable Content Area */}
-            <div className="flex-1 overflow-y-auto flex items-center justify-center px-4 md:px-6 py-4 md:py-6">
+            <div 
+              className="flex-1 flex items-center justify-center px-4 md:px-6 py-4"
+              style={{ overflowY: "auto", WebkitOverflowScrolling: "touch", overscrollBehavior: "contain" }}
+            >
               <div className="w-full max-w-3xl text-center">
 
                 {/* Step 1 */}
