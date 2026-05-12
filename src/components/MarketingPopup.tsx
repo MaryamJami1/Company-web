@@ -10,6 +10,7 @@ const MarketingPopup = () => {
   const [rotation, setRotation] = useState(0);
   const [showOffer, setShowOffer] = useState(false);
   const [isClosed, setIsClosed] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   // Theme Colors from globals.css
   const ARC_BLUE = '#00D2FF';
@@ -17,6 +18,7 @@ const MarketingPopup = () => {
   const VIBRANT_RED = '#FF3131'; // For wheel pop
 
   useEffect(() => {
+    setMounted(true);
     const timer = setTimeout(() => {
       const urlParams = new URLSearchParams(window.location.search);
       const isTestMode = urlParams.get('testPopup') === 'true';
@@ -52,6 +54,8 @@ const MarketingPopup = () => {
     window.location.href = '/build?offer=freeDomain';
     handleClose();
   };
+
+  if (!mounted) return null;
 
   return (
     <AnimatePresence>
