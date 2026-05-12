@@ -18,8 +18,11 @@ const MarketingPopup = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const isTestMode = urlParams.get('testPopup') === 'true';
       const hasSeenPopup = localStorage.getItem('marketingPopupSeen');
-      if (!hasSeenPopup) {
+      
+      if (!hasSeenPopup || isTestMode) {
         setIsOpen(true);
       }
     }, 3000);
