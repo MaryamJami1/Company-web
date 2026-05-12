@@ -3,7 +3,6 @@ import { Orbitron, Montserrat } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react"
 import "./globals.css";
 import SmoothScrollProvider from "@/components/SmoothScrollProvider";
-import MarketingPopup from "@/components/MarketingPopup";
 
 const orbitron = Orbitron({
   variable: "--font-orbitron",
@@ -226,7 +225,6 @@ export default function RootLayout({
         <SmoothScrollProvider>
           {children}
         </SmoothScrollProvider>
-        <MarketingPopup />
         <Analytics />
       </body>
     </html>
