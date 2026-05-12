@@ -26,6 +26,7 @@ import {
   Rocket,
   ShieldCheck,
   CheckCircle2,
+  Gift,
 } from "lucide-react";
 
 const fadeInUp = {
@@ -49,6 +50,8 @@ export default function BuildTodayPage() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [phone, setPhone] = useState("");
+  const [selectedProjectType, setSelectedProjectType] = useState<string>("");
+  const [selectedCoupon, setSelectedCoupon] = useState<boolean>(false);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -63,6 +66,12 @@ export default function BuildTodayPage() {
     const hiddenPhone = form.elements.namedItem("phone_number") as HTMLInputElement;
     if (hiddenPhone) {
       hiddenPhone.value = phone;
+    }
+
+    // Add coupon info to message if selected
+    const messageField = form.elements.namedItem("message") as HTMLTextAreaElement;
+    if (messageField && selectedCoupon) {
+      messageField.value = messageField.value + "\n\n[Free Domain Coupon: SPIN2026 - 1 Year Free .com Domain Selected]";
     }
 
     emailjs
@@ -292,7 +301,13 @@ export default function BuildTodayPage() {
                               <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
                                 {["Logo", "Web", "Animation", "Branding", "E-commerce", "Other"].map((type) => (
                                   <label key={type} className="relative cursor-pointer">
-                                    <input type="radio" name="project_type" value={type} className="peer sr-only" />
+                                    <input 
+                                      type="radio" 
+                                      name="project_type" 
+                                      value={type} 
+                                      className="peer sr-only"
+                                      onChange={(e) => setSelectedProjectType(e.target.value)}
+                                    />
                                     <div className="p-2 text-center border border-gray-100 rounded-lg text-[9px] font-bold uppercase tracking-wider text-gray-500 peer-checked:bg-[var(--color-arc-blue)] peer-checked:text-white peer-checked:border-[var(--color-arc-blue)] transition-all">
                                       {type}
                                     </div>
@@ -300,6 +315,72 @@ export default function BuildTodayPage() {
                                 ))}
                               </div>
                             </div>
+
+                            {/* Show Coupon Offer Only for Web Projects */}
+                            {selectedProjectType === "Web" && (
+                              <motion.div
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                className="relative overflow-hidden p-5 md:p-7 rounded-2xl border-2 border-[var(--color-arc-blue)]/20 bg-gray-50 shadow-inner group"
+                              >
+                                {/* Decorative Corner */}
+                                <div className="absolute top-0 right-0 w-20 h-20 bg-[var(--color-arc-blue)]/5 blur-3xl rounded-full -mr-10 -mt-10" />
+                                
+                                <div className="flex items-start gap-4 mb-5 relative z-10">
+                                  <div className="w-12 h-12 rounded-xl bg-[var(--color-arc-blue)]/10 flex items-center justify-center text-[var(--color-arc-blue)] shrink-0 shadow-sm border border-[var(--color-arc-blue)]/20">
+                                    <Gift size={22} className="group-hover:scale-110 transition-transform" />
+                                  </div>
+                                  <div className="flex-1">
+                                    <h3 className="font-bold text-base md:text-lg text-black mb-1 font-[var(--font-orbitron)] uppercase tracking-wider">
+                                      A Welcome <span className="text-[var(--color-arc-blue)]">Gift</span> for You
+                                    </h3>
+                                    <p className="text-[11px] md:text-xs text-gray-500 font-[var(--font-montserrat)] font-medium leading-relaxed uppercase tracking-tighter">
+                                      We&apos;re including a 1-year premium domain with this project initialization.
+                                    </p>
+                                  </div>
+                                </div>
+
+                                <div className="space-y-3 mb-4 relative z-10">
+                                  <label className="flex items-center gap-3 p-4 bg-white rounded-xl border border-gray-100 hover:border-[var(--color-arc-blue)]/40 hover:shadow-md transition-all cursor-pointer group/item">
+                                    <div className="relative flex items-center justify-center">
+                                      <input
+                                        type="checkbox"
+                                        id="coupon_offer"
+                                        checked={selectedCoupon}
+                                        onChange={(e) => setSelectedCoupon(e.target.checked)}
+                                        className="w-5 h-5 cursor-pointer appearance-none rounded-md border-2 border-gray-200 checked:bg-[var(--color-arc-blue)] checked:border-[var(--color-arc-blue)] transition-all"
+                                      />
+                                      <CheckCircle2 size={12} className={`absolute text-white transition-opacity ${selectedCoupon ? 'opacity-100' : 'opacity-0'}`} />
+                                    </div>
+                                    <div className="flex-1">
+                                      <span className="text-sm font-bold text-black block mb-0.5">Apply Domain Credit</span>
+                                      <span className="text-[10px] text-gray-400 font-medium uppercase tracking-widest flex items-center gap-2">
+                                        Access Key: <span className="text-[var(--color-hot-red)] font-black tracking-widest">SPIN2026</span>
+                                      </span>
+                                    </div>
+                                  </label>
+                                </div>
+
+                                {selectedCoupon && (
+                                  <motion.div
+                                    initial={{ opacity: 0, height: 0 }}
+                                    animate={{ opacity: 1, height: "auto" }}
+                                    className="text-[10px] md:text-[11px] text-gray-500 font-[var(--font-montserrat)] bg-white/50 backdrop-blur-sm p-4 rounded-xl border border-dashed border-[var(--color-arc-blue)]/30 space-y-1 relative z-10"
+                                  >
+                                    <div className="flex items-center gap-2 font-bold text-black/70 mb-1 uppercase tracking-tighter">
+                                      <Sparkles size={12} className="text-yellow-500" />
+                                      Project Details:
+                                    </div>
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4">
+                                      <div>✓ Full domain registration</div>
+                                      <div>✓ Business email accounts</div>
+                                      <div>✓ Priority DNS management</div>
+                                      <div>✓ No cost for 12 months</div>
+                                    </div>
+                                  </motion.div>
+                                )}
+                              </motion.div>
+                            )}
 
                             <div className="space-y-1">
                               <label className="text-[9px] font-bold uppercase tracking-widest text-gray-400 block ml-1">Description</label>

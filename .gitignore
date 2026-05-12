@@ -44,6 +44,19 @@ Thumbs.db
 # public/testimonials/*.mp4
 # public/testimonials/*.mov
 
+# Project Assets & Internal Configs
+.gemini/
+.antigravityignore
+POPUP_CSS_ENHANCEMENTS.css
+QUICK_REFERENCE.md
+README_MARKETING.md
+SETUP_GUIDE.md
+START_HERE.txt
+MARKETING_STRATEGY.md
+*.bak
+*.tmp
+~*
+
 # IDEs
 .vscode/
 .idea/

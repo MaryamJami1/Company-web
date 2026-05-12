@@ -126,6 +126,19 @@ export default function ContactPage() {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                   >
+                    {hasFreeDomainOffer && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="mb-8 bg-gradient-to-r from-[var(--color-arc-blue)] to-[var(--color-brand-green)] text-white p-4 rounded-xl flex items-start gap-3 border border-white/20"
+                      >
+                        <span className="text-xl">🎉</span>
+                        <div>
+                          <p className="font-bold text-sm mb-1">Free Domain Offer Active</p>
+                          <p className="text-xs opacity-90">Get 1 year of premium .com domain FREE with your website project.</p>
+                        </div>
+                      </motion.div>
+                    )}
                     <h2 className="font-[var(--font-orbitron)] text-2xl md:text-3xl font-bold uppercase tracking-wide mb-2 text-black">
                       Send Us A <span className="text-[var(--color-arc-blue)]">Message</span>
                     </h2>
