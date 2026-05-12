@@ -5,7 +5,7 @@ import { X, Gift, Sparkles } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const MarketingPopup = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const [hasSpun, setHasSpun] = useState(false);
   const [rotation, setRotation] = useState(0);
   const [showOffer, setShowOffer] = useState(false);
@@ -18,17 +18,8 @@ const MarketingPopup = () => {
   const VIBRANT_RED = '#FF3131'; // For wheel pop
 
   useEffect(() => {
+    console.log("MARKETING POPUP: Component Mounted");
     setMounted(true);
-    const timer = setTimeout(() => {
-      const urlParams = new URLSearchParams(window.location.search);
-      const isTestMode = urlParams.get('testPopup') === 'true';
-      const hasSeenPopup = localStorage.getItem('marketingPopupSeen');
-      
-      if (!hasSeenPopup || isTestMode) {
-        setIsOpen(true);
-      }
-    }, 3000);
-    return () => clearTimeout(timer);
   }, []);
 
   const handleSpin = () => {
