@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -47,6 +47,28 @@ const contactInfo = [
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [hasFreeDomainOffer, setHasFreeDomainOffer] = useState(false);
+  const [formData, setFormData] = useState({
+    from_name: "",
+    reply_to: "",
+    phone_number: "",
+    project_type: "",
+    message: "",
+  });
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      setHasFreeDomainOffer(params.get("offer") === "freeDomain");
+      setFormData({
+        from_name: params.get("name") || "",
+        reply_to: params.get("email") || "",
+        phone_number: params.get("phone") || "",
+        project_type: params.get("offer") === "freeDomain" ? "website" : "",
+        message: "",
+      });
+    }
+  }, []);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -155,6 +177,8 @@ export default function ContactPage() {
                             name="from_name"
                             placeholder="Full Name"
                             required
+                            value={formData.from_name}
+                            onChange={(e) => setFormData({ ...formData, from_name: e.target.value })}
                             className="w-full bg-gray-50 border border-gray-200 rounded-xl px-12 py-4 text-sm text-black placeholder-gray-500 focus:outline-none focus:border-[var(--color-arc-blue)] focus:shadow-[0_0_15px_rgba(0,210,255,0.1) transition-all duration-300 font-[var(--font-montserrat)]"
                           />
                         </div>
@@ -165,6 +189,8 @@ export default function ContactPage() {
                             name="reply_to"
                             placeholder="Email Address"
                             required
+                            value={formData.reply_to}
+                            onChange={(e) => setFormData({ ...formData, reply_to: e.target.value })}
                             className="w-full bg-gray-50 border border-gray-200 rounded-xl px-12 py-4 text-sm text-black placeholder-gray-500 focus:outline-none focus:border-[var(--color-arc-blue)] focus:shadow-[0_0_15px_rgba(0,210,255,0.1) transition-all duration-300 font-[var(--font-montserrat)]"
                           />
                         </div>
@@ -176,6 +202,8 @@ export default function ContactPage() {
                             type="tel"
                             name="phone_number"
                             placeholder="Phone Number"
+                            value={formData.phone_number}
+                            onChange={(e) => setFormData({ ...formData, phone_number: e.target.value })}
                             className="w-full bg-gray-50 border border-gray-200 rounded-xl px-12 py-4 text-sm text-black placeholder-gray-500 focus:outline-none focus:border-[var(--color-arc-blue)] focus:shadow-[0_0_15px_rgba(0,210,255,0.1) transition-all duration-300 font-[var(--font-montserrat)]"
                           />
                         </div>
@@ -183,6 +211,8 @@ export default function ContactPage() {
                           <Globe className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--color-arc-blue)]" />
                           <select 
                             name="project_type"
+                            value={formData.project_type}
+                            onChange={(e) => setFormData({ ...formData, project_type: e.target.value })}
                             className="w-full bg-gray-50 border border-gray-200 rounded-xl px-12 py-4 text-sm text-gray-500 focus:outline-none focus:border-[var(--color-arc-blue)] focus:shadow-[0_0_15px_rgba(0,210,255,0.1) transition-all duration-300 font-[var(--font-montserrat)] appearance-none"
                           >
                             <option value="">Select Service</option>
@@ -201,6 +231,8 @@ export default function ContactPage() {
                           placeholder="Tell us about your project..."
                           rows={6}
                           required
+                          value={formData.message}
+                          onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                           className="w-full bg-gray-50 border border-gray-200 rounded-xl px-12 py-4 text-sm text-black placeholder-gray-500 focus:outline-none focus:border-[var(--color-arc-blue)] focus:shadow-[0_0_15px_rgba(0,210,255,0.1) transition-all duration-300 resize-none font-[var(--font-montserrat)]"
                         />
                       </div>
