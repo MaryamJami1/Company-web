@@ -55,6 +55,7 @@ const portfolioItems = [
   { category: "Website", image: "/assets/website/website6.png" },
   { category: "Website", image: "/assets/website/website7.png" },
   { category: "Website", image: "/assets/website/website8.png" },
+  { category: "Website", image: "/assets/website/website09.png" },
   // BRANDING
   { category: "Branding", image: "/assets/branding/branding1.jpg" },
   { category: "Branding", image: "/assets/branding/branding2.jpg" },
