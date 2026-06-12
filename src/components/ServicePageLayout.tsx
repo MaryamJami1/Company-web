@@ -185,7 +185,7 @@ export default function ServicePageLayout({
                     <div className="grid grid-cols-1 gap-3 mt-auto pt-6">
                       <Link
                         href="/build"
-                        className="w-full bg-black border border-white/10 hover:border-[var(--color-arc-blue)] text-white py-3.5 rounded-xl font-bold uppercase tracking-wider text-[10px] flex items-center justify-center gap-2 transition-all duration-300 hover:bg-white/5"
+                        className="w-full bg-black border border-white/10 hover:border-[var(--color-arc-blue)] text-white py-3.5 rounded-xl font-bold uppercase tracking-wider text-[10px] flex items-center justify-center gap-2 transition-all duration-300 hover:bg-white hover:text-black"
                       >
                         Inquire Now <ChevronRight className="w-3 h-3" />
                       </Link>
