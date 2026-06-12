@@ -251,7 +251,7 @@ export default function Home() {
               Modern, trending, and high-quality products curated for a premium lifestyle. Fast delivery. Affordable luxury.
             </motion.p>
             <MagneticButton href="/build" className="bg-[var(--color-hot-red)] hover:bg-[#CC5500] text-white px-8 py-4 rounded-full font-[var(--font-orbitron)] font-bold uppercase tracking-wider text-sm flex items-center gap-3">
-              Shop Now <ShoppingCart className="w-4 h-4" />
+              Let&apos;s Build Today <ChevronRight className="w-4 h-4" />
             </MagneticButton>
           </motion.div>
         </div>
