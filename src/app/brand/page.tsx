@@ -1,7 +1,7 @@
 import ServicePageLayout from "@/components/ServicePageLayout";
 
 export const metadata = {
-  title: "Brand Identity & Strategy | Ideas Assemble",
+  title: "Brand Identity & Strategy | Topstier",
   description: "Complete corporate branding and identity solutions. Build trust and recognition with a cohesive brand strategy and premium visual assets.",
   keywords: ["Brand Identity", "Corporate Branding", "Brand Strategy", "Visual Identity", "Business Design", "Identity Design", "Brand Guidelines", "Premium Branding"],
 };
@@ -12,7 +12,7 @@ export default function BrandPage() {
       heroTitle="Brand Identity"
       heroSubtitle="Defining who you are."
       ctaLabel="Build Legacy"
-      heroImage="https://images.unsplash.com/photo-1558655146-9f40138edfeb?q=80&w=2064&auto=format&fit=crop"
+      heroImage="/bg.jpeg"
       description="Build a brand, not just a business. Our corporate branding services help you define who you are, what you stand for, and how you communicate with the world. We create cohesive brand identities that build trust and loyalty."
       description2="From naming and taglines to visual identity and style guides, we ensure consistency across every touchpoint."
       highlights={[
@@ -24,6 +24,7 @@ export default function BrandPage() {
         {
           name: "Startup",
           price: "$399",
+          paymentLink: "https://buy.stripe.com/test_brand_startup_399",
           features: [
             "Custom Logo Design",
             "Business Card Design",
@@ -36,6 +37,7 @@ export default function BrandPage() {
         {
           name: "Corporate",
           price: "$899",
+          paymentLink: "https://buy.stripe.com/test_brand_corporate_899",
           features: [
             "Unlimited Logo Ideas",
             "Complete Stationery Design",
@@ -49,6 +51,7 @@ export default function BrandPage() {
         {
           name: "Complete",
           price: "$1,699",
+          paymentLink: "https://buy.stripe.com/test_brand_complete_1699",
           features: [
             "Logo + Stationery + Social Kit",
             "5 Page Website Design",

@@ -1,8 +1,8 @@
 import ServicePageLayout from "@/components/ServicePageLayout";
 
 export const metadata = {
-  title: "Premium Website Design & Development | Ideas Assemble",
-  description: "Get a high-performance, custom-designed website with Ideas Assemble. We specialize in conversion-optimized, responsive web design and advanced UI/UX to elevate your digital presence.",
+  title: "Premium Website Design & Development | Topstier",
+  description: "Get a high-performance, custom-designed website with Topstier. We specialize in conversion-optimized, responsive web design and advanced UI/UX to elevate your digital presence.",
   keywords: ["Website Design", "Web Development", "E-commerce Website", "Responsive Design", "Next.js Development", "Landing Page Design", "UI/UX Design", "Business Website"],
 };
 
@@ -12,7 +12,7 @@ export default function WebsiteDesignPage() {
       heroTitle="Website Design"
       heroSubtitle="Building digital fortresses for your business."
       ctaLabel="Launch Site"
-      heroImage="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop"
+      heroImage="/bg.jpeg"
       description="Your website is your digital storefront. We create responsive, high-performance websites that not only look stunning but also convert visitors into customers. From simple landing pages to complex E-commerce platforms, we craft digital experiences."
       description2="Our development team ensures your site is SEO-friendly, mobile-responsive, and secure. We use the latest technologies to build websites that scale with your business."
       highlights={[
@@ -24,6 +24,7 @@ export default function WebsiteDesignPage() {
         {
           name: "Startup",
           price: "$499",
+          paymentLink: "https://buy.stripe.com/test_website_startup_499",
           features: [
             "5 Page Website Design",
             "HTML Based",
@@ -36,6 +37,7 @@ export default function WebsiteDesignPage() {
         {
           name: "Professional",
           price: "$999",
+          paymentLink: "https://buy.stripe.com/test_website_professional_999",
           features: [
             "10 Page Website Design",
             "CMS / Admin Panel Support",
@@ -49,6 +51,7 @@ export default function WebsiteDesignPage() {
         {
           name: "E-Commerce",
           price: "$1,999",
+          paymentLink: "https://buy.stripe.com/test_website_ecommerce_1999",
           features: [
             "Unlimited Pages Website",
             "Complete Cart Functionality",

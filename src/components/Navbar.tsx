@@ -9,9 +9,9 @@ const services = [
   { label: "Logo Design", href: "/logo-design" },
   { label: "Website Design", href: "/website-design" },
   { label: "Animation", href: "/animation" },
-  { label: "Brand", href: "/brand" },
-  { label: "E-commerce", href: "/ecommerce" },
-  { label: "Chatbot Development", href: "/chatbot-development" },
+  { label: "Brand Identity", href: "/brand" },
+  { label: "E-commerce Solutions", href: "/ecommerce" },
+  { label: "AI Chatbot Development", href: "/chatbot-development" },
 ];
 
 export default function Navbar() {
@@ -34,11 +34,8 @@ export default function Navbar() {
           className="flex-grow"
         >
           <div className="navbar-glass px-4 md:px-6 py-3 rounded-full flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-2 group">
-              <Cpu className="text-[var(--color-arc-blue)] transition-transform group-hover:rotate-90 duration-500 w-5 h-5" />
-              <span className="font-[var(--font-orbitron)] font-bold text-sm md:text-lg uppercase tracking-wider text-white">
-                Ideas Assemble
-              </span>
+            <Link href="/" className="flex items-center group">
+              <img src="/logo.png" alt="Topstier Logo" className="h-6 md:h-8 w-auto object-contain" />
             </Link>
 
             <div className="hidden lg:flex items-center gap-6">
@@ -71,7 +68,7 @@ export default function Navbar() {
                         <Link
                           key={s.href}
                           href={s.href}
-                          className="block px-4 py-2.5 text-xs text-gray-200 hover:text-[var(--color-arc-blue)] hover:bg-white/5 rounded-xl transition-all uppercase tracking-wide"
+                          className="block px-4 py-2.5 text-xs text-gray-200 hover:text-[var(--color-arc-blue)] hover:bg-black/5 rounded-xl transition-all uppercase tracking-wide"
                         >
                           {s.label}
                         </Link>
@@ -97,9 +94,9 @@ export default function Navbar() {
 
               <Link
                 href="/portfolio"
-                className="bg-[var(--color-arc-blue)] hover:bg-blue-500 text-white px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 border border-white/10 shadow-[0_0_15px_rgba(0,210,255,0.3)] hover:shadow-[0_0_25px_rgba(0,210,255,0.5)]"
+                className="bg-[var(--color-arc-blue)] hover:bg-[#CC5500] text-white px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 border border-white/10 shadow-[0_0_15px_rgba(0,210,255,0.3)] hover:shadow-[0_0_25px_rgba(0,210,255,0.5)]"
               >
-                Portfolio
+                Collections
               </Link>
             </div>
 
@@ -116,9 +113,9 @@ export default function Navbar() {
         >
           <Link
             href="/build"
-            className="bg-[var(--color-hot-red)] hover:bg-red-700 text-white px-6 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-[0_0_20px_rgba(139,0,0,0.3)] hover:shadow-[0_0_30px_rgba(139,0,0,0.6)] flex items-center gap-2 group border border-red-500/20 hover:scale-105 active:scale-95"
+            className="bg-[var(--color-hot-red)] hover:bg-[#CC5500] text-white px-6 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-[0_0_20px_rgba(139,0,0,0.3)] hover:shadow-[0_0_30px_rgba(139,0,0,0.6)] flex items-center gap-2 group border border-red-500/20 hover:scale-105 active:scale-95"
           >
-            Let&apos;s Build Today
+            Let's Build Today
             <div className="w-1.5 h-1.5 rounded-full bg-white animate-pulse group-hover:scale-150 transition-transform" />
           </Link>
         </motion.div>
@@ -150,11 +147,11 @@ export default function Navbar() {
               <Link href="/contact" onClick={() => setMobileOpen(false)} className="text-lg text-white hover:text-[var(--color-arc-blue)] uppercase tracking-wider py-3 border-b border-white/10">Contact</Link>
 
               <Link href="/portfolio" onClick={() => setMobileOpen(false)} className="mt-6 bg-[var(--color-arc-blue)] text-white text-center px-6 py-4 rounded-full text-sm font-bold uppercase tracking-wider border border-white/10 shadow-[0_0_15px_rgba(0,210,255,0.3)]">
-                Portfolio
+                Collections
               </Link>
 
               <Link href="/build" onClick={() => setMobileOpen(false)} className="mt-4 bg-[var(--color-hot-red)] text-white text-center px-6 py-4 rounded-full text-sm font-bold uppercase tracking-wider">
-                Let&apos;s Build Today
+                Let's Build Today
               </Link>
             </div>
           </motion.div>

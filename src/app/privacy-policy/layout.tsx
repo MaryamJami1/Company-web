@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Your privacy is our priority. Learn how Ideas Assemble collects, uses, and protects your personal information in our Privacy Policy.",
+  description: "Your privacy is our priority. Learn how Topstier collects, uses, and protects your personal information in our Privacy Policy.",
 };
 
 export default function PrivacyLayout({

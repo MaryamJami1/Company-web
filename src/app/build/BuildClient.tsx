@@ -87,31 +87,31 @@ export default function BuildTodayPage() {
     {
       icon: <MessageCircle className="w-5 md:w-6 h-5 md:h-6" />,
       label: "WhatsApp",
-      value: "+1 (512) 543-0367",
-      href: "https://wa.me/15125430367",
+      value: "+1 (516) 309-0972",
+      href: "https://wa.me/15163090972",
       color: "hover:text-green-500",
       bg: "bg-green-500/10",
     },
     {
       icon: <MailIcon className="w-5 md:w-6 h-5 md:h-6" />,
       label: "Email",
-      value: "ideasassemble1@gmail.com",
-      href: "mailto:ideasassemble1@gmail.com",
+      value: "support@topstier.co",
+      href: "mailto:support@topstier.co",
       color: "hover:text-blue-500",
       bg: "bg-blue-500/10",
     },
     {
       icon: <PhoneIcon className="w-5 md:w-6 h-5 md:h-6" />,
       label: "Direct Call",
-      value: "+1 (512) 543-0367",
-      href: "tel:+15125430367",
+      value: "+1 (516) 309-0972",
+      href: "tel:+15163090972",
       color: "hover:text-red-500",
       bg: "bg-red-500/10",
     },
   ];
 
   return (
-    <main className="min-h-screen relative selection:bg-[var(--color-arc-blue)] selection:text-black bg-white overflow-x-hidden">
+    <main className="min-h-screen relative selection:bg-[var(--color-brand-orange)] selection:text-white bg-black overflow-x-hidden">
       <Navbar />
 
       {/* Hero Section */}
@@ -120,7 +120,7 @@ export default function BuildTodayPage() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-black/95 via-black/80 to-white z-10" />
           <Image
-            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop"
+            src="/bg.jpeg"
             alt="Build Together"
             fill
             priority
@@ -133,7 +133,7 @@ export default function BuildTodayPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <div className="inline-flex items-center gap-2 px-3 md:px-4 py-1.5 md:py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-4 md:mb-6">
+            <div className="inline-flex items-center gap-2 px-3 md:px-4 py-1.5 md:py-2 rounded-full bg-black/10 backdrop-blur-md border border-white/20 mb-4 md:mb-6">
               <Sparkles className="w-3 md:w-4 h-3 md:h-4 text-yellow-400" />
               <span className="text-white text-[10px] md:text-xs font-bold uppercase tracking-widest">Innovation Hub</span>
             </div>
@@ -141,7 +141,7 @@ export default function BuildTodayPage() {
               className="font-[var(--font-orbitron)] text-4xl md:text-7xl lg:text-8xl font-black mb-4 md:mb-6 uppercase tracking-tighter text-white leading-tight glitch"
               data-text="LET'S BUILD TODAY"
             >
-              Let&apos;s Build <span className="text-[var(--color-hot-red)]">Today</span>
+              Let&apos;s Build <span className="text-[var(--color-brand-orange-dark)]">Today</span>
             </h1>
             <p className="font-[var(--font-montserrat)] text-sm md:text-xl text-gray-300 max-w-2xl mx-auto uppercase tracking-[0.1em] md:tracking-[0.2em] leading-relaxed">
               Transforming your vision into a digital masterpiece.
@@ -158,10 +158,10 @@ export default function BuildTodayPage() {
             {/* Left Column: Direct Contact & Benefits */}
             <div className="lg:col-span-5 space-y-6 md:space-y-8 max-w-md w-full mx-auto lg:max-w-none">
               <PerspectiveSection>
-                <div className="glass-pill p-6 md:p-10 rounded-[1.5rem] md:rounded-[2.5rem] border border-gray-100 shadow-xl space-y-8 md:space-y-10 bg-white">
+                <div className="glass-pill p-6 md:p-10 rounded-[1.5rem] md:rounded-[2.5rem] border border-white/10 shadow-xl space-y-8 md:space-y-10 bg-black">
                   <div className="text-center lg:text-left">
-                    <h2 className="font-[var(--font-orbitron)] text-2xl md:text-3xl font-bold uppercase tracking-wide text-black mb-3 md:mb-4">
-                      Direct <span className="text-[var(--color-arc-blue)]">Connect</span>
+                    <h2 className="font-[var(--font-orbitron)] text-2xl md:text-3xl font-bold uppercase tracking-wide text-white mb-3 md:mb-4">
+                      Direct <span className="text-[var(--color-brand-orange)]">Connect</span>
                     </h2>
                     <p className="font-[var(--font-montserrat)] text-sm md:text-base text-gray-600 leading-relaxed">
                       Reach out to our specialists instantly through any of these platforms for real-time support.
@@ -175,21 +175,21 @@ export default function BuildTodayPage() {
                         href={opt.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`flex items-center gap-4 md:gap-5 p-4 md:p-6 rounded-2xl border border-gray-100 bg-gray-50/50 hover:bg-white hover:shadow-lg transition-all duration-300 group ${opt.color}`}
+                        className={`flex items-center gap-4 md:gap-5 p-4 md:p-6 rounded-2xl border border-white/10 bg-black/50 hover:bg-black hover:shadow-lg transition-all duration-300 group ${opt.color}`}
                       >
                         <div className={`p-3 md:p-4 rounded-xl ${opt.bg} transition-transform group-hover:scale-110`}>
                           {opt.icon}
                         </div>
                         <div className="min-w-0">
                           <div className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-gray-400 group-hover:text-inherit mb-0.5 md:mb-1">{opt.label}</div>
-                          <div className="text-sm md:text-lg font-bold text-black group-hover:text-inherit truncate">{opt.value}</div>
+                          <div className="text-sm md:text-lg font-bold text-white group-hover:text-inherit truncate">{opt.value}</div>
                         </div>
                         <ChevronRight className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-1 hidden md:block" />
                       </a>
                     ))}
                   </div>
 
-                  <div className="pt-6 border-t border-gray-100 grid grid-cols-2 gap-4">
+                  <div className="pt-6 border-t border-white/10 grid grid-cols-2 gap-4">
                     <div className="flex items-center gap-2">
                       <CheckCircle2 className="w-4 h-4 text-green-500" />
                       <span className="text-[9px] md:text-[10px] font-bold uppercase text-gray-500">24/7 Support</span>
@@ -215,8 +215,8 @@ export default function BuildTodayPage() {
                   { icon: <Zap className="w-5 h-5" />, label: "Fast" },
                   { icon: <Rocket className="w-5 h-5" />, label: "Scalable" },
                 ].map((item, i) => (
-                  <motion.div key={i} variants={fadeInUp} className="bg-gray-50 p-3 rounded-xl text-center border border-gray-100">
-                    <div className="text-[var(--color-arc-blue)] flex justify-center mb-1">{item.icon}</div>
+                  <motion.div key={i} variants={fadeInUp} className="bg-black p-3 rounded-xl text-center border border-white/10">
+                    <div className="text-[var(--color-brand-orange)] flex justify-center mb-1">{item.icon}</div>
                     <div className="text-[8px] md:text-[10px] font-bold uppercase tracking-widest text-gray-500">{item.label}</div>
                   </motion.div>
                 ))}
@@ -227,7 +227,7 @@ export default function BuildTodayPage() {
             <div className="lg:col-span-7 max-w-md w-full mx-auto lg:max-w-none">
               <PerspectiveSection>
                 <div className="neon-border rounded-[1.5rem] md:rounded-[2.5rem] shadow-xl overflow-hidden">
-                  <div className="neon-content p-6 md:p-10 bg-white">
+                  <div className="neon-content p-6 md:p-10 bg-black">
                     <AnimatePresence mode="wait">
                       {!submitted ? (
                         <motion.div
@@ -237,8 +237,8 @@ export default function BuildTodayPage() {
                           exit={{ opacity: 0, x: -20 }}
                         >
                           <div className="text-center lg:text-left">
-                            <h2 className="font-[var(--font-orbitron)] text-2xl md:text-3xl font-bold uppercase tracking-wide text-black mb-2">
-                              Project <span className="text-[var(--color-hot-red)]">Brief</span>
+                            <h2 className="font-[var(--font-orbitron)] text-2xl md:text-3xl font-bold uppercase tracking-wide text-white mb-2">
+                              Project <span className="text-[var(--color-brand-orange-dark)]">Brief</span>
                             </h2>
                             <p className="font-[var(--font-montserrat)] text-[10px] md:text-sm text-gray-600 mb-8 md:mb-10 uppercase tracking-widest">
                               Initialize your vision into reality.
@@ -256,7 +256,7 @@ export default function BuildTodayPage() {
                                     name="from_name"
                                     required
                                     placeholder="Enter your name"
-                                    className="w-full bg-gray-50 border border-gray-100 rounded-xl px-12 py-3.5 md:py-3 text-sm focus:outline-none focus:border-[var(--color-arc-blue)] transition-all"
+                                    className="w-full bg-black border border-white/10 rounded-xl px-12 py-3.5 md:py-3 text-sm focus:outline-none focus:border-[var(--color-brand-orange)] transition-all"
                                   />
                                 </div>
                               </div>
@@ -269,7 +269,7 @@ export default function BuildTodayPage() {
                                     name="reply_to"
                                     required
                                     placeholder="Enter your email"
-                                    className="w-full bg-gray-50 border border-gray-100 rounded-xl px-12 py-3.5 md:py-3 text-sm focus:outline-none focus:border-[var(--color-arc-blue)] transition-all"
+                                    className="w-full bg-black border border-white/10 rounded-xl px-12 py-3.5 md:py-3 text-sm focus:outline-none focus:border-[var(--color-brand-orange)] transition-all"
                                   />
                                 </div>
                               </div>
@@ -302,7 +302,7 @@ export default function BuildTodayPage() {
                                       className="peer sr-only"
                                       onChange={(e) => setSelectedProjectType(e.target.value)}
                                     />
-                                    <div className="p-2 text-center border border-gray-100 rounded-lg text-[9px] font-bold uppercase tracking-wider text-gray-500 peer-checked:bg-[var(--color-arc-blue)] peer-checked:text-white peer-checked:border-[var(--color-arc-blue)] transition-all">
+                                    <div className="p-2 text-center border border-white/10 rounded-lg text-[9px] font-bold uppercase tracking-wider text-gray-500 peer-checked:bg-[var(--color-brand-orange)] peer-checked:text-white peer-checked:border-[var(--color-brand-orange)] transition-all">
                                       {type}
                                     </div>
                                   </label>
@@ -320,7 +320,7 @@ export default function BuildTodayPage() {
                                   name="message"
                                   required
                                   placeholder="What are your goals?"
-                                  className="w-full bg-gray-50 border border-gray-100 rounded-xl px-12 py-4 text-sm focus:outline-none focus:border-[var(--color-arc-blue)] transition-all resize-none"
+                                  className="w-full bg-black border border-white/10 rounded-xl px-12 py-4 text-sm focus:outline-none focus:border-[var(--color-brand-orange)] transition-all resize-none"
                                 />
                               </div>
                             </div>
@@ -329,7 +329,7 @@ export default function BuildTodayPage() {
                               <MagneticButton
                                 type="submit"
                                 disabled={loading}
-                                className={`w-full bg-black hover:bg-[var(--color-hot-red)] text-white py-4 rounded-xl font-[var(--font-orbitron)] font-bold uppercase tracking-wider text-xs md:text-sm flex items-center justify-center gap-3 transition-colors ${loading ? "opacity-50 cursor-not-allowed" : ""}`}
+                                className={`w-full bg-[var(--color-brand-orange)] hover:bg-[var(--color-brand-orange-dark)] text-white py-4 rounded-xl font-[var(--font-orbitron)] font-bold uppercase tracking-wider text-xs md:text-sm flex items-center justify-center gap-3 transition-colors ${loading ? "opacity-50 cursor-not-allowed" : ""}`}
                               >
                                 {loading ? "Initializing..." : <>Launch Project <Send className="w-4 h-4" /></>}
                               </MagneticButton>
@@ -346,13 +346,13 @@ export default function BuildTodayPage() {
                           <div className="w-16 md:w-24 h-16 md:h-24 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                             <CheckCircle2 className="w-8 md:w-12 h-8 md:h-12 text-green-500" />
                           </div>
-                          <h2 className="font-[var(--font-orbitron)] text-2xl md:text-4xl font-black uppercase text-black">Inquiry <span className="text-green-500">Sent</span></h2>
+                          <h2 className="font-[var(--font-orbitron)] text-2xl md:text-4xl font-black uppercase text-white">Inquiry <span className="text-green-500">Sent</span></h2>
                           <p className="font-[var(--font-montserrat)] text-xs md:text-base text-gray-600 max-w-sm mx-auto leading-relaxed">
                             Transmission successful. Our creative experts will contact you shortly.
                           </p>
                           <button
                             onClick={() => setSubmitted(false)}
-                            className="text-[var(--color-arc-blue)] font-bold uppercase tracking-widest text-[10px] hover:underline"
+                            className="text-[var(--color-brand-orange)] font-bold uppercase tracking-widest text-[10px] hover:underline"
                           >
                             Send Another Request
                           </button>

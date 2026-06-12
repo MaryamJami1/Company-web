@@ -32,6 +32,7 @@ interface PricingTier {
   name: string;
   price: string;
   features: string[];
+  paymentLink?: string;
 }
 
 interface ProcessStep {
@@ -63,7 +64,7 @@ export default function ServicePageLayout({
   heroImage,
 }: ServicePageProps) {
   return (
-    <main className="min-h-screen relative selection:bg-[var(--color-arc-blue)] selection:text-black">
+    <main className="min-h-screen relative selection:bg-[var(--color-arc-blue)] selection:text-white">
       <Navbar />
 
       {/* Hero */}
@@ -95,7 +96,7 @@ export default function ServicePageLayout({
             </p>
             <MagneticButton 
               href="/build"
-              className="bg-[var(--color-hot-red)] hover:bg-red-900 text-white px-8 py-4 rounded-full font-[var(--font-orbitron)] font-bold uppercase tracking-wider text-sm"
+              className="bg-[var(--color-hot-red)] hover:bg-[#CC5500] text-white px-8 py-4 rounded-full font-[var(--font-orbitron)] font-bold uppercase tracking-wider text-sm"
             >
               {ctaLabel}
             </MagneticButton>
@@ -124,7 +125,7 @@ export default function ServicePageLayout({
                 {highlights.map((h, i) => (
                   <div
                     key={i}
-                    className="bg-gray-50 px-5 py-3 rounded-full text-xs text-[var(--color-arc-blue)] uppercase tracking-widest font-bold border border-[var(--color-arc-blue)]/20"
+                    className="bg-black px-5 py-3 rounded-full text-xs text-[var(--color-arc-blue)] uppercase tracking-widest font-bold border border-[var(--color-arc-blue)]/20"
                   >
                     {h}
                   </div>
@@ -136,7 +137,7 @@ export default function ServicePageLayout({
       </PerspectiveSection>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-24 relative z-10 bg-gray-50 border-y border-gray-100">
+      <section id="pricing" className="py-24 relative z-10 bg-black border-y border-white/10">
         <div className="container mx-auto px-6">
           <motion.div
             initial="hidden"
@@ -145,7 +146,7 @@ export default function ServicePageLayout({
             variants={fadeInUp}
             className="text-center mb-16"
           >
-            <h2 className="font-[var(--font-orbitron)] text-3xl md:text-5xl font-bold uppercase tracking-wide mb-4 text-black">
+            <h2 className="font-[var(--font-orbitron)] text-3xl md:text-5xl font-bold uppercase tracking-wide mb-4 text-white">
               Choose Your <span className="text-[var(--color-arc-blue)]">Plan</span>
             </h2>
             <div className="w-24 h-1 bg-[var(--color-arc-blue)] mx-auto" />
@@ -164,13 +165,13 @@ export default function ServicePageLayout({
                 variants={fadeInUp}
                 className={`${i === 1 ? "md:-mt-4 md:mb-4" : ""} h-full`}
               >
-                <div className="neon-border group h-full bg-white shadow-xl hover:shadow-2xl transition-all duration-500 rounded-2xl overflow-hidden">
+                <div className="neon-border group h-full bg-black shadow-xl hover:shadow-2xl transition-all duration-500 rounded-2xl overflow-hidden">
                   <div className="neon-content p-8 h-full flex flex-col">
                     <h3 className="font-[var(--font-orbitron)] text-xl font-bold mb-2 uppercase tracking-wider text-[var(--color-arc-blue)]">
                       {tier.name}
                     </h3>
                     <div className="mb-6">
-                      <span className="font-[var(--font-orbitron)] text-4xl font-black text-black">{tier.price}</span>
+                      <span className="font-[var(--font-orbitron)] text-4xl font-black text-white">{tier.price}</span>
                       <span className="text-gray-500 text-sm ml-1">/project</span>
                     </div>
                     <ul className="space-y-3 flex-grow mb-8">
@@ -181,12 +182,22 @@ export default function ServicePageLayout({
                         </li>
                       ))}
                     </ul>
-                    <Link
-                      href="/build"
-                      className="w-full bg-[var(--color-hot-red)] hover:bg-red-700 text-white py-4 rounded-full font-bold uppercase tracking-wider text-xs flex items-center justify-center gap-2 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-red-500/30"
-                    >
-                      Get Started <ChevronRight className="w-4 h-4" />
-                    </Link>
+                    <div className="grid grid-cols-1 gap-3 mt-auto pt-6">
+                      <Link
+                        href="/build"
+                        className="w-full bg-black border border-white/10 hover:border-[var(--color-arc-blue)] text-white py-3.5 rounded-xl font-bold uppercase tracking-wider text-[10px] flex items-center justify-center gap-2 transition-all duration-300 hover:bg-white/5"
+                      >
+                        Inquire Now <ChevronRight className="w-3 h-3" />
+                      </Link>
+                      <a
+                        href={tier.paymentLink || "#"}
+                        target={tier.paymentLink ? "_blank" : "_self"}
+                        rel="noopener noreferrer"
+                        className="w-full bg-[var(--color-hot-red)] hover:bg-[#CC5500] text-white py-3.5 rounded-xl font-bold uppercase tracking-wider text-[10px] flex items-center justify-center gap-2 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-[0_0_20px_rgba(139,0,0,0.2)] hover:shadow-red-500/40"
+                      >
+                        Purchase Now <ChevronRight className="w-3 h-3" />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -206,7 +217,7 @@ export default function ServicePageLayout({
               variants={fadeInUp}
               className="text-center mb-16"
             >
-              <h2 className="font-[var(--font-orbitron)] text-3xl md:text-5xl font-bold uppercase tracking-wide mb-4 text-black">
+              <h2 className="font-[var(--font-orbitron)] text-3xl md:text-5xl font-bold uppercase tracking-wide mb-4 text-white">
                 Our <span className="text-[var(--color-brand-green)]">Process</span>
               </h2>
               <div className="w-24 h-1 bg-[var(--color-brand-green)] mx-auto" />
@@ -234,7 +245,7 @@ export default function ServicePageLayout({
                     )}
                   </div>
                   <div className="pb-8">
-                    <h3 className="font-[var(--font-orbitron)] text-lg font-bold uppercase tracking-wide text-black mb-2">
+                    <h3 className="font-[var(--font-orbitron)] text-lg font-bold uppercase tracking-wide text-white mb-2">
                       {step.title}
                     </h3>
                     <p className="font-[var(--font-montserrat)] text-sm text-gray-600 leading-relaxed">
@@ -249,7 +260,7 @@ export default function ServicePageLayout({
       </PerspectiveSection>
 
       {/* CTA Section */}
-      <section className="py-24 relative z-10 bg-white">
+      <section className="py-24 relative z-10 bg-black">
         <div className="container mx-auto px-6 text-center">
           <motion.div
             initial="hidden"
@@ -257,7 +268,7 @@ export default function ServicePageLayout({
             viewport={{ once: true, margin: "-100px" }}
             variants={fadeInUp}
           >
-            <h2 className="font-[var(--font-orbitron)] text-3xl md:text-4xl font-bold uppercase tracking-wide mb-6 text-black">
+            <h2 className="font-[var(--font-orbitron)] text-3xl md:text-4xl font-bold uppercase tracking-wide mb-6 text-white">
               Ready to <span className="text-[var(--color-hot-red)]">Get Started</span>?
             </h2>
             <p className="font-[var(--font-montserrat)] text-gray-600 mb-8 max-w-lg mx-auto">
@@ -265,7 +276,7 @@ export default function ServicePageLayout({
             </p>
             <MagneticButton 
               href="/build"
-              className="bg-[var(--color-hot-red)] hover:bg-red-900 text-white px-10 py-4 rounded-full font-[var(--font-orbitron)] font-bold uppercase tracking-wider text-sm"
+              className="bg-[var(--color-hot-red)] hover:bg-[#CC5500] text-white px-10 py-4 rounded-full font-[var(--font-orbitron)] font-bold uppercase tracking-wider text-sm"
             >
               Initialize Connection
             </MagneticButton>

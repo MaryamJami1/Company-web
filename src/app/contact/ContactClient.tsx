@@ -38,10 +38,10 @@ const staggerContainer = {
 
 const contactInfo = [
   { icon: <MapPin className="w-5 h-5" />, label: "Address", value: "1001 S Main ST #12594 Kalispell, MT 59901-1498" },
-  { icon: <Phone className="w-5 h-5" />, label: "Phone", value: "+1 (512) 543-0367" },
-  { icon: <Mail className="w-5 h-5" />, label: "Email", value: "ideasassemble1@gmail.com" },
+  { icon: <Phone className="w-5 h-5" />, label: "Phone", value: "+1 (516) 309-0972" },
+  { icon: <Mail className="w-5 h-5" />, label: "Email", value: "support@topstier.co" },
   { icon: <Clock className="w-5 h-5" />, label: "Working Hours", value: "Mon - Fri: 9:00 AM - 6:00 PM" },
-  { icon: <Globe className="w-5 h-5" />, label: "Website", value: "www.ideasassemble.com" },
+  { icon: <Globe className="w-5 h-5" />, label: "Website", value: "www.topstier.co" },
 ];
 
 export default function ContactPage() {
@@ -94,7 +94,7 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="min-h-screen relative selection:bg-[var(--color-arc-blue)] selection:text-black">
+    <main className="min-h-screen relative selection:bg-[var(--color-arc-blue)] selection:text-white">
       <Navbar />
 
       {/* Hero */}
@@ -102,7 +102,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/85 z-10" />
           <Image
-            src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?q=80&w=2074&auto=format&fit=crop"
+            src="/bg.jpeg"
             alt="Contact Us"
             fill
             priority
@@ -154,14 +154,14 @@ export default function ContactPage() {
                         animate={{ opacity: 1, y: 0 }}
                         className="mb-8 bg-gradient-to-r from-[var(--color-arc-blue)] to-[var(--color-brand-green)] text-white p-4 rounded-xl flex items-start gap-3 border border-white/20"
                       >
-                        <span className="text-xl">🎉</span>
+                        <span className="text-xl">ÃƒÂ°Ã…Â¸Ã…Â½Ã¢â‚¬Â°</span>
                         <div>
                           <p className="font-bold text-sm mb-1">Free Domain Offer Active</p>
                           <p className="text-xs opacity-90">Get 1 year of premium .com domain FREE with your website project.</p>
                         </div>
                       </motion.div>
                     )}
-                    <h2 className="font-[var(--font-orbitron)] text-2xl md:text-3xl font-bold uppercase tracking-wide mb-2 text-black">
+                    <h2 className="font-[var(--font-orbitron)] text-2xl md:text-3xl font-bold uppercase tracking-wide mb-2 text-white">
                       Send Us A <span className="text-[var(--color-arc-blue)]">Message</span>
                     </h2>
                     <p className="font-[var(--font-montserrat)] text-gray-600 text-sm mb-8">
@@ -179,7 +179,7 @@ export default function ContactPage() {
                             required
                             value={formData.from_name}
                             onChange={(e) => setFormData({ ...formData, from_name: e.target.value })}
-                            className="w-full bg-gray-50 border border-gray-200 rounded-xl px-12 py-4 text-sm text-black placeholder-gray-500 focus:outline-none focus:border-[var(--color-arc-blue)] focus:shadow-[0_0_15px_rgba(0,210,255,0.1) transition-all duration-300 font-[var(--font-montserrat)]"
+                            className="w-full bg-black border border-gray-200 rounded-xl px-12 py-4 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-[var(--color-arc-blue)] focus:shadow-[0_0_15px_rgba(0,210,255,0.1) transition-all duration-300 font-[var(--font-montserrat)]"
                           />
                         </div>
                         <div className="relative">
@@ -191,7 +191,7 @@ export default function ContactPage() {
                             required
                             value={formData.reply_to}
                             onChange={(e) => setFormData({ ...formData, reply_to: e.target.value })}
-                            className="w-full bg-gray-50 border border-gray-200 rounded-xl px-12 py-4 text-sm text-black placeholder-gray-500 focus:outline-none focus:border-[var(--color-arc-blue)] focus:shadow-[0_0_15px_rgba(0,210,255,0.1) transition-all duration-300 font-[var(--font-montserrat)]"
+                            className="w-full bg-black border border-gray-200 rounded-xl px-12 py-4 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-[var(--color-arc-blue)] focus:shadow-[0_0_15px_rgba(0,210,255,0.1) transition-all duration-300 font-[var(--font-montserrat)]"
                           />
                         </div>
                       </div>
@@ -204,7 +204,7 @@ export default function ContactPage() {
                             placeholder="Phone Number"
                             value={formData.phone_number}
                             onChange={(e) => setFormData({ ...formData, phone_number: e.target.value })}
-                            className="w-full bg-gray-50 border border-gray-200 rounded-xl px-12 py-4 text-sm text-black placeholder-gray-500 focus:outline-none focus:border-[var(--color-arc-blue)] focus:shadow-[0_0_15px_rgba(0,210,255,0.1) transition-all duration-300 font-[var(--font-montserrat)]"
+                            className="w-full bg-black border border-gray-200 rounded-xl px-12 py-4 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-[var(--color-arc-blue)] focus:shadow-[0_0_15px_rgba(0,210,255,0.1) transition-all duration-300 font-[var(--font-montserrat)]"
                           />
                         </div>
                         <div className="relative">
@@ -213,7 +213,7 @@ export default function ContactPage() {
                             name="project_type"
                             value={formData.project_type}
                             onChange={(e) => setFormData({ ...formData, project_type: e.target.value })}
-                            className="w-full bg-gray-50 border border-gray-200 rounded-xl px-12 py-4 text-sm text-gray-500 focus:outline-none focus:border-[var(--color-arc-blue)] focus:shadow-[0_0_15px_rgba(0,210,255,0.1) transition-all duration-300 font-[var(--font-montserrat)] appearance-none"
+                            className="w-full bg-black border border-gray-200 rounded-xl px-12 py-4 text-sm text-gray-500 focus:outline-none focus:border-[var(--color-arc-blue)] focus:shadow-[0_0_15px_rgba(0,210,255,0.1) transition-all duration-300 font-[var(--font-montserrat)] appearance-none"
                           >
                             <option value="">Select Service</option>
                             <option value="logo">Logo Design</option>
@@ -233,13 +233,13 @@ export default function ContactPage() {
                           required
                           value={formData.message}
                           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                          className="w-full bg-gray-50 border border-gray-200 rounded-xl px-12 py-4 text-sm text-black placeholder-gray-500 focus:outline-none focus:border-[var(--color-arc-blue)] focus:shadow-[0_0_15px_rgba(0,210,255,0.1) transition-all duration-300 resize-none font-[var(--font-montserrat)]"
+                          className="w-full bg-black border border-gray-200 rounded-xl px-12 py-4 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-[var(--color-arc-blue)] focus:shadow-[0_0_15px_rgba(0,210,255,0.1) transition-all duration-300 resize-none font-[var(--font-montserrat)]"
                         />
                       </div>
                       <MagneticButton 
                         type="submit" 
                         disabled={loading}
-                        className={`bg-[var(--color-hot-red)] hover:bg-red-900 text-white px-10 py-4 rounded-full font-[var(--font-orbitron)] font-bold uppercase tracking-wider text-sm flex items-center gap-3 transition-all ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
+                        className={`bg-[var(--color-hot-red)] hover:bg-[#CC5500] text-white px-10 py-4 rounded-full font-[var(--font-orbitron)] font-bold uppercase tracking-wider text-sm flex items-center gap-3 transition-all ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
                       >
                         {loading ? "Sending..." : <>Send Transmission <Send className="w-4 h-4" /></>}
                       </MagneticButton>
@@ -250,18 +250,18 @@ export default function ContactPage() {
                     key="success"
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    className="text-center py-20 bg-gray-50 rounded-[2rem] border border-gray-100 shadow-inner"
+                    className="text-center py-20 bg-black rounded-[2rem] border border-white/10 shadow-inner"
                   >
                     <div className="w-20 h-20 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-6">
                       <CheckCircle2 className="w-10 h-10 text-green-500" />
                     </div>
-                    <h3 className="font-[var(--font-orbitron)] text-3xl font-bold uppercase text-black mb-4">Transmission <span className="text-green-500">Received</span></h3>
+                    <h3 className="font-[var(--font-orbitron)] text-3xl font-bold uppercase text-white mb-4">Transmission <span className="text-green-500">Received</span></h3>
                     <p className="font-[var(--font-montserrat)] text-gray-600 max-w-sm mx-auto mb-8">
                       Your connection has been initialized. Our specialists will reach out shortly.
                     </p>
                     <button 
                       onClick={() => setSubmitted(false)}
-                      className="text-[10px] font-bold uppercase tracking-widest text-gray-400 hover:text-black transition-colors"
+                      className="text-[10px] font-bold uppercase tracking-widest text-gray-400 hover:text-white transition-colors"
                     >
                       Send Another Transmission
                     </button>
@@ -272,7 +272,7 @@ export default function ContactPage() {
 
             {/* Contact Info Sidebar */}
             <motion.div variants={fadeInUp} className="lg:col-span-2">
-              <h2 className="font-[var(--font-orbitron)] text-2xl md:text-3xl font-bold uppercase tracking-wide mb-2 text-black">
+              <h2 className="font-[var(--font-orbitron)] text-2xl md:text-3xl font-bold uppercase tracking-wide mb-2 text-white">
                 Contact <span className="text-[var(--color-brand-green)]">Info</span>
               </h2>
               <p className="font-[var(--font-montserrat)] text-gray-600 text-sm mb-8">
@@ -281,10 +281,10 @@ export default function ContactPage() {
 
               <div className="space-y-6">
                 {contactInfo.map((info, i) => (
-                  <div key={i} className="flex items-start gap-4 glass-pill p-5 rounded-2xl border border-gray-100 hover:border-[var(--color-arc-blue)]/20 transition-colors duration-500">
+                  <div key={i} className="flex items-start gap-4 glass-pill p-5 rounded-2xl border border-white/10 hover:border-[var(--color-arc-blue)]/20 transition-colors duration-500">
                     <div className="text-[var(--color-arc-blue)] mt-0.5 shrink-0">{info.icon}</div>
                     <div>
-                      <div className="font-[var(--font-orbitron)] text-xs font-bold uppercase tracking-widest text-black mb-1">{info.label}</div>
+                      <div className="font-[var(--font-orbitron)] text-xs font-bold uppercase tracking-widest text-white mb-1">{info.label}</div>
                       <div className="font-[var(--font-montserrat)] text-sm text-gray-600">{info.value}</div>
                     </div>
                   </div>

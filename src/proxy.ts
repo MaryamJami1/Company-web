@@ -6,8 +6,8 @@ export function proxy(request: NextRequest) {
   const host = request.headers.get('host');
 
   // Redirect non-www to www
-  if (host && host === 'ideasassemble.com') {
-    url.hostname = 'www.ideasassemble.com';
+  if (host && host === 'topstier.co') {
+    url.hostname = 'www.topstier.co';
     return NextResponse.redirect(url, 301);
   }
 

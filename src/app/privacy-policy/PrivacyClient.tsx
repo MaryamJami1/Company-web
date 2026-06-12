@@ -17,7 +17,7 @@ const fadeInUp = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <main className="min-h-screen relative selection:bg-[var(--color-arc-blue)] selection:text-black bg-white">
+    <main className="min-h-screen relative selection:bg-[var(--color-arc-blue)] selection:text-white bg-black">
       <Navbar />
 
       {/* Hero Section */}
@@ -29,7 +29,7 @@ export default function PrivacyPolicyPage() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/5 border border-white/10 mb-6">
               <Shield className="w-4 h-4 text-[var(--color-arc-blue)]" />
               <span className="text-white text-[10px] font-bold uppercase tracking-widest">Legal Department</span>
             </div>
@@ -40,7 +40,7 @@ export default function PrivacyPolicyPage() {
               Privacy <span className="text-[var(--color-arc-blue)]">Policy</span>
             </h1>
             <p className="font-[var(--font-montserrat)] text-gray-400 text-sm md:text-base uppercase tracking-widest max-w-2xl mx-auto">
-              Last Updated: April 22, 2026 • Version 1.0
+              Last Updated: April 22, 2026 Ã¢â‚¬Â¢ Version 1.0
             </p>
           </motion.div>
         </div>
@@ -50,19 +50,19 @@ export default function PrivacyPolicyPage() {
       <section className="py-24 relative z-10">
         <div className="container mx-auto px-6 max-w-4xl">
           <PerspectiveSection>
-            <div className="bg-white rounded-[2rem] border border-gray-100 shadow-2xl p-8 md:p-16 space-y-12">
+            <div className="bg-black rounded-[2rem] border border-white/10 shadow-2xl p-8 md:p-16 space-y-12">
               
               <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
                 <div className="flex items-center gap-4 mb-6">
                   <div className="p-3 rounded-xl bg-blue-50 text-[var(--color-arc-blue)]">
                     <Eye className="w-6 h-6" />
                   </div>
-                  <h2 className="font-[var(--font-orbitron)] text-2xl font-bold text-black uppercase tracking-wide">
+                  <h2 className="font-[var(--font-orbitron)] text-2xl font-bold text-white uppercase tracking-wide">
                     1. Introduction
                   </h2>
                 </div>
                 <p className="font-[var(--font-montserrat)] text-gray-600 leading-relaxed">
-                  At Ideas Assemble, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy outlines how we collect, use, and safeguard the data you provide to us through our website and services.
+                  At Topstier, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy outlines how we collect, use, and safeguard the data you provide to us through our website and services.
                 </p>
               </motion.div>
 
@@ -71,7 +71,7 @@ export default function PrivacyPolicyPage() {
                   <div className="p-3 rounded-xl bg-red-50 text-[var(--color-hot-red)]">
                     <FileText className="w-6 h-6" />
                   </div>
-                  <h2 className="font-[var(--font-orbitron)] text-2xl font-bold text-black uppercase tracking-wide">
+                  <h2 className="font-[var(--font-orbitron)] text-2xl font-bold text-white uppercase tracking-wide">
                     2. Data Collection
                   </h2>
                 </div>
@@ -91,7 +91,7 @@ export default function PrivacyPolicyPage() {
                   <div className="p-3 rounded-xl bg-green-50 text-green-600">
                     <Lock className="w-6 h-6" />
                   </div>
-                  <h2 className="font-[var(--font-orbitron)] text-2xl font-bold text-black uppercase tracking-wide">
+                  <h2 className="font-[var(--font-orbitron)] text-2xl font-bold text-white uppercase tracking-wide">
                     3. Information Usage
                   </h2>
                 </div>
@@ -99,19 +99,19 @@ export default function PrivacyPolicyPage() {
                   The information we collect is used to:
                 </p>
                 <ul className="grid md:grid-cols-2 gap-4 font-[var(--font-montserrat)] text-gray-600">
-                  <li className="p-4 bg-gray-50 rounded-xl border border-gray-100 flex items-center gap-3">
+                  <li className="p-4 bg-black rounded-xl border border-white/10 flex items-center gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-[var(--color-arc-blue)]" />
                     Process your project requests
                   </li>
-                  <li className="p-4 bg-gray-50 rounded-xl border border-gray-100 flex items-center gap-3">
+                  <li className="p-4 bg-black rounded-xl border border-white/10 flex items-center gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-[var(--color-arc-blue)]" />
                     Communicate project updates
                   </li>
-                  <li className="p-4 bg-gray-50 rounded-xl border border-gray-100 flex items-center gap-3">
+                  <li className="p-4 bg-black rounded-xl border border-white/10 flex items-center gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-[var(--color-arc-blue)]" />
                     Improve our service delivery
                   </li>
-                  <li className="p-4 bg-gray-50 rounded-xl border border-gray-100 flex items-center gap-3">
+                  <li className="p-4 bg-black rounded-xl border border-white/10 flex items-center gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-[var(--color-arc-blue)]" />
                     Send periodic design insights
                   </li>
@@ -123,7 +123,7 @@ export default function PrivacyPolicyPage() {
                   <div className="p-3 rounded-xl bg-purple-50 text-purple-600">
                     <Shield className="w-6 h-6" />
                   </div>
-                  <h2 className="font-[var(--font-orbitron)] text-2xl font-bold text-black uppercase tracking-wide">
+                  <h2 className="font-[var(--font-orbitron)] text-2xl font-bold text-white uppercase tracking-wide">
                     4. Data Security
                   </h2>
                 </div>
@@ -132,9 +132,9 @@ export default function PrivacyPolicyPage() {
                 </p>
               </motion.div>
 
-              <div className="pt-12 border-t border-gray-100 text-center">
+              <div className="pt-12 border-t border-white/10 text-center">
                 <p className="font-[var(--font-montserrat)] text-sm text-gray-400">
-                  If you have any questions regarding this privacy policy, you may contact our legal team at <span className="text-black font-bold">ideasassemble1@gmail.com</span>
+                  If you have any questions regarding this privacy policy, you may contact our legal team at <span className="text-white font-bold">support@topstier.co</span>
                 </p>
               </div>
 

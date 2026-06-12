@@ -1,7 +1,7 @@
 import ServicePageLayout from "@/components/ServicePageLayout";
 
 export const metadata = {
-  title: "Animation & Motion Graphics | Ideas Assemble",
+  title: "Animation & Motion Graphics | Topstier",
   description: "Professional 2D/3D animation services. Explainer videos, motion graphics, and cinematic visual effects to captivate your audience.",
   keywords: ["2D Animation", "3D Animation", "Explainer Videos", "Motion Graphics", "Whiteboard Animation", "Video Production", "Cinematic Effects", "Product Animation"],
 };
@@ -12,7 +12,7 @@ export default function AnimationPage() {
       heroTitle="Animation"
       heroSubtitle="Bringing your story to life."
       ctaLabel="Get Animated"
-      heroImage="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop"
+      heroImage="/bg.jpeg"
       description="Explain your business in 60 seconds. Animation is the most powerful way to simplify complex ideas. We create engaging 2D and 3D animated explainer videos, whiteboard animations, and motion graphics that captivate your audience."
       description2="Our videos are designed to increase conversion rates, improve brand recall, and boost your engagement on social media platforms."
       highlights={[
@@ -24,6 +24,7 @@ export default function AnimationPage() {
         {
           name: "Teaser",
           price: "$299",
+          paymentLink: "https://buy.stripe.com/test_animation_teaser_299",
           features: [
             "15 Seconds Duration",
             "Professional Script Writing",
@@ -36,6 +37,7 @@ export default function AnimationPage() {
         {
           name: "Explainer",
           price: "$799",
+          paymentLink: "https://buy.stripe.com/test_animation_explainer_799",
           features: [
             "30 Seconds Duration",
             "Professional Voice Over",
@@ -49,6 +51,7 @@ export default function AnimationPage() {
         {
           name: "Premium",
           price: "$1,499",
+          paymentLink: "https://buy.stripe.com/test_animation_premium_1499",
           features: [
             "60 Seconds Duration",
             "Top Tier Voice Talent",

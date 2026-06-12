@@ -2,13 +2,13 @@ import ServicePageLayout from "@/components/ServicePageLayout";
 
 export const metadata = {
   title: "Best Logo Designer in USA | Professional Custom Logo Design Services",
-  description: "Looking for the best logo designer in USA? Ideas Assemble offers professional custom logo design with 100% Money-Back Guarantee, unlimited revisions, and fast delivery. Trusted by 500+ American brands.",
+  description: "Looking for the best logo designer in USA? Topstier offers professional custom logo design with 100% Money-Back Guarantee, unlimited revisions, and fast delivery. Trusted by 500+ American brands.",
   keywords: ["Logo Designer in USA", "Best Logo Designer USA", "Professional Logo Designer USA", "Custom Logo Design USA", "Logo Design Company America", "Affordable Logo Designer USA", "Top Logo Designer in United States", "Business Logo Design USA", "Minimalist Logo Designer USA", "Corporate Logo Design USA", "Brand Identity Designer USA"],
   openGraph: {
-    title: "Best Logo Designer in USA | Ideas Assemble",
+    title: "Best Logo Designer in USA | Topstier",
     description: "Professional custom logo design services in USA. 100% Money-Back Guarantee, unlimited revisions, and fast turnaround. Trusted by 500+ brands across America.",
     type: "website",
-    url: "https://www.ideasassemble.com/logo-design",
+    url: "https://www.topstier.co/logo-design",
   },
 };
 
@@ -18,7 +18,7 @@ export default function LogoDesignPage() {
       heroTitle="Logo Design"
       heroSubtitle="Forging visual identities that resonate."
       ctaLabel="Start Designing"
-      heroImage="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=2071&auto=format&fit=crop"
+      heroImage="/bg.jpeg"
       description="We don't just design logos; we build brands. As a premier logo design agency, we combine artistic creativity with strategic thinking to deliver logos that are not only visually stunning but also psychologically compelling."
       description2="With our 100% Money-Back Guarantee and rapid turnaround times, you can trust us to deliver excellence. Our process involves dedicated project managers and direct communication with award-winning designers."
       highlights={[
@@ -30,6 +30,7 @@ export default function LogoDesignPage() {
         {
           name: "Silver",
           price: "$49",
+          paymentLink: "https://buy.stripe.com/test_silver_plan_49",
           features: [
             "3 Custom Logo Concepts",
             "2 Dedicated Designers",
@@ -42,6 +43,7 @@ export default function LogoDesignPage() {
         {
           name: "Gold",
           price: "$149",
+          paymentLink: "https://buy.stripe.com/test_gold_plan_149",
           features: [
             "6 Custom Logo Concepts",
             "3 Dedicated Designers",
@@ -55,6 +57,7 @@ export default function LogoDesignPage() {
         {
           name: "Platinum",
           price: "$399",
+          paymentLink: "https://buy.stripe.com/test_platinum_plan_399",
           features: [
             "Unlimited Logo Concepts",
             "4 Dedicated Designers",

@@ -137,10 +137,10 @@ export default function PortfolioClient() {
   if (!mounted) return null;
 
   return (
-    <main className="min-h-screen relative selection:bg-[var(--color-arc-blue)] selection:text-black bg-[#0c0c0c] font-[var(--font-montserrat)]">
+    <main className="min-h-screen relative selection:bg-[var(--color-arc-blue)] selection:text-white bg-[#0c0c0c] font-[var(--font-montserrat)]">
       <Navbar />
 
-      {/* ═══════════ DARK HERO ═══════════ */}
+      {/* â•â•â•â•â•â•â•â•â•â•â• DARK HERO â•â•â•â•â•â•â•â•â•â•â• */}
       <section className="relative h-[42vh] sm:h-[48vh] md:h-[55vh] lg:h-[60vh] flex items-center justify-center overflow-hidden pt-16 md:pt-24">
         {/* Animated gradient background */}
         <div className="absolute inset-0 z-0">
@@ -208,7 +208,7 @@ export default function PortfolioClient() {
         <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#0c0c0c] to-transparent z-10" />
       </section>
 
-      {/* ═══════════ FILTER TABS ═══════════ */}
+      {/* â•â•â•â•â•â•â•â•â•â•â• FILTER TABS â•â•â•â•â•â•â•â•â•â•â• */}
       <section className="sticky top-14 sm:top-16 md:top-20 z-30 py-1.5 sm:py-2 md:py-4">
         <div className="container mx-auto px-3 sm:px-4 md:px-6">
           <div className="navbar-glass rounded-xl md:rounded-2xl px-2 sm:px-3 md:px-6 py-2.5 sm:py-3 md:py-4 grid grid-cols-1 md:grid-cols-3 items-center gap-2 md:gap-4">
@@ -262,7 +262,7 @@ export default function PortfolioClient() {
         </div>
       </section>
 
-      {/* ═══════════ PORTFOLIO GRID ═══════════ */}
+      {/* â•â•â•â•â•â•â•â•â•â•â• PORTFOLIO GRID â•â•â•â•â•â•â•â•â•â•â• */}
       <section className="py-6 sm:py-10 md:py-16 relative z-10">
         <div className="container mx-auto px-3 sm:px-4 md:px-6">
           <AnimatePresence mode="wait">
@@ -282,7 +282,7 @@ export default function PortfolioClient() {
                   transition={{ duration: 0.5, delay: i * 0.08 }}
                   onClick={() => openLightbox(i)}
                   className={`group relative overflow-hidden rounded-xl md:rounded-2xl cursor-pointer transition-all duration-500 hover:-translate-y-2 ${item.category === "Logo"
-                      ? "aspect-square bg-white p-3 sm:p-5 md:p-8 lg:p-10"
+                      ? "aspect-square bg-black p-3 sm:p-5 md:p-8 lg:p-10"
                       : "aspect-[4/3] bg-[#141414]"
                     }`}
                   style={{
@@ -329,7 +329,7 @@ export default function PortfolioClient() {
         </div>
       </section>
 
-      {/* ═══════════ LIGHTBOX ═══════════ */}
+      {/* â•â•â•â•â•â•â•â•â•â•â• LIGHTBOX â•â•â•â•â•â•â•â•â•â•â• */}
       <AnimatePresence>
         {lightboxIndex !== null && (
           <motion.div
@@ -377,7 +377,7 @@ export default function PortfolioClient() {
               transition={{ duration: 0.3 }}
               onClick={(e) => e.stopPropagation()}
               className={`relative max-w-5xl w-[88vw] sm:w-[92vw] md:w-[85vw] lg:w-[80vw] ${filteredItems[lightboxIndex]?.category === "Logo"
-                  ? "max-h-[55vh] sm:max-h-[60vh] md:max-h-[70vh] aspect-square bg-white rounded-xl sm:rounded-2xl md:rounded-3xl p-4 sm:p-8 md:p-12"
+                  ? "max-h-[55vh] sm:max-h-[60vh] md:max-h-[70vh] aspect-square bg-black rounded-xl sm:rounded-2xl md:rounded-3xl p-4 sm:p-8 md:p-12"
                   : "max-h-[55vh] sm:max-h-[65vh] md:max-h-[80vh] aspect-[16/10] rounded-xl sm:rounded-2xl md:rounded-3xl overflow-hidden"
                 }`}
             >

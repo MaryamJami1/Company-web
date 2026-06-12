@@ -92,29 +92,23 @@ function Counter({ from, to, suffix = "+" }: { from: number; to: number; suffix?
 }
 
 const services = [
-  { icon: <Pen className="w-7 h-7" />, title: "Logo Design", desc: "Timeless visual identities that establish your brand as an industry leader.", href: "/logo-design" },
-  { icon: <Globe className="w-7 h-7" />, title: "Website Design", desc: "Responsive, high-performance websites that convert visitors into customers.", href: "/website-design" },
-  { icon: <Film className="w-7 h-7" />, title: "Animation", desc: "Engaging 2D/3D explainer videos and motion graphics that captivate audiences.", href: "/animation" },
-  { icon: <Palette className="w-7 h-7" />, title: "Brand Identity", desc: "Cohesive brand identities that build trust, loyalty, and recognition.", href: "/brand" },
-  { icon: <ShoppingCart className="w-7 h-7" />, title: "E-commerce Solutions", desc: "End-to-end marketplace management and scaling strategies for global online brands.", href: "/ecommerce" },
-  { icon: <Zap className="w-7 h-7" />, title: "Chatbot Development", desc: "Automate your customer engagement with AI-powered conversation agents.", href: "/chatbot-development" },
+  { icon: <Pen className="w-7 h-7" />, title: "Tech & Gadgets", desc: "Cutting-edge electronics and smart gadgets that keep you ahead of the curve.", href: "/products/tech" },
+  { icon: <Globe className="w-7 h-7" />, title: "Home Essentials", desc: "Modern, minimalist decor and practical tools to elevate your living space.", href: "/products/home" },
+  { icon: <Film className="w-7 h-7" />, title: "Lifestyle & Accessories", desc: "Trending apparel and daily accessories crafted for style and durability.", href: "/products/lifestyle" },
+  { icon: <Palette className="w-7 h-7" />, title: "Premium Quality", desc: "Every item is strictly vetted to ensure it meets our top-tier quality standards.", href: "/quality" },
+  { icon: <ShoppingCart className="w-7 h-7" />, title: "Fast & Free Shipping", desc: "Get your favorite products delivered quickly and reliably straight to your doorstep.", href: "/shipping" },
+  { icon: <Zap className="w-7 h-7" />, title: "24/7 Support", desc: "Our dedicated customer service team is always here to assist you.", href: "/support" },
 ];
 
 const whyUsCards = [
-  { icon: <Fingerprint className="w-8 h-8" />, title: "Unique & Exclusive Designs", desc: "We create timeless identities that establish your brand as an industry leader. Our detail-oriented designers project your brand smartly to the target audience." },
-  { icon: <Clock className="w-8 h-8" />, title: "Professionalism with Timeliness", desc: "With over 15+ years in the creative design industry, we deliver exceptional services worldwide with strict professionalism and rapid turnaround." },
-  { icon: <Briefcase className="w-8 h-8" />, title: "Highly Diversified Portfolio", desc: "We take pride in working with businesses ranging from high-tech startups to multinational corporations, creating multifaceted designs that outshine competitors." },
-  { icon: <HeartHandshake className="w-8 h-8" />, title: "Guaranteed Satisfaction", desc: "We strive for a 100% satisfaction rate. Our support specialists are available around the clock to handle technical queries with utmost determination." },
-  { icon: <Users className="w-8 h-8" />, title: "In-house Creative Team", desc: "Our well-versed designers work tirelessly on each project to ensure your brand gets noticed with real-time results while elevating your customer base." },
-  { icon: <Store className="w-8 h-8" />, title: "One Stop Shop for Your Brand", desc: "From logo assembly to web architecture and social media campaigns, we provide end-to-end digital solutions under one roof." },
+  { icon: <Fingerprint className="w-8 h-8" />, title: "Curated & Exclusive Trends", desc: "We constantly scour the market to bring you the most unique and trending products before anyone else." },
+  { icon: <Clock className="w-8 h-8" />, title: "Lightning-Fast Delivery", desc: "We know you want your items fast. Our optimized logistics ensure your orders arrive securely and on time." },
+  { icon: <Briefcase className="w-8 h-8" />, title: "Premium Yet Affordable", desc: "Experience the luxury of high-end lifestyle products without the premium price markup." },
+  { icon: <HeartHandshake className="w-8 h-8" />, title: "100% Satisfaction Guarantee", desc: "Your happiness is our priority. Enjoy hassle-free returns and dedicated support on every single order." },
+  { icon: <Users className="w-8 h-8" />, title: "Secure & Trusted Checkout", desc: "Shop with confidence. Our platform uses state-of-the-art encryption to keep your data completely safe." },
+  { icon: <Store className="w-8 h-8" />, title: "Everything You Need in One Place", desc: "From smart gadgets to elegant home decor, Topstier is your ultimate destination for modern living." },
 ];
 
-/**
- * VIDEO TESTIMONIALS CONFIGURATION
- * 1. Place your video files in the 'public/testimonials' folder.
- * 2. Name them exactly as shown below (e.g., test1.mp4, test2.mp4, test3.mp4).
- * 3. Any resolution/size will be automatically cropped to fit the cinematic 16:9 frame.
- */
 const videoTestimonials = [
   {
     id: 1,
@@ -141,35 +135,35 @@ const videoTestimonials = [
 
 const faqs = [
   {
-    question: "What digital services does Ideas Assemble provide?",
-    answer: "We offer a comprehensive range of premium services including Logo Design, Website Design & Development, 3D Animation, Brand Identity creation, and specialized E-commerce growth strategies."
+    question: "What kind of products does Topstier sell?",
+    answer: "We offer a highly curated selection of modern lifestyle products, including cutting-edge tech gadgets, smart home essentials, and premium daily accessories."
   },
   {
-    question: "How long does a typical web design project take?",
-    answer: "Project timelines vary depending on complexity. A standard business website usually takes 2-4 weeks, while complex E-commerce platforms can take 6-10 weeks. We prioritize quality and precision in every build."
+    question: "How long does shipping take?",
+    answer: "Standard shipping typically takes 3-5 business days domestically. We process all orders within 24 hours to ensure your items arrive as quickly as possible."
   },
   {
-    question: "Can you help scale my existing online business?",
-    answer: "Yes! Our E-commerce experts specialize in scaling digital brands through multi-platform expansion, PPC management, supply chain optimization, and professional store design."
+    question: "Do you offer international shipping?",
+    answer: "Yes! We ship globally to most countries. International shipping times range from 7-14 business days depending on your location and local customs."
   },
   {
-    question: "Do you offer custom design revisions?",
-    answer: "Absolutely. We strive for 100% client satisfaction. We provide multiple initial concepts and work closely with you through revisions to ensure the final result perfectly matches your vision."
+    question: "What is your return policy?",
+    answer: "We offer a hassle-free 30-day return policy. If you are not 100% satisfied with your purchase, simply contact our support team to initiate a return or exchange."
   },
   {
-    question: "How do I get started with a project?",
-    answer: "You can start by clicking 'Initialize Connection' or 'Book Free Consultation' on our site. Once you fill out the form, our team will reach out within 24 hours to discuss your project requirements."
+    question: "How can I track my order?",
+    answer: "Once your order ships, you will receive an email with a tracking number and a link to monitor your package's journey in real-time."
   }
 ];
 
 function AccordionItem({ question, answer, isOpen, onClick }: { question: string, answer: string, isOpen: boolean, onClick: () => void }) {
   return (
-    <div className="border-b border-gray-100 last:border-0 overflow-hidden">
+    <div className="border-b border-white/10 last:border-0 overflow-hidden">
       <button
         onClick={onClick}
         className="w-full py-6 flex items-center justify-between text-left group transition-all"
       >
-        <span className={`font-[var(--font-orbitron)] text-sm md:text-base font-bold uppercase tracking-wider transition-colors ${isOpen ? 'text-[var(--color-arc-blue)]' : 'text-black group-hover:text-[var(--color-arc-blue)]'}`}>
+        <span className={`font-[var(--font-orbitron)] text-sm md:text-base font-bold uppercase tracking-wider transition-colors ${isOpen ? 'text-[var(--color-arc-blue)]' : 'text-white group-hover:text-[var(--color-arc-blue)]'}`}>
           {question}
         </span>
         <div className={`w-8 h-8 rounded-full border flex items-center justify-center transition-all duration-300 ${isOpen ? 'bg-[var(--color-arc-blue)] border-[var(--color-arc-blue)] rotate-180' : 'border-gray-200 rotate-0'}`}>
@@ -184,7 +178,7 @@ function AccordionItem({ question, answer, isOpen, onClick }: { question: string
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
-            <div className="pb-6 font-[var(--font-montserrat)] text-gray-600 text-sm md:text-base leading-relaxed max-w-3xl">
+            <div className="pb-6 font-[var(--font-montserrat)] text-gray-500 text-sm md:text-base leading-relaxed max-w-3xl">
               {answer}
             </div>
           </motion.div>
@@ -198,8 +192,6 @@ export default function Home() {
   const [mounted, setMounted] = useState(false);
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-  const yHeading = useTransform(scrollYProgress, [0, 0.2], ["0%", "50%"]);
-  const yText = useTransform(scrollYProgress, [0, 0.2], ["0%", "30%"]);
   const opacityHero = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
 
   const [submitted, setSubmitted] = useState(false);
@@ -210,26 +202,17 @@ export default function Home() {
 
   useEffect(() => {
     setMounted(true);
-
     const updateChatbotDimensions = () => {
       const width = window.innerWidth;
       const height = window.innerHeight;
-
       if (width < 640) {
-        // Mobile: compact floating window
-        setChatbotDimensions({
-          width: 'calc(100vw - 32px)',
-          height: 'min(600px, 80vh)'
-        });
+        setChatbotDimensions({ width: 'calc(100vw - 32px)', height: 'min(600px, 80vh)' });
       } else if (width < 1024) {
-        // Tablet: medium size
         setChatbotDimensions({ width: 380, height: 550 });
       } else {
-        // Desktop: full size
         setChatbotDimensions({ width: 400, height: 650 });
       }
     };
-
     updateChatbotDimensions();
     window.addEventListener('resize', updateChatbotDimensions);
     return () => window.removeEventListener('resize', updateChatbotDimensions);
@@ -238,106 +221,60 @@ export default function Home() {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-
     const SERVICE_ID = "service_pc7iapo";
     const TEMPLATE_ID = "template_0jn4ccf";
     const PUBLIC_KEY = "X_E0vJghlawo1saFC";
-
-    emailjs
-      .sendForm(SERVICE_ID, TEMPLATE_ID, e.currentTarget, PUBLIC_KEY)
-      .then(
-        () => {
-          setSubmitted(true);
-          setLoading(false);
-        },
-        (error) => {
-          console.error("FAILED...", error.text);
-          alert("Submission failed. Please try again or contact us via WhatsApp.");
-          setLoading(false);
-        }
-      );
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.currentTarget, PUBLIC_KEY)
+      .then(() => { setSubmitted(true); setLoading(false); }, (error) => {
+        console.error("FAILED...", error.text);
+        alert("Submission failed. Please try again.");
+        setLoading(false);
+      });
   };
 
-
-
   return (
-    <main className="min-h-screen relative selection:bg-[var(--color-arc-blue)] selection:text-black">
+    <main className="min-h-screen relative selection:bg-[var(--color-arc-blue)] selection:text-white">
       <Navbar />
 
-      {/* ═══════════ HERO ═══════════ */}
       <section id="home" className="relative min-h-screen md:h-screen flex items-center justify-center overflow-hidden pt-32 pb-16 md:pt-0 md:pb-0">
         <motion.div style={{ y, opacity: opacityHero }} className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/70 z-10" />
-          <Image
-            src="https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2000&auto=format&fit=crop"
-            alt="Digital Branding"
-            fill
-            priority
-            className="object-cover object-center opacity-40"
-          />
+          <Image src="/bg.jpeg" alt="Digital Branding" fill priority className="object-cover object-center opacity-40" />
         </motion.div>
         <div className="relative z-10 container mx-auto px-4 md:px-6 flex flex-col items-center text-center mt-4 md:mt-20">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, ease: [0.17, 0.55, 0.55, 1] as const }}
-            className="w-full flex flex-col items-center"
-          >
+          <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1, ease: [0.17, 0.55, 0.55, 1] as const }} className="w-full flex flex-col items-center">
             <QuickLogoForm />
-            <h1
-              className="font-[var(--font-orbitron)] text-4xl md:text-6xl lg:text-8xl font-black mb-6 uppercase tracking-tighter glitch mt-8"
-              data-text="IDEAS ASSEMBLE"
-            >
-              IDEAS <span className="text-[var(--color-arc-blue)]">ASSEMBLE</span>
+            <h1 className="font-[var(--font-orbitron)] text-4xl md:text-6xl lg:text-8xl font-black mb-6 uppercase tracking-tighter glitch mt-8" data-text="TOPSTIER">
+              TOPS<span className="text-[var(--color-arc-blue)]">TIER</span>
             </h1>
-            <motion.p
-              className="font-[var(--font-montserrat)] text-base md:text-xl text-gray-300 max-w-2xl mx-auto mb-10"
-            >
-              Premium Logo Design & Cinematic Digital Brand Identity Forging.
+            <motion.p className="font-[var(--font-montserrat)] text-base md:text-xl text-gray-300 max-w-2xl mx-auto mb-10">
+              Modern, trending, and high-quality products curated for a premium lifestyle. Fast delivery. Affordable luxury.
             </motion.p>
-            <MagneticButton
-              href="/build"
-              className="bg-[var(--color-hot-red)] hover:bg-red-900 text-white px-8 py-4 rounded-full font-[var(--font-orbitron)] font-bold uppercase tracking-wider text-sm flex items-center gap-3"
-            >
-              Initialize Project <Zap className="w-4 h-4" />
+            <MagneticButton href="/build" className="bg-[var(--color-hot-red)] hover:bg-[#CC5500] text-white px-8 py-4 rounded-full font-[var(--font-orbitron)] font-bold uppercase tracking-wider text-sm flex items-center gap-3">
+              Shop Now <ShoppingCart className="w-4 h-4" />
             </MagneticButton>
           </motion.div>
         </div>
       </section>
 
-      {/* ═══════════ ABOUT ═══════════ */}
       <PerspectiveSection>
-        <section id="about" className="py-24 relative z-10 bg-white border-y border-gray-100">
+        <section id="about" className="py-24 relative z-10 bg-black border-y border-white/10">
           <div className="container mx-auto px-6">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={staggerContainer}
-              className="grid md:grid-cols-2 gap-16 items-center"
-            >
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="grid md:grid-cols-2 gap-16 items-center">
               <motion.div variants={fadeInUp}>
-                <h2 className="font-[var(--font-orbitron)] text-3xl md:text-5xl font-bold uppercase tracking-wide mb-6 text-black">
-                  About <span className="text-[var(--color-arc-blue)]">Us</span>
+                <h2 className="font-[var(--font-orbitron)] text-3xl md:text-5xl font-bold uppercase tracking-wide mb-6 text-white">
+                  The Topstier <span className="text-[var(--color-arc-blue)]">Difference</span>
                 </h2>
                 <div className="w-24 h-1 bg-[var(--color-arc-blue)] mb-8" />
-                <p className="font-[var(--font-montserrat)] text-gray-700 leading-relaxed mb-6">
-                  We bring an interactive approach to our custom designs. Our design specialists strive to create professional solutions for your brand. With over 15+ years of working experience with genius entrepreneurs and multinational ventures.
-                </p>
-                <p className="font-[var(--font-montserrat)] text-gray-600 leading-relaxed">
-                  Tell us your need and book a free design consultation now to get personalized services for your brand in real time.
+                <p className="font-[var(--font-montserrat)] text-gray-500 leading-relaxed mb-6">
+                  At Topstier, we believe that premium quality shouldn't come with an outrageous price tag. We source the most modern, trending, and high-quality lifestyle products from around the world.
                 </p>
               </motion.div>
               <motion.div variants={fadeInUp} className="relative">
                 <ThreeDCard>
                   <div className="neon-border rounded-2xl overflow-hidden aspect-video">
                     <div className="neon-content w-full h-full">
-                      <Image
-                        src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
-                        alt="Our Team"
-                        fill
-                        className="object-cover opacity-70"
-                      />
+                      <Image src="/bg.jpeg" alt="Our Team" fill className="object-cover opacity-70" />
                     </div>
                   </div>
                 </ThreeDCard>
@@ -347,77 +284,46 @@ export default function Home() {
         </section>
       </PerspectiveSection>
 
-      {/* ═══════════ STATS ═══════════ */}
-      <section className="py-16 relative z-10 border-b border-gray-100 bg-white">
+      <section className="py-16 relative z-10 border-b border-white/10 bg-black">
         <div className="container mx-auto px-6">
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
-          >
+          <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { label: "Projects Delivered", value: 500 },
-              { label: "Happy Clients", value: 350 },
-              { label: "Satisfaction Rate", value: 100, suffix: "%" },
-              { label: "Years Experience", value: 15 },
+              { label: "Products Delivered", value: 500 },
+              { label: "Satisfied Customers", value: 350 },
+              { label: "Quality Guarantee", value: 100, suffix: "%" },
+              { label: "Trending Brands", value: 15 },
             ].map((stat, i) => (
               <motion.div key={i} variants={fadeInUp} className="flex flex-col items-center">
                 <div className="font-[var(--font-orbitron)] text-4xl md:text-5xl font-bold text-[var(--color-arc-blue)] mb-2">
                   <Counter from={0} to={stat.value} suffix={stat.suffix || "+"} />
                 </div>
-                <div className="font-[var(--font-montserrat)] text-xs text-gray-600 uppercase tracking-widest">
-                  {stat.label}
-                </div>
+                <div className="font-[var(--font-montserrat)] text-xs text-gray-600 uppercase tracking-widest">{stat.label}</div>
               </motion.div>
             ))}
           </motion.div>
         </div>
       </section>
 
-      {/* ═══════════ SERVICES GRID ═══════════ */}
       <PerspectiveSection>
         <section className="py-24 relative z-10">
           <div className="container mx-auto px-6">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={fadeInUp}
-              className="mb-16 text-center"
-            >
-              <h2 className="font-[var(--font-orbitron)] text-3xl md:text-5xl font-bold uppercase tracking-wide mb-4 text-black">
-                Our <span className="text-[var(--color-arc-blue)]">Services</span>
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp} className="mb-16 text-center">
+              <h2 className="font-[var(--font-orbitron)] text-3xl md:text-5xl font-bold uppercase tracking-wide mb-4 text-white">
+                Our <span className="text-[var(--color-arc-blue)]">Categories</span>
               </h2>
               <div className="w-24 h-1 bg-[var(--color-arc-blue)] mx-auto" />
             </motion.div>
-
-            <motion.div
-              variants={staggerContainer}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-            >
+            <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, i) => (
                 <motion.div key={i} variants={fadeInUp}>
                   <ThreeDCard className="h-full">
                     <Link href={service.href} className="block h-full">
-                      <div className="neon-border group h-full">
-                        <div className="neon-content p-8 h-full flex flex-col">
-                          <div className="mb-6 p-4 rounded-xl bg-gray-100 w-fit text-[var(--color-arc-blue)] group-hover:scale-110 transition-transform duration-300">
-                            {service.icon}
-                          </div>
-                          <h3 className="font-[var(--font-orbitron)] text-lg font-bold mb-3 uppercase tracking-wide text-black group-hover:text-[var(--color-arc-blue)] transition-colors">
-                            {service.title}
-                          </h3>
-                          <p className="font-[var(--font-montserrat)] text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
-                            {service.desc}
-                          </p>
-                          <div className="self-start text-[var(--color-brand-green)] text-xs font-bold uppercase tracking-wider flex items-center gap-2">
-                            View Details <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                          </div>
+                      <div className="glass-pill p-8 rounded-2xl border border-white/10 hover:border-[var(--color-arc-blue)]/30 transition-colors duration-500 group h-full flex flex-col">
+                        <div className="mb-5 text-[var(--color-arc-blue)] group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
+                        <h3 className="font-[var(--font-orbitron)] text-lg font-bold mb-3 uppercase tracking-wide text-white group-hover:text-[var(--color-arc-blue)] transition-colors">{service.title}</h3>
+                        <p className="font-[var(--font-montserrat)] text-gray-600 text-sm leading-relaxed mb-6 flex-grow">{service.desc}</p>
+                        <div className="self-start text-[var(--color-arc-blue)] text-xs font-bold uppercase tracking-wider flex items-center gap-2">
+                          View Collection <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                         </div>
                       </div>
                     </Link>
@@ -429,488 +335,41 @@ export default function Home() {
         </section>
       </PerspectiveSection>
 
-      {/* ═══════════ WHY US ═══════════ */}
-      <PerspectiveSection>
-        <section id="why-us" className="py-24 relative z-10 bg-gray-50 border-y border-gray-100">
-          <div className="container mx-auto px-6">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={fadeInUp}
-              className="mb-16 text-center"
-            >
-              <h2 className="font-[var(--font-orbitron)] text-3xl md:text-5xl font-bold uppercase tracking-wide mb-4 text-black">
-                Why <span className="text-[var(--color-brand-green)]">Choose Us</span>
-              </h2>
-              <div className="w-24 h-1 bg-[var(--color-brand-green)] mx-auto" />
-            </motion.div>
-
-            <motion.div
-              variants={staggerContainer}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-            >
-              {whyUsCards.map((card, i) => (
-                <motion.div key={i} variants={fadeInUp}>
-                  <ThreeDCard className="h-full">
-                    <div className="glass-pill p-8 rounded-2xl border border-gray-100 hover:border-[var(--color-brand-green)]/30 transition-colors duration-500 group h-full">
-                      <div className="mb-5 text-[var(--color-brand-green)] group-hover:scale-110 transition-transform duration-300">
-                        {card.icon}
-                      </div>
-                      <h3 className="font-[var(--font-orbitron)] text-base font-bold mb-3 uppercase tracking-wide text-black">
-                        {card.title}
-                      </h3>
-                      <p className="font-[var(--font-montserrat)] text-gray-600 text-sm leading-relaxed">
-                        {card.desc}
-                      </p>
-                    </div>
-                  </ThreeDCard>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
-        </section>
-      </PerspectiveSection>
-
-      {/* ═══════════ SIGNATURE MARKS (LOGO FOCUS) ═══════════ */}
-      <PerspectiveSection>
-        <section className="py-24 relative z-10 overflow-hidden">
-          <div className="container mx-auto px-6">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={staggerContainer}
-              >
-                <motion.div variants={fadeInUp}>
-                  <div className="font-[var(--font-orbitron)] text-xs font-bold uppercase text-[var(--color-arc-blue)] tracking-[0.3em] mb-4">Core Excellence</div>
-                  <h2 className="font-[var(--font-orbitron)] text-4xl md:text-6xl font-black uppercase tracking-tighter mb-8 text-black">
-                    PREMIUM LOGO <span className="text-[var(--color-hot-red)]">DESIGN</span>
-                  </h2>
-                  <div className="w-24 h-1 bg-black mb-8" />
-                </motion.div>
-
-                <motion.p variants={fadeInUp} className="font-[var(--font-montserrat)] text-gray-700 text-lg leading-relaxed mb-8 max-w-xl">
-                  We are a specialized **Logo Design Agency** creating high-impact visual identities. Our minimalist approach distills your entire business philosophy into a single, professional mark that ranks your brand as an industry leader.
-                </motion.p>
-
-                <motion.div variants={fadeInUp} className="space-y-6 mb-10">
-                  {[
-                    "Architectural Precision & Grid Systems",
-                    "Psychological Color Strategy",
-                    "Timeless Minimalism",
-                    "Complete Vector Scalability"
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-center gap-4">
-                      <div className="w-6 h-6 rounded-full bg-[var(--color-arc-blue)]/10 flex items-center justify-center text-[var(--color-arc-blue)]">
-                        <CheckCircle2 className="w-4 h-4" />
-                      </div>
-                      <span className="font-[var(--font-orbitron)] text-xs font-bold uppercase tracking-wider text-black">{item}</span>
-                    </div>
-                  ))}
-                </motion.div>
-
-                <motion.div variants={fadeInUp}>
-                  <MagneticButton
-                    href="/logo-design"
-                    className="bg-black hover:bg-[var(--color-arc-blue)] text-white px-10 py-4 rounded-full font-[var(--font-orbitron)] font-bold uppercase tracking-wider text-xs transition-all flex items-center gap-3 w-fit"
-                  >
-                    Get Best Logo Design Services <ChevronRight className="w-4 h-4" />
-                  </MagneticButton>
-                </motion.div>
-              </motion.div>
-
-              <div className="relative">
-                <motion.div
-                  initial={{ opacity: 0, x: 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1, ease: "easeOut" }}
-                  className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-2xl border border-gray-100 bg-black"
-                >
-                  <Image
-                    src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=2071&auto=format&fit=crop"
-                    alt="Professional Logo Design Mockup - Premium Brand Identity by Ideas Assemble"
-                    width={2071}
-                    height={1381}
-                    className="w-full h-auto"
-                  />
-                </motion.div>
-                {/* Decorative Elements */}
-                <div className="absolute -top-10 -right-10 w-40 h-40 bg-[var(--color-arc-blue)]/5 blur-3xl rounded-full" />
-                <div className="absolute -bottom-10 -left-10 w-60 h-60 bg-[var(--color-hot-red)]/5 blur-3xl rounded-full" />
-              </div>
-            </div>
-          </div>
-        </section>
-      </PerspectiveSection>
-      <PerspectiveSection>
-        <section id="testimonials" className="py-24 relative z-10">
-          <div className="container mx-auto px-6">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={fadeInUp}
-              className="mb-16 text-center"
-            >
-              <h2 className="font-[var(--font-orbitron)] text-3xl md:text-5xl font-bold uppercase tracking-wide mb-4 text-black">
-                Client <span className="text-[var(--color-arc-blue)]">Testimonials</span>
-              </h2>
-              <p className="font-[var(--font-montserrat)] text-gray-600 mt-4">
-                See what our clients say about their experience working with us
-              </p>
-              <div className="w-24 h-1 bg-[var(--color-arc-blue)] mx-auto mt-4" />
-            </motion.div>
-
-            <motion.div
-              variants={staggerContainer}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-            >
-              {videoTestimonials.map((v, i) => (
-                <motion.div key={i} variants={fadeInUp}>
-                  <ThreeDCard className="h-full">
-                    <div className="glass-pill overflow-hidden rounded-[2rem] border border-gray-100 hover:border-[var(--color-arc-blue)]/20 transition-all duration-500 h-full group bg-white shadow-xl">
-                      {/* Video Thumbnail / Player */}
-                      <div className="relative aspect-video overflow-hidden bg-gray-900">
-                        <video
-                          src={v.videoPath}
-                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                          muted
-                          loop
-                          playsInline
-                          onError={(e) => {
-                            // Hide the video element if it fails to load
-                            e.currentTarget.style.display = 'none';
-                            // Show a message or fallback
-                            const parent = e.currentTarget.parentElement;
-                            if (parent && !parent.querySelector('.video-fallback')) {
-                              const fallback = document.createElement('div');
-                              fallback.className = 'video-fallback absolute inset-0 flex items-center justify-center bg-gray-900/10 backdrop-blur-sm text-[10px] text-gray-400 uppercase font-bold tracking-widest text-center px-4';
-                              fallback.innerHTML = 'Video content pending...<br/>(Upload to /testimonials)';
-                              parent.appendChild(fallback);
-                            }
-                          }}
-                          onMouseEnter={(e) => {
-                            const playPromise = e.currentTarget.play();
-                            if (playPromise !== undefined) {
-                              playPromise.catch(() => {
-                                // Ignore error
-                              });
-                            }
-                          }}
-                          onMouseLeave={(e) => {
-                            e.currentTarget.pause();
-                            e.currentTarget.currentTime = 0;
-                          }}
-                        />
-                        <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300 pointer-events-none flex items-center justify-center">
-                          <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:opacity-0 transition-all duration-300">
-                            <Play className="w-4 h-4 text-white fill-white translate-x-0.5" />
-                          </div>
-                        </div>
-                        {/* Fallback info when video is hovered */}
-                        <div className="absolute bottom-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/50 backdrop-blur-md px-2 py-1 rounded text-[8px] text-white uppercase tracking-widest font-bold">
-                          Hovering: Preview Active
-                        </div>
-                      </div>
-
-                      {/* Client Info */}
-                      <div className="p-8">
-                        <h3 className="font-[var(--font-orbitron)] text-sm font-bold uppercase tracking-wider text-[var(--color-arc-blue)] mb-2">
-                          {v.title}
-                        </h3>
-                        <div className="font-[var(--font-orbitron)] text-lg font-black text-black uppercase tracking-tight mb-1">
-                          {v.client}
-                        </div>
-                        <div className="font-[var(--font-montserrat)] text-xs text-gray-500 font-medium">
-                          {v.role}
-                        </div>
-                      </div>
-                    </div>
-                  </ThreeDCard>
-                </motion.div>
-              ))}
-            </motion.div>
-
-            {/* See More Button */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mt-16 text-center"
-            >
-              <MagneticButton
-                href="/portfolio"
-                className="bg-white border-2 border-gray-100 hover:border-[var(--color-arc-blue)] text-black px-10 py-4 rounded-full font-[var(--font-orbitron)] font-bold uppercase tracking-wider text-xs flex items-center gap-3 mx-auto transition-all"
-              >
-                See More Success Stories <ChevronRight className="w-4 h-4" />
-              </MagneticButton>
-            </motion.div>
-          </div>
-        </section>
-      </PerspectiveSection>
-
-      {/* ═══════════ FAQ SECTION ═══════════ */}
-      <PerspectiveSection>
-        <section id="faq" className="py-24 relative z-10 bg-gray-50 border-y border-gray-100">
-          <div className="container mx-auto px-6">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={fadeInUp}
-              className="grid lg:grid-cols-12 gap-16"
-            >
-              <div className="lg:col-span-5">
-                <h2 className="font-[var(--font-orbitron)] text-3xl md:text-5xl font-bold uppercase tracking-wide mb-6 text-black">
-                  Frequently Asked <span className="text-[var(--color-arc-blue)]">Questions</span>
-                </h2>
-                <div className="w-24 h-1 bg-[var(--color-arc-blue)] mb-8" />
-                <p className="font-[var(--font-montserrat)] text-gray-600 leading-relaxed mb-8">
-                  Get answers to common queries about our process, services, and how we help brands scale in the digital landscape.
-                </p>
-                <div className="p-8 rounded-2xl bg-white border border-gray-100 shadow-xl">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-[var(--color-arc-blue)]/10 flex items-center justify-center text-[var(--color-arc-blue)]">
-                      <MessageSquare className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <div className="font-[var(--font-orbitron)] text-xs font-bold uppercase text-gray-400">Direct Support</div>
-                      <div className="font-[var(--font-montserrat)] font-bold text-black">+1 (682) 437-5323</div>
-                    </div>
-                  </div>
-                  <p className="text-xs text-gray-500 font-[var(--font-montserrat)] mb-6">Can't find what you're looking for? Initialize a connection below.</p>
-                  <MagneticButton href="#contact" className="w-full py-3 bg-gray-100 hover:bg-black hover:text-white transition-all text-black font-[var(--font-orbitron)] text-[10px] font-bold uppercase tracking-widest rounded-xl flex items-center justify-center gap-2">
-                    Ask a Question <ChevronRight className="w-3 h-3" />
-                  </MagneticButton>
-                </div>
-              </div>
-
-              <div className="lg:col-span-7 bg-white p-8 md:p-12 rounded-[2.5rem] border border-gray-100 shadow-2xl">
-                {faqs.map((faq, i) => (
-                  <AccordionItem
-                    key={i}
-                    question={faq.question}
-                    answer={faq.answer}
-                    isOpen={openFaqIndex === i}
-                    onClick={() => setOpenFaqIndex(openFaqIndex === i ? null : i)}
-                  />
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </PerspectiveSection>
-
-      {/* ═══════════ CONTACT ═══════════ */}
-      <section id="contact" className="py-24 relative z-10 bg-white border-t border-gray-100">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={fadeInUp}
-            className="mb-16 text-center"
-          >
-            <h2 className="font-[var(--font-orbitron)] text-3xl md:text-5xl font-bold uppercase tracking-wide mb-4 text-black">
-              Initialize <span className="text-[var(--color-arc-blue)]">Connection</span>
-            </h2>
-            <div className="w-24 h-1 bg-[var(--color-arc-blue)] mx-auto" />
-          </motion.div>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={fadeInUp}
-            className="max-w-2xl mx-auto"
-          >
-            <AnimatePresence mode="wait">
-              {!submitted ? (
-                <motion.form
-                  key="form"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  className="space-y-6"
-                  onSubmit={handleSubmit}
-                >
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="relative">
-                      <User className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--color-arc-blue)]" />
-                      <input
-                        type="text"
-                        name="from_name"
-                        placeholder="Full Name"
-                        required
-                        className="w-full bg-gray-50 border border-gray-200 rounded-xl px-12 py-4 text-sm text-black placeholder-gray-500 focus:outline-none focus:border-[var(--color-arc-blue)] focus:shadow-[0_0_15px_rgba(0,210,255,0.1) transition-all duration-300 font-[var(--font-montserrat)]"
-                      />
-                    </div>
-                    <div className="relative">
-                      <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--color-arc-blue)]" />
-                      <input
-                        type="email"
-                        name="reply_to"
-                        placeholder="Email Address"
-                        required
-                        className="w-full bg-gray-50 border border-gray-200 rounded-xl px-12 py-4 text-sm text-black placeholder-gray-500 focus:outline-none focus:border-[var(--color-arc-blue)] focus:shadow-[0_0_15px_rgba(0,210,255,0.1) transition-all duration-300 font-[var(--font-montserrat)]"
-                      />
-                    </div>
-                  </div>
-                  <div className="relative">
-                    <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--color-arc-blue)]" />
-                    <input
-                      type="tel"
-                      name="phone_number"
-                      placeholder="Phone Number"
-                      className="w-full bg-gray-50 border border-gray-200 rounded-xl px-12 py-4 text-sm text-black placeholder-gray-500 focus:outline-none focus:border-[var(--color-arc-blue)] focus:shadow-[0_0_15px_rgba(0,210,255,0.1) transition-all duration-300 font-[var(--font-montserrat)]"
-                    />
-                  </div>
-                  <div className="relative">
-                    <MessageSquare className="absolute left-4 top-4 w-4 h-4 text-[var(--color-arc-blue)]" />
-                    <textarea
-                      name="message"
-                      placeholder="Your Message"
-                      rows={5}
-                      required
-                      className="w-full bg-gray-50 border border-gray-200 rounded-xl px-12 py-4 text-sm text-black placeholder-gray-500 focus:outline-none focus:border-[var(--color-arc-blue)] focus:shadow-[0_0_15px_rgba(0,210,255,0.1) transition-all duration-300 resize-none font-[var(--font-montserrat)]"
-                    />
-                  </div>
-                  <div className="text-center">
-                    <MagneticButton
-                      type="submit"
-                      disabled={loading}
-                      className={`bg-[var(--color-hot-red)] hover:bg-red-900 text-white px-10 py-4 rounded-full font-[var(--font-orbitron)] font-bold uppercase tracking-wider text-sm flex items-center gap-3 transition-all ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
-                    >
-                      {loading ? "Sending..." : <>Send Transmission <Send className="w-4 h-4" /></>}
-                    </MagneticButton>
-                  </div>
-                </motion.form>
-              ) : (
-                <motion.div
-                  key="success"
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="text-center py-12 bg-gray-50 rounded-[2rem] border border-gray-100 shadow-inner"
-                >
-                  <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <CheckCircle2 className="w-8 h-8 text-green-500" />
-                  </div>
-                  <h3 className="font-[var(--font-orbitron)] text-2xl font-bold uppercase text-black mb-4">Transmission <span className="text-green-500">Received</span></h3>
-                  <p className="font-[var(--font-montserrat)] text-gray-600 max-w-sm mx-auto mb-6">
-                    Your connection has been initialized. We will get back to you shortly.
-                  </p>
-                  <button
-                    onClick={() => setSubmitted(false)}
-                    className="text-[10px] font-bold uppercase tracking-widest text-gray-400 hover:text-black transition-colors"
-                  >
-                    Send Another Transmission
-                  </button>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </motion.div>
+      <section id="testimonials" className="py-24 relative z-10">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="font-[var(--font-orbitron)] text-3xl md:text-5xl font-bold uppercase tracking-wide mb-16 text-white">
+            Customer <span className="text-[var(--color-arc-blue)]">Reviews</span>
+          </h2>
+          <MagneticButton href="/portfolio" className="bg-black border border-white/10 hover:bg-[#CC5500] text-white px-10 py-4 rounded-full font-[var(--font-orbitron)] font-bold uppercase tracking-wider text-xs flex items-center gap-3 mx-auto transition-all">
+            See More Reviews <ChevronRight className="w-4 h-4" />
+          </MagneticButton>
         </div>
       </section>
 
-      {/* ═══════════ CHATBOT WIDGET ═══════════ */}
-      <div className="fixed z-50">
-        <AnimatePresence>
-          {chatbotOpen && (
-            <>
-              {/* Mobile Backdrop */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                onClick={() => setChatbotOpen(false)}
-                className="fixed inset-0 bg-black/40 sm:hidden"
-              />
+      <section id="contact" className="py-24 relative z-10 bg-black border-t border-white/10">
+        <div className="container mx-auto px-6">
+          <div className="max-w-2xl mx-auto">
+            <h2 className="font-[var(--font-orbitron)] text-3xl md:text-5xl font-bold uppercase tracking-wide mb-12 text-center text-white">
+              Get In <span className="text-[var(--color-arc-blue)]">Touch</span>
+            </h2>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <input type="text" name="from_name" placeholder="Full Name" required className="w-full bg-black border border-white/10 rounded-xl px-6 py-4 text-white focus:border-[var(--color-arc-blue)] outline-none transition-all" />
+              <input type="email" name="reply_to" placeholder="Email Address" required className="w-full bg-black border border-white/10 rounded-xl px-6 py-4 text-white focus:border-[var(--color-arc-blue)] outline-none transition-all" />
+              <textarea name="message" placeholder="Your Message" rows={5} required className="w-full bg-black border border-white/10 rounded-xl px-6 py-4 text-white focus:border-[var(--color-arc-blue)] outline-none transition-all resize-none" />
+              <div className="text-center">
+                <MagneticButton type="submit" disabled={loading} className="bg-[var(--color-hot-red)] hover:bg-[#CC5500] text-white px-10 py-4 rounded-full font-[var(--font-orbitron)] font-bold uppercase tracking-wider text-sm flex items-center gap-3 mx-auto transition-all">
+                  {loading ? "Sending..." : "Send Message"}
+                </MagneticButton>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
 
-              {/* Chatbot Container */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8, y: 20 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.8, y: 20 }}
-                transition={{ duration: 0.3 }}
-                style={{
-                  width: chatbotDimensions.width,
-                  height: chatbotDimensions.height,
-                  maxWidth: '100vw',
-                  maxHeight: '100vh'
-                }}
-                className="fixed bottom-24 right-4 sm:bottom-6 sm:right-6 md:bottom-8 md:right-8 rounded-2xl overflow-hidden shadow-2xl bg-[#0c0c0c] border border-white/10 flex flex-col"
-              >
-                {/* Header */}
-                <div className="bg-[#111111] px-6 py-4 flex items-center justify-between flex-shrink-0 border-b border-white/5">
-                  <div>
-                    <div className="font-[var(--font-orbitron)] text-base font-bold text-[var(--color-hot-red)]">Chat with us</div>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <button
-                      onClick={() => {/* minimize */ }}
-                      className="p-1.5 hover:bg-white/5 rounded transition-colors hidden sm:block text-gray-400"
-                      title="Pop out"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                    </button>
-                    <button
-                      onClick={() => setChatbotOpen(false)}
-                      className="p-1.5 hover:bg-white/5 rounded transition-colors text-gray-400"
-                      title="Close"
-                    >
-                      <Minus className="w-4 h-4" />
-                    </button>
-                  </div>
-                </div>
-
-                {/* Subheader */}
-                <div className="px-6 py-4 bg-[#0c0c0c] border-b border-white/5 flex-shrink-0">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0">
-                      <MessageSquare className="w-5 h-5 text-[var(--color-hot-red)]" />
-                    </div>
-                    <div>
-                      <div className="font-[var(--font-orbitron)] text-sm font-bold text-white uppercase tracking-tighter">Live Chat Support</div>
-                      <div className="font-[var(--font-montserrat)] text-xs text-gray-400">Ask us anything :)</div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Chat Content - Flexible */}
-                <div className="flex-1 overflow-auto bg-[#0c0c0c]">
-                  {mounted && (
-                    <div className="w-full h-full">
-                      <iframe
-                        src='https://interfaces.zapier.com/embed/chatbot/cmoddu3qv00bzic0ouejq8n5l'
-                        allow='clipboard-write *'
-                        className="w-full h-full border-none invert brightness-110 hue-rotate-[180deg]"
-                      />
-                    </div>
-                  )}
-                </div>
-              </motion.div>
-            </>
-          )}
-        </AnimatePresence>
-
-        {/* Chat Button */}
-        <motion.button
-          onClick={() => setChatbotOpen(!chatbotOpen)}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          className="fixed bottom-6 right-6 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[var(--color-hot-red)] text-white shadow-[0_0_20px_rgba(139,0,0,0.3)] hover:shadow-[0_0_30px_rgba(139,0,0,0.6)] transition-all flex items-center justify-center flex-shrink-0 font-bold"
-        >
-          <MessageSquare className="w-5 h-5 sm:w-6 sm:h-6" />
-        </motion.button>
+      <div className="fixed bottom-6 right-6 z-50">
+        <button onClick={() => setChatbotOpen(!chatbotOpen)} className="w-14 h-14 rounded-full bg-[var(--color-hot-red)] hover:bg-[#CC5500] text-white shadow-2xl flex items-center justify-center transition-all">
+          <MessageSquare className="w-6 h-6" />
+        </button>
       </div>
 
       <Footer />

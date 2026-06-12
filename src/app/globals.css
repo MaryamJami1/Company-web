@@ -2,20 +2,20 @@
 
 @theme inline {
   --color-black: #0c0c0c;
-  --color-arc-blue: #00D2FF;
-  --color-brand-green: #00cba9;
-  --color-hot-red: #8B0000;
+  --color-arc-blue: #FF7A00;
+  --color-brand-green: #FF9900;
+  --color-hot-red: #E65C00;
   --font-orbitron: var(--font-orbitron);
   --font-montserrat: var(--font-montserrat);
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #111111;
+  --background: #0a0a0a;
+  --foreground: #ffffff;
 }
 
 html {
-  background: #ffffff;
+  background: var(--background);
 }
 
 body {
@@ -33,8 +33,8 @@ body {
   width: 100vw;
   height: 100vh;
   background-image: 
-    linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   background-size: 40px 40px;
   z-index: 0; /* Behind content but above background */
   pointer-events: none;
@@ -82,7 +82,7 @@ body {
 }
 
 .glass-pill {
-  background: #ffffff;
+  background: rgba(20, 20, 20, 0.7);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(0, 0, 0, 0.05);

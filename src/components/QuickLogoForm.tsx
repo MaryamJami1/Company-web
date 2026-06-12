@@ -121,17 +121,17 @@ export default function LogoEngineWizard() {
     );
   };
 
-  /* ── Shared classnames ─────────────────────────── */
+  /* â”€â”€ Shared classnames â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   const stepLabel = "font-[var(--font-orbitron)] uppercase tracking-[0.2em] text-[11px] font-bold mb-2";
   const stepTitle = "font-[var(--font-orbitron)] text-white font-black uppercase text-lg sm:text-3xl md:text-5xl mb-4";
   const inputBase = "w-full bg-transparent border-b-2 border-white/20 text-white px-3 py-2 text-center text-sm sm:text-base md:text-xl focus:outline-none focus:border-[var(--color-arc-blue)] transition-colors placeholder:text-gray-600";
-  const nextBtn = "bg-[var(--color-arc-blue)] text-black px-6 py-2.5 sm:px-8 sm:py-3.5 rounded-full font-[var(--font-orbitron)] text-xs sm:text-sm font-bold uppercase tracking-widest hover:bg-white disabled:opacity-50 transition-all flex items-center gap-2";
+  const nextBtn = "bg-[var(--color-arc-blue)] text-white px-6 py-2.5 sm:px-8 sm:py-3.5 rounded-full font-[var(--font-orbitron)] text-xs sm:text-sm font-bold uppercase tracking-widest hover:bg-black disabled:opacity-50 transition-all flex items-center gap-2";
   const backBtn = "text-gray-400 hover:text-white px-4 py-2.5 flex items-center gap-1.5 font-[var(--font-orbitron)] uppercase tracking-widest text-xs transition-colors";
   const navRow = "flex flex-row justify-center items-center gap-2 sm:gap-3 mt-5 sm:mt-6 w-full";
 
   return (
     <>
-      {/* ── Banner ─── */}
+      {/* â”€â”€ Banner â”€â”€â”€ */}
       <div className="w-full max-w-4xl mx-auto bg-black/50 backdrop-blur-md border border-white/10 p-5 md:p-8 rounded-2xl md:rounded-3xl mb-12 shadow-[0_0_40px_rgba(0,210,255,0.1)] relative z-20 text-center">
         <h2 className="text-xl md:text-4xl font-[var(--font-orbitron)] font-bold text-white mb-2 uppercase tracking-wide">
           Online Logo Maker &amp; Custom Design Services
@@ -148,15 +148,15 @@ export default function LogoEngineWizard() {
             onChange={(e) => setFormData({ ...formData, businessName: e.target.value })}
             required
             style={{ fontSize: '16px' }}
-            className="flex-grow bg-white text-black px-5 py-3.5 md:px-6 md:py-4 rounded-xl font-[var(--font-montserrat)] focus:outline-none focus:ring-2 focus:ring-[var(--color-arc-blue)]"
+            className="flex-grow bg-black text-white px-5 py-3.5 md:px-6 md:py-4 rounded-xl font-[var(--font-montserrat)] focus:outline-none focus:ring-2 focus:ring-[var(--color-arc-blue)]"
           />
-          <button type="submit" className="bg-[var(--color-arc-blue)] hover:bg-[#00b8e6] text-black font-[var(--font-orbitron)] font-bold uppercase tracking-wider px-8 py-3.5 rounded-xl transition-colors text-sm md:text-base w-full md:w-auto">
+          <button type="submit" className="bg-[var(--color-arc-blue)] hover:bg-[#CC5500] text-white font-[var(--font-orbitron)] font-bold uppercase tracking-wider px-8 py-3.5 rounded-xl transition-colors text-sm md:text-base w-full md:w-auto">
             Design
           </button>
         </form>
       </div>
 
-      {/* ── Wizard Modal ─── */}
+      {/* â”€â”€ Wizard Modal â”€â”€â”€ */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -179,7 +179,7 @@ export default function LogoEngineWizard() {
             <div className="fixed -top-40 -right-40 w-96 h-96 bg-[var(--color-arc-blue)]/20 blur-[100px] rounded-full pointer-events-none" />
             <div className="fixed -bottom-40 -left-40 w-96 h-96 bg-[var(--color-hot-red)]/20 blur-[100px] rounded-full pointer-events-none" />
 
-            {/* ── Top bar (All devices) ── */}
+            {/* â”€â”€ Top bar (All devices) â”€â”€ */}
             <div 
               className="flex-none flex items-center justify-between px-5 md:px-10 py-4 md:py-5 z-50 bg-black border-b border-white/5"
               style={{ paddingTop: 'max(env(safe-area-inset-top), 16px)' }}
@@ -194,7 +194,7 @@ export default function LogoEngineWizard() {
               </button>
             </div>
 
-            {/* ── Scrollable body ── */}
+            {/* â”€â”€ Scrollable body â”€â”€ */}
             <div
               className="flex-1 relative z-10 px-4 md:px-8"
               style={{ overflowY: "auto", overscrollBehavior: "contain", WebkitOverflowScrolling: "touch" } as React.CSSProperties}
@@ -202,7 +202,7 @@ export default function LogoEngineWizard() {
               {/* inner centering wrapper */}
               <div className="flex flex-col items-center justify-center text-center min-h-full py-4 pb-12">
 
-                {/* ── STEP 1 ── */}
+                {/* â”€â”€ STEP 1 â”€â”€ */}
                 {step === 1 && (
                   <motion.div className="w-full max-w-lg" initial={{ x: 50, opacity: 0 }} animate={{ x: 0, opacity: 1 }}>
                     <p className={`${stepLabel} text-[var(--color-arc-blue)]`}>Step 1</p>
@@ -226,7 +226,7 @@ export default function LogoEngineWizard() {
                   </motion.div>
                 )}
 
-                {/* ── STEP 2 ── */}
+                {/* â”€â”€ STEP 2 â”€â”€ */}
                 {step === 2 && (
                   <motion.div className="w-full max-w-lg" initial={{ x: 50, opacity: 0 }} animate={{ x: 0, opacity: 1 }}>
                     <p className={`${stepLabel} text-[var(--color-arc-blue)]`}>Step 2</p>
@@ -256,7 +256,7 @@ export default function LogoEngineWizard() {
                   </motion.div>
                 )}
 
-                {/* ── STEP 3 ── */}
+                {/* â”€â”€ STEP 3 â”€â”€ */}
                 {step === 3 && (
                   <motion.div className="w-full max-w-lg" initial={{ x: 50, opacity: 0 }} animate={{ x: 0, opacity: 1 }}>
                     <p className={`${stepLabel} text-[var(--color-arc-blue)]`}>Step 3</p>
@@ -281,7 +281,7 @@ export default function LogoEngineWizard() {
                   </motion.div>
                 )}
 
-                {/* ── STEP 4 ── */}
+                {/* â”€â”€ STEP 4 â”€â”€ */}
                 {step === 4 && (
                   <motion.div className="w-full max-w-lg" initial={{ x: 50, opacity: 0 }} animate={{ x: 0, opacity: 1 }}>
                     <p className={`${stepLabel} text-[var(--color-arc-blue)]`}>Step 4</p>
@@ -295,7 +295,7 @@ export default function LogoEngineWizard() {
                       value={formData.additionalInfo}
                       onChange={(e) => setFormData({ ...formData, additionalInfo: e.target.value })}
                       style={{ fontSize: '16px' }}
-                      className="w-full bg-white/5 border border-white/10 rounded-xl text-white px-4 py-3 text-sm focus:outline-none focus:border-[var(--color-arc-blue)] transition-colors placeholder:text-gray-600 resize-none font-[var(--font-montserrat)]"
+                      className="w-full bg-black/5 border border-white/10 rounded-xl text-white px-4 py-3 text-sm focus:outline-none focus:border-[var(--color-arc-blue)] transition-colors placeholder:text-gray-600 resize-none font-[var(--font-montserrat)]"
                     />
                     <div className={navRow}>
                       <button onClick={handlePrev} className={backBtn}><ChevronLeft className="w-4 h-4" /> Back</button>
@@ -306,7 +306,7 @@ export default function LogoEngineWizard() {
                   </motion.div>
                 )}
 
-                {/* ── STEP 5 ── */}
+                {/* â”€â”€ STEP 5 â”€â”€ */}
                 {step === 5 && (
                   <motion.div className="w-full max-w-md" initial={{ x: 50, opacity: 0 }} animate={{ x: 0, opacity: 1 }}>
                     <p className={`${stepLabel} text-[var(--color-hot-red)]`}>Final Step</p>
@@ -317,14 +317,14 @@ export default function LogoEngineWizard() {
                         value={formData.fullName}
                         onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                         style={{ fontSize: '16px' }}
-                        className="w-full bg-white/5 border border-white/10 text-white px-4 py-3 rounded-xl font-[var(--font-montserrat)] text-sm focus:outline-none focus:border-[var(--color-arc-blue)] transition-colors placeholder:text-gray-500"
+                        className="w-full bg-black/5 border border-white/10 text-white px-4 py-3 rounded-xl font-[var(--font-montserrat)] text-sm focus:outline-none focus:border-[var(--color-arc-blue)] transition-colors placeholder:text-gray-500"
                       />
                       <input
                         type="email" placeholder="Email Address" required
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         style={{ fontSize: '16px' }}
-                        className="w-full bg-white/5 border border-white/10 text-white px-4 py-3 rounded-xl font-[var(--font-montserrat)] text-sm focus:outline-none focus:border-[var(--color-arc-blue)] transition-colors placeholder:text-gray-500"
+                        className="w-full bg-black/5 border border-white/10 text-white px-4 py-3 rounded-xl font-[var(--font-montserrat)] text-sm focus:outline-none focus:border-[var(--color-arc-blue)] transition-colors placeholder:text-gray-500"
                       />
                       <div className="phone-dark text-sm">
                         <PhoneInput
@@ -338,7 +338,7 @@ export default function LogoEngineWizard() {
                         <button type="button" onClick={handlePrev} className={backBtn}><ChevronLeft className="w-4 h-4" /> Back</button>
                         <button
                           type="submit" disabled={loading}
-                          className={`bg-[var(--color-hot-red)] hover:bg-red-900 text-white px-6 py-2.5 sm:px-8 sm:py-3.5 rounded-full font-[var(--font-orbitron)] font-bold uppercase tracking-widest text-xs sm:text-sm transition-all flex items-center gap-2 ${loading ? "opacity-50 cursor-not-allowed" : ""}`}
+                          className={`bg-[var(--color-hot-red)] hover:bg-[#CC5500] text-white px-6 py-2.5 sm:px-8 sm:py-3.5 rounded-full font-[var(--font-orbitron)] font-bold uppercase tracking-widest text-xs sm:text-sm transition-all flex items-center gap-2 ${loading ? "opacity-50 cursor-not-allowed" : ""}`}
                         >
                           {loading ? "Processing..." : <>Finish &amp; Send <Send className="w-3.5 h-3.5" /></>}
                         </button>
@@ -347,7 +347,7 @@ export default function LogoEngineWizard() {
                   </motion.div>
                 )}
 
-                {/* ── STEP 6 ── */}
+                {/* â”€â”€ STEP 6 â”€â”€ */}
                 {step === 6 && (
                   <motion.div
                     initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }}
@@ -356,11 +356,11 @@ export default function LogoEngineWizard() {
                     <div className="w-11 h-11 sm:w-14 sm:h-14 bg-[var(--color-arc-blue)]/20 border-2 border-[var(--color-arc-blue)] rounded-full flex items-center justify-center mx-auto mb-3 shadow-[0_0_30px_rgba(0,210,255,0.3)]">
                       <CheckCircle2 className="w-5 h-5 sm:w-7 sm:h-7 text-[var(--color-arc-blue)]" />
                     </div>
-                    <h3 className="text-base sm:text-xl font-[var(--font-orbitron)] font-black text-white mb-1 uppercase tracking-wider">Thankyou ☺</h3>
+                    <h3 className="text-base sm:text-xl font-[var(--font-orbitron)] font-black text-white mb-1 uppercase tracking-wider">Thankyou â˜º</h3>
                     <p className="text-[11px] sm:text-sm text-gray-300 font-[var(--font-montserrat)] mb-3">
                       Checkout our Portfolio or view our Pricing and Packages
                     </p>
-                    <div className="bg-white/5 border border-white/10 rounded-xl p-3 sm:p-4 text-left mb-4">
+                    <div className="bg-black/5 border border-white/10 rounded-xl p-3 sm:p-4 text-left mb-4">
                       <h4 className="text-[var(--color-arc-blue)] font-[var(--font-orbitron)] text-xs sm:text-sm font-bold uppercase mb-1">Custom Logo Design</h4>
                       <p className="text-white font-[var(--font-montserrat)] text-[11px] sm:text-xs font-semibold mb-1">For Professional Businesses</p>
                       <p className="text-gray-400 font-[var(--font-montserrat)] text-[10px] mb-2 leading-snug">
@@ -378,11 +378,11 @@ export default function LogoEngineWizard() {
                     <div className="flex flex-row gap-2 justify-center">
                       <Link
                         href="/portfolio" onClick={() => setIsOpen(false)}
-                        className="flex-1 bg-transparent border-2 border-white text-white px-3 py-2 rounded-full font-[var(--font-orbitron)] text-[9px] sm:text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all text-center"
+                        className="flex-1 bg-transparent border-2 border-white text-white px-3 py-2 rounded-full font-[var(--font-orbitron)] text-[9px] sm:text-xs font-bold uppercase tracking-widest hover:bg-black hover:text-white transition-all text-center"
                       >Visit Portfolio</Link>
                       <Link
                         href="/logo-design#pricing" onClick={() => setIsOpen(false)}
-                        className="flex-1 bg-[var(--color-arc-blue)] hover:bg-[#00b8e6] text-black px-3 py-2 rounded-full font-[var(--font-orbitron)] text-[9px] sm:text-xs font-bold uppercase tracking-widest transition-all text-center"
+                        className="flex-1 bg-[var(--color-arc-blue)] hover:bg-[#CC5500] text-white px-3 py-2 rounded-full font-[var(--font-orbitron)] text-[9px] sm:text-xs font-bold uppercase tracking-widest transition-all text-center"
                       >View Packages</Link>
                     </div>
                   </motion.div>

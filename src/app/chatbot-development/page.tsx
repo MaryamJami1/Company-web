@@ -1,7 +1,7 @@
 import ServicePageLayout from "@/components/ServicePageLayout";
 
 export const metadata = {
-  title: "AI Chatbot Development | Ideas Assemble",
+  title: "AI Chatbot Development | Topstier",
   description: "Automate your customer engagement with advanced AI chatbots. Custom NLP solutions, WhatsApp bots, and website assistants to scale your business.",
   keywords: ["Chatbot Development", "AI Assistant", "NLP", "WhatsApp Bot", "Customer Automation", "AI Solutions", "Machine Learning", "Customer Support Bot"],
 };
@@ -12,7 +12,7 @@ export default function ChatbotDevelopmentPage() {
       heroTitle="Chatbot Development"
       heroSubtitle="Automate your connection with 24/7 AI-powered assistants."
       ctaLabel="Build My Bot"
-      heroImage="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=2000&auto=format&fit=crop"
+      heroImage="/bg.jpeg"
       description="Revolutionize your customer experience with intelligent, automated conversation agents. We build custom AI chatbots that understand context, solve problems, and convert leads while you sleep."
       description2="Our bots integrate seamlessly with your website, WhatsApp, and social media platforms, providing a consistent and efficient support layer for your brand."
       highlights={[
@@ -24,6 +24,7 @@ export default function ChatbotDevelopmentPage() {
         {
           name: "Basic Bot",
           price: "$599",
+          paymentLink: "https://buy.stripe.com/test_chatbot_basic_599",
           features: [
             "Rule-based Logic",
             "Website Integration",
@@ -36,6 +37,7 @@ export default function ChatbotDevelopmentPage() {
         {
           name: "AI Advanced",
           price: "$1,499",
+          paymentLink: "https://buy.stripe.com/test_chatbot_advanced_1499",
           features: [
             "NLP Integration (OpenAI/Dialogflow)",
             "Contextual Understanding",
@@ -48,6 +50,7 @@ export default function ChatbotDevelopmentPage() {
         {
           name: "Enterprise",
           price: "$3,499",
+          paymentLink: "https://buy.stripe.com/test_chatbot_enterprise_3499",
           features: [
             "Custom Trained Models",
             "Secure API Integrations",
